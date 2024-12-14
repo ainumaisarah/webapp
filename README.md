@@ -13,20 +13,20 @@
 
 
 
-## The objective of the web application 
+## Objective of the web application 
 
 
 
-## Features and functionalities of the web application.
+## Features and Functionalities of the web application
 
 
 
-## Entity Relationship Diagram (ERD) for the database tables with relationship.
+## Entity Relationship Diagram (ERD) for the database tables with relationship
 
 
-## A sequence diagram to represent the interaction of the web application.
+## Sequence Diagram to represent the interaction of the web application.
 
 
 
-## References.
+## References
 
