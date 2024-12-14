@@ -1,12 +1,12 @@
-## Group Members 
-*Member 1* : A
-*Member 2* : Arina Batrisyia Sobhan Binti Mohd Razali (2217572)
-*Member 3* :
-*Member 4* :
-*Member 5* :
+## Group Members
+- **Member 1**: Name (Matric No.)
+- **Member 2**: Arina Batrisyia Sobhan Binti Mohd Razali (2217572)
+- **Member 3**: Name (Matric No.)
+- **Member 4**: Name (Matric No.)
+- **Member 5**: Name (Matric No.)
 
 
-## Hotel Name - Hotel Management System
+# Hotel Name - Hotel Management System
 
 
 ## Introduction of the web application 
