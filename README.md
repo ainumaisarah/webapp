@@ -31,19 +31,19 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings and Payments.
 
 **User Profile** 
-The system allows customers to create and login to their account using their email and password. Customers can manage their user profiles, providing a convenient and personalized experience. Users can update their personal details such as name, email, and phone numbers.
+- The system allows customers to create and login to their account using their email and password. Customers can manage their user profiles, providing a convenient and personalized experience. Users can update their personal details such as name, email, and phone numbers.
 
 **Hotel Rooms** 
-The system enables customers to view available hotel rooms with detailed information. Each room listing provides details such as room descriptions, pricing, amenities, and images, helping customers make decisions. On the administrative side, hotel staff can add, update, or remove room details.
+- The system enables customers to view available hotel rooms with detailed information. Each room listing provides details such as room descriptions, pricing, amenities, and images, helping customers make decisions. On the administrative side, hotel staff can add, update, or remove room details.
 
 **Bookings** 
-One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms on the date and duration that they want. Upon successful booking, Customers can view or cancel their reservations directly through their accounts, offering flexibility and control.
+- One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms on the date and duration that they want. Upon successful booking, Customers can view or cancel their reservations directly through their accounts, offering flexibility and control.
 
 **Review and Ratings**
-To enhance customers' trust and provide valuable feedback, the system includes a reviews and ratings feature. Customers can rate their experience using a 1-5 star rating system and leave written reviews about their stay. These reviews will be displayed on the review and ratings section to assist other users in making decisions.
+- To enhance customers' trust and provide valuable feedback, the system includes a reviews and ratings feature. Customers can rate their experience using a 1-5 star rating system and leave written reviews about their stay. These reviews will be displayed on the review and ratings section to assist other users in making decisions.
 
 **Payments**
-The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer.
+- The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer.
 
 ## Entity Relationship Diagram (ERD) for the database tables with relationship
 
