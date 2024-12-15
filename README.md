@@ -19,11 +19,11 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 
 
 ## Objective of the web application 
-<ul>To enable users to manage their profiles and booking details, and provide reviews through the implementation of CRUD functionalities, ensuring all user data is properly stored in the database.</ul>
+1. To enable users to manage their profiles and booking details, and provide reviews through the implementation of CRUD functionalities, ensuring all user data is properly stored in the database.
 
-2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records to ensure efficient data processing.
+2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records for efficient data processing.
 
-3. To implement review and rating features that allow customers to provide feedback on their stay and access reliable information for future booking decisions.</li>
+3. To implement review and rating features that allow customers to provide feedback on their stay and access information for future booking decisions.
 
 
 ## Features and Functionalities of the web application
