@@ -10,7 +10,7 @@
 
 ## Introduction of the web application 
 
-A **Hotel Management System** is a digital platform designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room inventory, reservations, payments, and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures seamless data handling, making it a reliable and user-friendly solution for the hospitality industry.
+A **Hotel Management System** is a web platform designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room inventory, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
 
 The system’s features cover five main areas: **User Profiles**, **Hotel Rooms**, **Bookings**, **Reviews & Ratings**, and **Payments**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee room inventory, track bookings, manage payments, and remove inappropriate feedback. These features work together to ensure both convenience for customers and operational efficiency for hotel staff. For instance, users can view booking histories and receipts, update personal details, or cancel reservations, while admins can adjust room availability, update payment statuses, and monitor customer interactions.
 
@@ -19,7 +19,11 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 
 
 ## Objective of the web application 
+<li>To enable users to manage their profiles and booking details, and provide reviews through the implementation of CRUD functionalities, ensuring all user data is properly stored in the database.</li>
 
+2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records to ensure efficient data processing.
+
+3. To implement review and rating features that allow customers to provide feedback on their stay and access reliable information for future booking decisions.</li>
 
 
 ## Features and Functionalities of the web application
