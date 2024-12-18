@@ -1,5 +1,3 @@
-# Moonlit Lagoon Hotel - Hotel Management System
-
 ## Group Members
 - **Member 1**: Ainu Maisarah binti Ami Nuddin (2216320)
 - **Member 2**: Arina Batrisyia Sobhan Binti Mohd Razali (2217572)
@@ -7,6 +5,7 @@
 - **Member 4**: Muhammad Syahmi Bin Noorhisham (2213991)
 - **Member 5**: Muhd Iskandar Bin Yong Fui Min (2214527)
 
+# Moonlit Lagoon Hotel - Hotel Management System
 
 ## 1.0 Introduction of the web application 
 
