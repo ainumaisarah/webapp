@@ -8,7 +8,7 @@
 - **Member 5**: Muhd Iskandar Bin Yong Fui Min (2214527)
 
 
-## Introduction of the web application 
+## 1.0 Introduction of the web application 
 
 A **Hotel Management System** is a web platform designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room inventory, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
 
@@ -18,7 +18,9 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 
 
 
-## Objective of the web application 
+## 2.0 Objectives of the web application 
+The main objectives of the Hotel Management System are : 
+
 1. To enable users to manage their profiles and booking details, and provide reviews to ensure all user data is properly stored in the database.
 
 2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records for efficient data processing.
@@ -26,7 +28,7 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 3. To implement review and rating features that allow customers to provide feedback on their stay and access information for future booking decisions.
 
 
-## Features and Functionalities of the web application
+## 3.0 Features and Functionalities of the web application
 
 The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings and Payments.
 
@@ -45,12 +47,14 @@ The system features and fucntionalities will cover User Profiles, Hotel Rooms, B
 **Payments**
 - The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer.
 
-## Entity Relationship Diagram (ERD) for the database tables with relationship
+## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
 
-## Sequence Diagram to represent the interaction of the web application
+## 5.0 Sequence Diagram to represent the interaction of the web application
 
 
 
-## References
+## 6.0 Project System Captured Screen 
+
+## 7.0 References
 
