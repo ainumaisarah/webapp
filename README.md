@@ -1,4 +1,4 @@
-# Hotel Name - Hotel Management System
+# Moonlit Lagoon Hotel - Hotel Management System
 
 ## Group Members
 - **Member 1**: Ainu Maisarah binti Ami Nuddin (2216320)
