@@ -29,7 +29,7 @@ The main objectives of the Hotel Management System are :
 
 ## 3.0 Features and Functionalities of the web application
 
-The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings, Payments, and Contact.
+The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings, and Payments.
 
 **User Profile** 
 - The system allows customers to create their account using their name, email and password. After that, they can login into the system using their email and password. Customers can view and update their user profile such as name, email, password, phoner number, and payment info. Furthermore, customers can also delete their account should they wish to.
@@ -45,9 +45,6 @@ The system features and fucntionalities will cover User Profiles, Hotel Rooms, B
 
 **Payments**
 - The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer. However, the customer can cancel payments before confirmation if they change their mind last minute.
-
-**Contact**
-- The system includes a contact feature that allows customers to easily reach out to hotel staff or administrators for inquiries, support, or feedback. Customers can access a contact form within the **Contact Us** section, where they can provide their name, email, subject, and message. Alternatively, the system displays key contact information, including phone number, email address, and physical address of the hotel.
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
