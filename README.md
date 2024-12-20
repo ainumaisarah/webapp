@@ -29,22 +29,25 @@ The main objectives of the Hotel Management System are :
 
 ## 3.0 Features and Functionalities of the web application
 
-The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings and Payments.
+The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings, Payments, and Contact.
 
 **User Profile** 
-- The system allows customers to create and login to their account using their email and password. Customers can manage their user profiles, providing a convenient and personalized experience. Users can update their personal details such as name, email, and phone numbers.
+- The system allows customers to create their account using their name, email and password. After that, they can login into the system using their email and password. Customers can view and update their user profile such as name, email, password, phoner number, and payment info. Furthermore, customers can also delete their account should they wish to.
 
 **Hotel Rooms** 
-- The system enables customers to view available hotel rooms with detailed information. Each room listing provides details such as room descriptions, pricing, amenities, and images, helping customers make decisions. On the administrative side, hotel staff can add, update, or remove room details.
+- The system enables customers to view available hotel rooms with detailed information. Customers can search the rooms by type and price. Each room listing provides details such as room descriptions, pricing, amenities, images, and availability, helping customers make decisions. On the administrative side, hotel staff can add, update, or remove room details. The hotel staffs can also add or remove room.
 
 **Bookings** 
-- One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms on the date and duration that they want. Upon successful booking, Customers can view or cancel their reservations directly through their accounts, offering flexibility and control.
+- One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms by selecting dates, room, and number of guests. Upon successful booking, customers can view the booking details such as dates and room type. Furthermore, the customer can update their booking details such as dates or number of guest. The customer can also cancel their booking if they want to. On the administrative side, the hotel staffs can manually add and delete booking. 
 
 **Review and Ratings**
-- To enhance customers' trust and provide valuable feedback, the system includes a reviews and ratings feature. Customers can rate their experience using a 1-5 star rating system and leave written reviews about their stay. These reviews will be displayed on the review and ratings section to assist other users in making decisions.
+- To enhance customers' trust and provide valuable feedback, the system includes a reviews and ratings feature. Customers can rate their experience using a 1-5 star rating system and leave written reviews about their stay. If the customer want to change their review, they can do so within a limited time frame. These reviews will be displayed on the review and ratings section to assist other users in making decisions.
 
 **Payments**
-- The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer.
+- The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer. However, the customer can cancel payments before confirmation if they change their mind last minute.
+
+**Contact**
+- The system includes a contact feature that allows customers to easily reach out to hotel staff or administrators for inquiries, support, or feedback. Customers can access a contact form within the **Contact Us** section, where they can provide their name, email, subject, and message. Alternatively, the system displays key contact information, including phone number, email address, and physical address of the hotel.
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
