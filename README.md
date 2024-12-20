@@ -36,6 +36,7 @@ The system features and fucntionalities will cover User Profiles, Hotel Rooms, B
 
 **Hotel Rooms** 
 - The system enables customers to view available hotel rooms with detailed information. Customers can search the rooms by type and price. Each room listing provides details such as room descriptions, pricing, amenities, images, and availability, helping customers make decisions.
+
 **Bookings** 
 - One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms by selecting dates, room, and number of guests. Upon successful booking, customers can view the booking details such as dates and room type. Furthermore, the customer can update their booking details such as dates or number of guest. The customer can also cancel their booking if they want to. On the administrative side, the hotel staffs can manually add and delete booking. 
 
