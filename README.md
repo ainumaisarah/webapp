@@ -11,7 +11,7 @@
 
 A **Hotel Management System** is a web application designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room allocation, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
 
-The system’s features cover five main areas: **User Profiles**, **Bookings**, **Reviews & Ratings**, **Payments** and **Room Allocation Admin**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee customers profiles, room inventory and track payments. These features work together to ensure both convenience for customers and operational efficiency for hotel staffs. For instance, users can view booking histories and receipts, update personal details or post reviews and ratings, while admins can oversee room occupants and monitor payment records. 
+The system’s features cover five main areas: **User Profiles**, **Bookings**, **Reviews & Ratings**, **Payments** and **Admin Control Panel**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee customers profiles, room inventory and track payments. These features work together to ensure both convenience for customers and operational efficiency for hotel staffs. For instance, users can view booking histories and receipts, update personal details or post reviews and ratings, while admins can oversee room occupants and monitor payment records. 
 
 Overall, the **Hotel Management System** provides a robust and integrated approach to handling hotel operations. It simplifies complex tasks like managing payments or processing customer feedback and provide more efficient and satisfying guest experience. With its intuitive design and emphasis on data accuracy, the system increase productivity for hotel staff while offering convenience to customers. This makes it an essential tool for modernizing hotel management processes.
 
@@ -29,13 +29,13 @@ The main objectives of the Hotel Management System are :
 
 ## 3.0 Features and Functionalities of the web application
 
-The system features and fucntionalities will cover User Profiles, Hotel Rooms, Bookings, Review and Ratings, and Payments.
+The system features and fucntionalities will cover User Profiles, Bookings, Review and Ratings, Payments and Room Allocation Admin.
 
 **User Profile** 
-- The system allows customers to create their account using their name, email and password. After that, the customer and admin can login into the system using their email and password. The customer can view their user profile such as name, email, password, phoner number, booking history, and payment info in the **User Profile** section. Customers can also update their user profile such as name, email, password, phone number, and payment info. Furthermore, customers can also delete their account should they wish to.
-
-**Hotel Rooms** 
-- The system enables customers to view available hotel rooms with detailed information. Customers can search the rooms by type and price. Each room listing provides details such as room descriptions, pricing, amenities, images, and availability, helping customers make decisions.
+<ul> Account Creation: Users can create an account by entering personal details like name, email, phone number and password.
+<ul> Profile Management: Users can view, update and manage their profile details, including contact information, email and password.
+<ul> Booking History: Users can access and review their past and upcoming bookings, helping them track their stay history.
+<ul> Account Deletion: Users can deactivate or delete their accounts when needed, ensuring secure data handling.
 
 **Bookings** 
 - One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms by selecting dates, room, and number of guests. Upon successful booking, customers can view the booking details such as dates and room type. Furthermore, the customer can update their booking details such as dates or number of guest. The customer can also cancel their booking if they want to. On the administrative side, the hotel staffs can manually add and delete booking. 
@@ -45,6 +45,12 @@ The system features and fucntionalities will cover User Profiles, Hotel Rooms, B
 
 **Payments**
 - The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer. However, the customer can cancel payments before confirmation if they change their mind last minute.
+
+**Admin Control Panel**
+<ul> Guest Management: Admins can manage guest details including guest name and their phone number. They can view and update this information as needed.
+<ul> Room Management: Admins can monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. 
+<ul> Reservation Oversight: The system allows admins to track check-in and check-out dates for each reservation, ensuring smooth guest arrivals and departures. Admins can make changes if needed, such as modifying booking dates. 
+<ul> Payment Tracking: Admins can view the total payment for each guest’s booking, track payment status and ensure all payments are processed correctly. 
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
