@@ -47,7 +47,7 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 - Guest Management: Admins can manage guest details including guest name and their phone number. They can view and update this information as needed.
 - Room Management: Admins can monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. 
 - Reservation Oversight: The system allows admins to track check-in and check-out dates for each reservation, ensuring smooth guest arrivals and departures. Admins can make changes if needed, such as modifying booking dates. 
-- Payment Tracking: Admins can view the total payment for each guest’s booking, track payment status and ensure all payments are processed correctly. 
+- Payment Tracking: Admins can view the total payment for each guest’s booking and ensure all payments are processed correctly. 
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
