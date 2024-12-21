@@ -32,10 +32,7 @@ The main objectives of the Hotel Management System are :
 The system features and fucntionalities will cover User Profiles, Bookings, Review and Ratings, Payments and Room Allocation Admin.
 
 **User Profile** 
-- Account Creation: Users can create an account by entering personal details like name, email, phone number and password.
-- Profile Management: Users can view and update their profile details, including contact information, email and password.
-- Booking History: Users can access and review their past and upcoming bookings, helping them track their stay history.
-- Account Deletion: Users can delete their accounts when needed to ensure secure data handling.
+- The system allows customers to create and login to their account using their email and password. Customers can manage their user profiles, providing a convenient and personalized experience. Users can update their personal details such as name, email, and phone numbers.
 
 **Bookings** 
 - One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms by selecting dates, room, and number of guests. Upon successful booking, customers can view the booking details such as dates and room type. Furthermore, the customer can update their booking details such as dates or number of guest. The customer can also cancel their booking if they want to. On the administrative side, the hotel staffs can manually add and delete booking. 
