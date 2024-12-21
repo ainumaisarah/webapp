@@ -33,7 +33,7 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 
 **User Profile** 
 - Account Creation: Users can create an account by entering personal details like name, email, phone number and password.
-- Profile Management: Users can view, update and manage their profile details, including contact information, email and password.
+- Profile Management: Users can view and update their profile details, including contact information, email and password.
 - Booking History: Users can access and review their past and upcoming bookings, helping them track their stay history.
 - Account Deletion: Users can delete their accounts when needed to ensure secure data handling.
 
