@@ -9,9 +9,9 @@
 
 ## 1.0 Introduction of the web application 
 
-A **Hotel Management System** is a web platform designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room inventory, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
+A **Hotel Management System** is a web application designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room allocation, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
 
-The system’s features cover five main areas: **User Profiles**, **Hotel Rooms**, **Bookings**, **Reviews & Ratings** and **Payments**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee room inventory, track bookings, manage payments, and remove inappropriate feedback. These features work together to ensure both convenience for customers and operational efficiency for hotel staff. For instance, users can view booking histories and receipts, update personal details, or cancel reservations, while admins can adjust room availability, update payment statuses, and monitor customer interactions.
+The system’s features cover five main areas: **User Profiles**, **Bookings**, **Reviews & Ratings**, **Payments** and **Room Allocation Admin**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee customers profiles, room inventory and track payments. These features work together to ensure both convenience for customers and operational efficiency for hotel staffs. For instance, users can view booking histories and receipts, update personal details or post reviews and ratings, while admins can oversee room occupants and monitor payment records. 
 
 Overall, the **Hotel Management System** provides a robust and integrated approach to handling hotel operations. It simplifies complex tasks like managing payments or processing customer feedback and provide more efficient and satisfying guest experience. With its intuitive design and emphasis on data accuracy, the system increase productivity for hotel staff while offering convenience to customers. This makes it an essential tool for modernizing hotel management processes.
 
@@ -20,11 +20,11 @@ Overall, the **Hotel Management System** provides a robust and integrated approa
 ## 2.0 Objectives of the web application 
 The main objectives of the Hotel Management System are : 
 
-1. To enable users to manage their profiles and booking details, and provide reviews to ensure all user data is properly stored in the database.
+1. To enable users to create and manage their profiles, confirm booking details and leave reviews to ensure all user data is properly stored in the database.
 
-2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records for efficient data processing.
+2. To provide hotel administrators with tools for managing customer profiles, monitoring booking reservations and tracking payment records for efficient data processing.
 
-3. To implement review and rating features that allow customers to provide feedback on their stay and access information for future booking decisions.
+3. To implement review and rating features that allow customers to provide feedback on their stay and assisting future guests in making better booking options.
 
 
 ## 3.0 Features and Functionalities of the web application
