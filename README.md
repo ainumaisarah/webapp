@@ -32,10 +32,10 @@ The main objectives of the Hotel Management System are :
 The system features and fucntionalities will cover User Profiles, Bookings, Review and Ratings, Payments and Room Allocation Admin.
 
 **User Profile** 
-<ul> Account Creation: Users can create an account by entering personal details like name, email, phone number and password.
-<ul> Profile Management: Users can view, update and manage their profile details, including contact information, email and password.
-<ul> Booking History: Users can access and review their past and upcoming bookings, helping them track their stay history.
-<ul> Account Deletion: Users can deactivate or delete their accounts when needed, ensuring secure data handling.
+- Account Creation: Users can create an account by entering personal details like name, email, phone number and password.
+- Profile Management: Users can view, update and manage their profile details, including contact information, email and password.
+- Booking History: Users can access and review their past and upcoming bookings, helping them track their stay history.
+- Account Deletion: Users can deactivate or delete their accounts when needed, ensuring secure data handling.
 
 **Bookings** 
 - One of the key feature of the system is its booking functionality, which allows customers to reserve hotel rooms seamlessly. Customers can book their desired rooms by selecting dates, room, and number of guests. Upon successful booking, customers can view the booking details such as dates and room type. Furthermore, the customer can update their booking details such as dates or number of guest. The customer can also cancel their booking if they want to. On the administrative side, the hotel staffs can manually add and delete booking. 
@@ -47,10 +47,10 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 - The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer. However, the customer can cancel payments before confirmation if they change their mind last minute.
 
 **Admin Control Panel**
-<ul> Guest Management: Admins can manage guest details including guest name and their phone number. They can view and update this information as needed.
-<ul> Room Management: Admins can monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. 
-<ul> Reservation Oversight: The system allows admins to track check-in and check-out dates for each reservation, ensuring smooth guest arrivals and departures. Admins can make changes if needed, such as modifying booking dates. 
-<ul> Payment Tracking: Admins can view the total payment for each guest’s booking, track payment status and ensure all payments are processed correctly. 
+- Guest Management: Admins can manage guest details including guest name and their phone number. They can view and update this information as needed.
+- Room Management: Admins can monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. 
+- Reservation Oversight: The system allows admins to track check-in and check-out dates for each reservation, ensuring smooth guest arrivals and departures. Admins can make changes if needed, such as modifying booking dates. 
+- Payment Tracking: Admins can view the total payment for each guest’s booking, track payment status and ensure all payments are processed correctly. 
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
