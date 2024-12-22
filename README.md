@@ -58,7 +58,7 @@ Entity Relationship Diagram (ERD) of Hotel Management System
 
 
 
-## 6.0 Project System Captured Screen 
+## 6.0 Prototype Project Captured Screen 
 
 ## 7.0 References
 
