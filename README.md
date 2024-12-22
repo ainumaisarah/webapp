@@ -51,7 +51,7 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 
 ## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
 
-Erd Diagram of Hotel Management System 
+Entity Relationship Diagram (ERD) of Hotel Management System 
 ![image](https://github.com/user-attachments/assets/d5b8dbe9-aa0c-46cd-a099-8e171ea8dd4f)
 
 ## 5.0 Sequence Diagram to represent the interaction of the web application
