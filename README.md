@@ -58,7 +58,16 @@ Entity Relationship Diagram (ERD) of Hotel Management System
 
 
 
-## 6.0 Prototype Project Captured Screen 
+## 6.0 Prototype Project 
+1. Log In Page
+2. Sign Up Page
+3. Profile Page
+4. Room Booking Page 
+5. Payment Page
+6. Review and Rating Page
+7. Admin Log In Page
+8. Admin Control Panel 
 
 ## 7.0 References
-
+1. https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaKEBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuALUuaC7BsACAdICJDYwMmMwZjc5LWE3ZjgtNDQ3Yi1iMWNjLWE3NzY3NGFkMjIwMdgCBeACAQ&ucfs=1&arphpl=1
+2. https://theregencyhotel.my/kualalumpur/
