@@ -29,7 +29,7 @@ The main objectives of the Hotel Management System are :
 
 ## 3.0 Features and Functionalities of the web application
 
-The system features and fucntionalities will cover User Profiles, Bookings, Review and Ratings, Payments and Room Allocation Admin.
+The system features and fucntionalities will cover User Profiles, Bookings, Review and Ratings, Payments and Admin Control Panel.
 
 **User Profile** 
 - The system allows customers to create and login to their account using their email and password. Customers can manage their user profiles, providing a convenient and personalized experience. Users can update their personal details such as name, email, and phone numbers.
