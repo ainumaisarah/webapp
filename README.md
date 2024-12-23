@@ -49,12 +49,12 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 - Reservation Oversight : The system allows admins to track check-in and check-out dates for each reservation and make changes if needed, such as modifying booking dates.
 - Payment Tracking : Admins can view the total payment for each guest’s booking and ensure all payments are processed correctly. 
 
-## 4.0 Entity Relationship Diagram (ERD) for the database tables with relationship
+## 4.0 Entity Relationship Diagram (ERD) 
 
 Entity Relationship Diagram (ERD) of Hotel Management System 
 ![image](https://github.com/user-attachments/assets/d5b8dbe9-aa0c-46cd-a099-8e171ea8dd4f)
 
-## 5.0 Sequence Diagram to represent the interaction of the web application
+## 5.0 Sequence Diagram 
 Sequence diagram of Hotel Management System 
 ![SequenceHotel (3)](https://github.com/user-attachments/assets/c1f4ec02-f498-4b8a-8fb6-32799fd74371)
 
