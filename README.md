@@ -55,8 +55,8 @@ Entity Relationship Diagram (ERD) of Hotel Management System
 ![image](https://github.com/user-attachments/assets/d5b8dbe9-aa0c-46cd-a099-8e171ea8dd4f)
 
 ## 5.0 Sequence Diagram to represent the interaction of the web application
-
-
+Sequence diagram of Hotel Management System 
+![SequenceHotel (3)](https://github.com/user-attachments/assets/c1f4ec02-f498-4b8a-8fb6-32799fd74371)
 
 ## 6.0 Prototype Project 
 1. Log In Page
