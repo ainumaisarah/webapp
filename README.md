@@ -44,10 +44,7 @@ The system features and fucntionalities will cover User Profiles, Bookings, Revi
 - The system ensures that customers can make payments for their bookings using multiple payment options, including credit cards, debit cards, and online banking, providing flexibility and convenience. Upon successful payment, the system will provides receipts as a confirmation of successful payments to the customer. However, the customer can cancel payments before confirmation if they change their mind last minute.
 
 **Admin Control Panel**
-- Guest Management : Admins can manage guest details including guest name and their phone number. They can view and update this information as needed.
-- Room Management : Admins can monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. 
-- Reservation Oversight : The system allows admins to track check-in and check-out dates for each reservation and make changes if needed, such as modifying booking dates.
-- Payment Tracking : Admins can view the total payment for each guest’s booking and ensure all payments are processed correctly. 
+- Admins can manage guest details including guest name and their phone number. They can view and update this information as needed. The admins can also monitor and manage room assignments, displaying details such as room number, room type and price. They can also update room availability and adjust prices. The system allows admins to track check-in and check-out dates for each reservation and make changes if needed, such as modifying booking dates. Lastly, Admins can view the total payment for each guest’s booking and ensure all payments are processed correctly. 
 
 ## 4.0 Entity Relationship Diagram (ERD) 
 
