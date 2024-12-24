@@ -66,5 +66,5 @@ Sequence diagram of Hotel Management System
 8. Admin Control Panel 
 
 ## 7.0 References
-1. https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaKEBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuALUuaC7BsACAdICJDYwMmMwZjc5LWE3ZjgtNDQ3Yi1iMWNjLWE3NzY3NGFkMjIwMdgCBeACAQ&ucfs=1&arphpl=1
-2. https://theregencyhotel.my/kualalumpur/
+1. Jalan Bukit Bintang Hotel | JW Marriott Hotel Kuala Lumpur, www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/overview/. Accessed 24 Dec. 2024. AECiAIBqAIDuALUuaC7BsACAdICJDYwMmMwZjc5LWE3ZjgtNDQ3Yi1iMWNjLWE3NzY3NGFkMjIwMdgCBeACAQ&ucfs=1&arphpl=1
+2. The Regency Hotel, theregencyhotel.my/kualalumpur/. Accessed 24 Dec. 2024.  
