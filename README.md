@@ -9,11 +9,11 @@
 
 ## 1.0 Introduction of the web application 
 
-A **Hotel Management System** is a web application designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room allocation, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
+  A **Hotel Management System** is a web application designed to simplify hotel operations and provide an enhanced experience for guests. It enables administrators and customers to efficiently manage various aspects of hotel services, such as user accounts, room allocation, reservations, payments and feedback. By incorporating CRUD (Create, Read, Update, Delete) functionalities, the system ensures efficient data handling, making it a reliable and user-friendly solution for the hospitality industry.
 
-The system’s features cover five main areas: **User Profiles**, **Bookings**, **Reviews & Ratings**, **Payments** and **Admin Control Panel**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee customers profiles, room inventory and track payments. These features work together to ensure both convenience for customers and operational efficiency for hotel staffs. For instance, users can view booking histories and receipts, update personal details or post reviews and ratings, while admins can oversee room occupants and monitor payment records. 
+  The system’s features cover five main areas: **User Profiles**, **Bookings**, **Reviews & Ratings**, **Payments** and **Admin Control Panel**. Customers can create and manage personal profiles, search for and book rooms, and leave reviews for their stays, while administrators can oversee customers profiles, room inventory and track payments. These features work together to ensure both convenience for customers and operational efficiency for hotel staffs. For instance, users can view booking histories and receipts, update personal details or post reviews and ratings, while admins can oversee room occupants and monitor payment records. 
 
-Overall, the **Hotel Management System** provides a robust and integrated approach to handling hotel operations. It simplifies complex tasks like managing payments or processing customer feedback and provide more efficient and satisfying guest experience. With its intuitive design and emphasis on data accuracy, the system increase productivity for hotel staff while offering convenience to customers. This makes it an essential tool for modernizing hotel management processes.
+  Overall, the **Hotel Management System** provides a robust and integrated approach to handling hotel operations. It simplifies complex tasks like managing payments or processing customer feedback and provide more efficient and satisfying guest experience. With its intuitive design and emphasis on data accuracy, the system increase productivity for hotel staff while offering convenience to customers. This makes it an essential tool for modernizing hotel management processes.
 
 
 
@@ -66,5 +66,7 @@ Sequence diagram of Hotel Management System
 8. Admin Control Panel 
 
 ## 7.0 References
-1. https://www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/overview/ 
-2. https://theregencyhotel.my/kualalumpur/room-list/ 
+1. Booking.com. (2024). JW Marriott Kuala Lumpur. Booking.com. https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaKEBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuALUuaC7BsACAdICJDYwMmMwZjc5LWE3ZjgtNDQ3Yi1iMWNjLWE3NzY3NGFkMjIwMdgCBeACAQ&ucfs=1&arphpl=1
+
+2. The Regency Hotel – Kuala Lumpur. (2020). Theregencyhotel.my. https://theregencyhotel.my/kualalumpur/
+
