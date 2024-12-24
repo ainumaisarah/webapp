@@ -56,14 +56,46 @@ Sequence Diagram of Hotel Management System
 ![SequenceHotel (3)](https://github.com/user-attachments/assets/c1f4ec02-f498-4b8a-8fb6-32799fd74371)
 
 ## 6.0 Prototype Project 
-1. Log In Page
-2. Sign Up Page
-3. Profile Page
-4. Room Booking Page 
-5. Payment Page
-6. Review and Rating Page
-7. Admin Log In Page
-8. Admin Control Panel 
+1. Home Page
+
+![1](https://github.com/user-attachments/assets/c12cf21f-0466-4785-bdfd-8f288b55ef95)
+
+2. Log In Page
+
+![3](https://github.com/user-attachments/assets/32ad372a-fbfa-465e-8140-46710c72d9b2)
+
+
+3. Sign Up Page
+
+![2](https://github.com/user-attachments/assets/b32bbb4e-5dce-48e9-91da-a7c3f4adde1c)
+
+4. Profile Page
+
+![5](https://github.com/user-attachments/assets/da66bc00-80df-4869-9565-d32145a147e2)
+
+![6](https://github.com/user-attachments/assets/65b14ca5-b1ec-4702-8617-4db4d45b9af8)
+
+5. Room Booking Page 
+
+![7](https://github.com/user-attachments/assets/19cda4aa-111b-477f-ba99-35c06915f374)
+
+6. Payment Page
+
+![10](https://github.com/user-attachments/assets/1332eb7c-51da-46e5-9dac-4b13812c3e3f)
+
+![11](https://github.com/user-attachments/assets/2a515092-b0d4-4070-86e4-06dc7b47b24a)
+
+7. Review and Rating Page
+
+![9](https://github.com/user-attachments/assets/89bd0196-eb12-45ef-92cf-25fde6b19d2b)
+
+8. Admin Log In Page
+
+![4](https://github.com/user-attachments/assets/fc19c9d8-3455-41ea-a71d-0e885464861d)
+
+9. Admin Control Panel 
+
+![8](https://github.com/user-attachments/assets/8437e5d4-a591-465b-9427-ae5b4a4ce654)
 
 ## 7.0 References
 1. Booking.com. (2024). JW Marriott Kuala Lumpur. Booking.com. https://www.booking.com/hotel/my/jw-marriott-kuala-lumpur.html?aid=304142&label=gen173nr-1FCAEoggI46AdIM1gEaKEBiAEBmAExuAEHyAEM2AEB6AEB-AECiAIBqAIDuALUuaC7BsACAdICJDYwMmMwZjc5LWE3ZjgtNDQ3Yi1iMWNjLWE3NzY3NGFkMjIwMdgCBeACAQ&ucfs=1&arphpl=1
