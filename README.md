@@ -102,5 +102,5 @@ Sequence Diagram of Hotel Management System
 
 2. The Regency Hotel – Kuala Lumpur. (2020). Theregencyhotel.my. https://theregencyhotel.my/kualalumpur/
 
-3. Wondershare Edraw. “UML Sequence Diagram Tutorial | Easy to Understand with Examples.” YouTube, youtu.be/gzKe7yt8qEo?si=YOD5vk481xhBBdgz. Accessed 24 Dec. 2024. 
+3. Wondershare Edraw. “UML Sequence Diagram Tutorial | Easy to Understand with Examples.” YouTube, youtu.be/gzKe7yt8qEo?si=YOD5vk481xhBBdgz 
 
