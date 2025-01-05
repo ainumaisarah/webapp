@@ -132,7 +132,8 @@ body {
 }
 
 .stars {
-    color: #FFD700;
+    font-size: 24px;
+    color: #FFD700; /* Gold color for stars */
 }
 
 .review-form {

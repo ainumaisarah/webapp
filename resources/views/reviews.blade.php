@@ -29,27 +29,14 @@
     <div class="review-form">
         <h3>Review</h3>
         <div class="rating-options">
-            <span>Comfort</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Staff</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Facilities</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9734;</span>
-            <span>Cleanliness</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Location</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span>Value For Money</span>
-            <span class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
+            <span>Rating</span>
+            <div class="stars" data-score="0" id="rating"></div>
         </div>
         <form action="{{ route('reviews.store') }}" method="POST">
             @csrf
-            <div class="review-form">
-                <h3>Review</h3>
-                <input type="number" name="rating" placeholder="Rating" step="0.1" min="0" max="5" required>
-                <textarea name="review_text" placeholder="Your review..." required></textarea>
-                <button type="submit" class="btn-post">Post Review</button>
-            </div>
+            <input type="hidden" name="rating" id="rating-score">
+            <textarea name="review_text" placeholder="Your review..." required></textarea>
+            <button type="submit" class="btn-post">Post Review</button>
         </form>
     </div>
 
@@ -63,34 +50,25 @@
                 <p>Deluxe Twin Room <br> 1 night - November 2024</p>
             </div>
             <div class="review-text">
-                <p><strong>Great Stay</strong></p>
-                <p>"What I liked the most was how well centrally located this hotel was in proximity to all the must-see sites in Kuala Lumpur. I had a great stay."</p>
-                <span class="review-meta">Posted on 5 Dec 2024 at 2:56 PM</span>
-                <div class="review-actions">
-                    <button class="helpful">Helpful</button>
-                    <button class="unhelpful">Unhelpful</button>
-                    <button class="report">Report</button>
-                </div>
-            </div>
-        </div>
-
-        <div class="guest-review">
-            <div class="guest-info">
-                <p><strong>Saeed</strong> <br> Qatar</p>
-                <p>Executive Deluxe King <br> 3 nights - October 2024</p>
-            </div>
-            <div class="review-text">
-                <p><strong>Exceptional</strong></p>
-                <p>"The location is top-notch, the front staff hospitality and not to forget the variety of breakfasts, which is awesome."</p>
-                <span class="review-meta">Posted on 5 Dec 2024 at 2:56 PM</span>
-                <div class="review-actions">
-                    <button class="helpful">Helpful</button>
-                    <button class="unhelpful">Unhelpful</button>
-                    <button class="report">Report</button>
-                </div>
+                <!-- Review text here -->
             </div>
         </div>
     </div>
 </div>
 
-  @endsection
+<script>
+    $(document).ready(function() {
+        $('#rating').raty({
+            half: true,
+            starType: 'i', // Use <i> tags for stars
+            starOn: 'fa fa-star',
+            starHalf: 'fa fa-star-half-o',
+            starOff: 'fa fa-star-o',
+            click: function(score, evt) {
+                $('#rating-score').val(score);
+            }
+        });
+    });
+</script>
+
+@endsection
