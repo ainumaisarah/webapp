@@ -28,6 +28,35 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <div class="top-bar">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 social-media">
+                    <a href="#"><i class="icon ion-logo-facebook"></i></a>
+                    <a href="#"><i class="icon ion-logo-twitter"></i></a>
+                    <a href="#"><i class="icon ion-logo-instagram"></i></a>
+                </div>
+                <div class="col-md-6 text-right">
+                    @if (Route::has('login'))
+                        <div class="top-right links">
+                            @auth
+                                <form action="{{ route('logout') }}" method="post" style="display: inline;">
+                                    @csrf
+                                    <button type="submit" class="btn btn-link" style="color: #fff; text-decoration: none;">Logout</button>
+                                </form>
+                            @else
+                                <a href="{{ route('login') }}">Login</a>
+                                <span class="separator">|</span>
+                                @if (Route::has('register'))
+                                    <a href="{{ route('register') }}">Register</a>
+                                @endif
+                            @endauth
+                        </div>
+                    @endif
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">
@@ -119,22 +148,20 @@
 
 
   <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/bootstrap-datepicker.js"></script>
-  <script src="js/jquery.timepicker.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+    <script src="js/jquery-migrate-3.0.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/jquery.easing.1.3.js"></script>
+    <script src="js/jquery.waypoints.min.js"></script>
+    <script src="js/jquery.stellar.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/jquery.magnific-popup.min.js"></script>
+    <script src="js/aos.js"></script>
+    <script src="js/jquery.animateNumber.min.js"></script>
+    <script src="js/bootstrap-datepicker.js"></script>
+    <script src="js/jquery.timepicker.min.js"></script>
+    <script src="js/scrollax.min.js"></script>
+    <script src="js/main.js"></script>
 
   </body>
 </html>
