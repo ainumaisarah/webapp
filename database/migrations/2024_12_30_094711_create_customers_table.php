@@ -16,8 +16,10 @@ return new class extends Migration
             $table->string('cust_id', 8)->unique();
             $table->string('cust_name');
             $table->string('cust_email')->unique();
-            $table->string('cust_pass');
-            $table->date('cust_phone')->unique();
+            $table->timestamp('email_verified_at')->nullable();
+            $table->string('cust_pass'); // Use cust_pass instead of password
+            $table->rememberToken();
+            $table->string('cust_phone')->unique(); // Change cust_phone to string
             $table->timestamps();
         });
     }

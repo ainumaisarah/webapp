@@ -16,8 +16,8 @@ class ReviewController extends Controller
             'rating' => 'required|numeric|min:0|max:5',
         ]);
 
-        $user = Auth::user();
-        $cust_id = $user->cust_id;
+        $customer = Auth::user(); // This will now return an instance of Customer
+        $cust_id = $customer->cust_id;
 
         // Retrieve the room_id based on the booking list
         $booking = Booking::where('cust_id', $cust_id)
@@ -37,6 +37,6 @@ class ReviewController extends Controller
         $review->review_date = now();
         $review->save();
 
-        return redirect()->back()->with('success', 'Review posted successfully!');
+        return redirect()->back()->with('success', 'Review submitted successfully.');
     }
 }

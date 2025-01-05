@@ -60,7 +60,7 @@
     $(document).ready(function() {
         $('#rating').raty({
             half: true,
-            starType: 'i', // Use <i> tags for stars
+            starType: 'i',
             starOn: 'fa fa-star',
             starHalf: 'fa fa-star-half-o',
             starOff: 'fa fa-star-o',
