@@ -12,12 +12,28 @@ class UpdateCustomersTable extends Migration
     public function up(): void
     {
         Schema::table('customers', function (Blueprint $table) {
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
-            $table->string('cust_pass')->change(); // Ensure cust_pass is used for authentication
-            $table->string('cust_phone')->change(); // Change cust_phone to string
+            // Add email_verified_at column only if it doesn't exist
+            if (!Schema::hasColumn('customers', 'email_verified_at')) {
+                $table->timestamp('email_verified_at')->nullable();
+            }
+
+            // Add remember_token column only if it doesn't exist
+            if (!Schema::hasColumn('customers', 'remember_token')) {
+                $table->rememberToken();
+            }
+
+            // Ensure cust_pass is a string for authentication
+            if (Schema::hasColumn('customers', 'cust_pass')) {
+                $table->string('cust_pass')->change();
+            }
+
+            // Ensure cust_phone is a string
+            if (Schema::hasColumn('customers', 'cust_phone')) {
+                $table->string('cust_phone')->change();
+            }
         });
     }
+
 
     /**
      * Reverse the migrations.
