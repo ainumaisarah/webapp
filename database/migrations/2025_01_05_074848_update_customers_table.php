@@ -34,6 +34,7 @@ class UpdateCustomersTable extends Migration
         });
     }
 
+
     /**
      * Reverse the migrations.
      */
