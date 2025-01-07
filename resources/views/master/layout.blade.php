@@ -33,17 +33,17 @@
                 </div>
                 <div class="col-md-6 text-right">
                     @if (Route::has('login'))
-                        <div class="top-right links">
+                        <div class="top-right links" style="position: relative; z-index: 10;">
                             @auth
                                 <form action="{{ route('logout') }}" method="post" style="display: inline;">
                                     @csrf
                                     <button type="submit" class="btn btn-link" style="color: #fff; text-decoration: none;">Logout</button>
                                 </form>
                             @else
-                                <a href="{{ route('login') }}">Login</a>
-                                <span class="separator">|</span>
+                                <a href="{{ route('login') }}" style="margin-right: 10px; color: #fff; text-decoration: none;">Login</a>
+                                <span class="separator" style="color: #fff;">|</span>
                                 @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">Register</a>
+                                    <a href="{{ route('register') }}" style="margin-left: 10px; color: #fff; text-decoration: none;">Register</a>
                                 @endif
                             @endauth
                         </div>
@@ -54,24 +54,25 @@
     </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
-	    <div class="container">
-	      <a class="navbar-brand" href="index.html">Deluxe</a>
-	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="oi oi-menu"></span> Menu
-	      </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Deluxe</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="oi oi-menu"></span> Menu
+            </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
-	          <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
-	  </nav>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
+                    <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
+                    <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
+                    <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+                    <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
     <!-- END nav -->
 
     @yield('content')

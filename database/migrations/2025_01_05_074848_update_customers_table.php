@@ -12,10 +12,18 @@ class UpdateCustomersTable extends Migration
     public function up(): void
     {
         Schema::table('customers', function (Blueprint $table) {
-            $table->timestamp('email_verified_at')->nullable();
-            $table->rememberToken();
-            $table->string('cust_pass')->change(); // Ensure cust_pass is used for authentication
-            $table->string('cust_phone')->change(); // Change cust_phone to string
+            if (!Schema::hasColumn('customers', 'email_verified_at')) {
+                $table->timestamp('email_verified_at')->nullable();
+            }
+            if (!Schema::hasColumn('customers', 'remember_token')) {
+                $table->rememberToken();
+            }
+            if (Schema::hasColumn('customers', 'cust_pass')) {
+                $table->string('cust_pass')->change(); // Ensure cust_pass is used for authentication
+            }
+            if (Schema::hasColumn('customers', 'cust_phone')) {
+                $table->string('cust_phone')->change(); // Change cust_phone to string
+            }
         });
     }
 
@@ -31,10 +39,7 @@ class UpdateCustomersTable extends Migration
             if (Schema::hasColumn('customers', 'remember_token')) {
                 $table->dropColumn('remember_token');
             }
-            // Revert cust_pass column if needed
-            $table->string('cust_pass')->change();
-            // Revert cust_phone to its original type if needed
-            $table->date('cust_phone')->change();
+            // Revert cust_pass and cust_phone changes if necessary
         });
     }
 }

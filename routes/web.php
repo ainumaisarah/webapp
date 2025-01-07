@@ -13,6 +13,10 @@ Route::get('/reviews', function () {
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
