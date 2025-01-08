@@ -1,4 +1,4 @@
-<x-guest-layout style="background-image:url(images/login.jpg);">
+<x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
@@ -60,3 +60,12 @@
         </div>
     </x-authentication-card>
 </x-guest-layout>
+
+<style>
+    body {
+        background-image:url(images/login.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
+</style>
