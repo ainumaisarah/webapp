@@ -20,9 +20,27 @@
     <div class="overall-rating">
         <h2>Reviews</h2>
         <div class="rating-score">
-            <span class="score">9.1</span>
-            <span class="label">Excellent</span>
-            <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+            <span class="score">{{ number_format($averageRating, 1) }}</span>
+            <span class="label">
+                @if ($averageRating >= 9)
+                    Excellent
+                @elseif ($averageRating >= 7)
+                    Good
+                @elseif ($averageRating >= 5)
+                    Average
+                @else
+                    Poor
+                @endif
+            </span>
+            <div class="stars">
+                @for ($i = 0; $i < 5; $i++)
+                    @if ($i < floor($averageRating))
+                        &#9733;
+                    @else
+                        &#9734;
+                    @endif
+                @endfor
+            </div>
         </div>
     </div>
 
@@ -42,17 +60,22 @@
 
     <div class="guest-reviews">
         <h3>Guest Reviews</h3>
-        <p>4,789 reviews</p>
+        <p>{{ $reviews->count() }} reviews</p>
 
-        <div class="guest-review">
-            <div class="guest-info">
-                <p><strong>Matthew</strong> <br> Spain</p>
-                <p>Deluxe Twin Room <br> 1 night - November 2024</p>
+        @foreach ($reviews as $review)
+            <div class="guest-review">
+                <div class="guest-info">
+                    <p><strong>{{ $review->user->name }}</strong> <br> {{ $review->user->country }}</p>
+                    <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : now()->format('F Y') }}</p>
+                </div>
+                <div class="review-text">
+                    {{ $review->review_text }}
+                </div>
+                <div class="review-date">
+                    Posted on {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : now()->format('j F Y \a\t g:iA') }}
+                </div>
             </div>
-            <div class="review-text">
-                <!-- Review text here -->
-            </div>
-        </div>
+        @endforeach
     </div>
 </div>
 

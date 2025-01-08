@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
 
+    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
     <link rel="stylesheet" href="css/animate.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
@@ -18,40 +19,12 @@
     <link rel="stylesheet" href="css/jquery.timepicker.css">
     <link rel="stylesheet" href="css/flaticon.css">
     <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 social-media">
-                    <a href="#"><i class="icon ion-logo-facebook"></i></a>
-                    <a href="#"><i class="icon ion-logo-twitter"></i></a>
-                    <a href="#"><i class="icon ion-logo-instagram"></i></a>
-                </div>
-                <div class="col-md-6 text-right">
-                    @if (Route::has('login'))
-                        <div class="top-right links">
-                            @auth
-                                <form action="{{ route('logout') }}" method="post" style="display: inline;">
-                                    @csrf
-                                    <button type="submit" class="btn btn-link" style="color: #fff; text-decoration: none;">Logout</button>
-                                </form>
-                            @else
-                                <a href="{{ route('login') }}">Login</a>
-                                <span class="separator">|</span>
-                                @if (Route::has('register'))
-                                    <a href="{{ route('register') }}">Register</a>
-                                @endif
-                            @endauth
-                        </div>
-                    @endif
-                </div>
-            </div>
-        </div>
-    </div>
+    <!--Top BE-->
+
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container">

@@ -14,7 +14,7 @@ return new class extends Migration
         Schema::create('booking', function (Blueprint $table) {
             $table->id();
             $table->string('booking_id')->unique();
-            $table->string('cust_id'); // Foreign Key
+            $table->string('user_id'); // Foreign Key
             $table->string('room_id'); // Foreign Key
             $table->date('check_in_date');
             $table->date('check_out_date');
@@ -23,7 +23,7 @@ return new class extends Migration
             $table->timestamps(); // Adds created_at and updated_at columns
 
             // Foreign Key Constraints
-            $table->foreign('cust_id')->references('cust_id')->on('customers')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('room_id')->references('room_id')->on('rooms')->onDelete('cascade');
         });
     }

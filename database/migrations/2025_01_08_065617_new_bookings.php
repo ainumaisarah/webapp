@@ -11,15 +11,17 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
-            $table->string('review_id', 8)->unique();
-            $table->string('user_id', 8);
-            $table->float('rating');
-            $table->string('review_text');
-            $table->date('review_date')->nullable();
-            $table->timestamps();
+        Schema::create('bookings', function (Blueprint $table) {
+            $table->string('booking_id')->unique();
+            $table->unsignedBigInteger('user_id'); // Foreign Key
+            $table->string('room_id'); // Foreign Key
+            $table->date('check_in_date');
+            $table->date('check_out_date');
+            $table->integer('guest_count');
+            $table->string('booking_status');
+            $table->timestamps(); // Adds created_at and updated_at columns
 
+            // Foreign Key Constraints
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreign('room_id')->references('room_id')->on('rooms')->onDelete('cascade');
         });
@@ -30,6 +32,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reviews');
+        //
     }
 };

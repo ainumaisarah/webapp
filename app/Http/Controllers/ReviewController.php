@@ -4,11 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Review;
-use App\Models\Booking;
 use Illuminate\Support\Facades\Auth;
 
 class ReviewController extends Controller
 {
+    public function index()
+    {
+        $reviews = Review::all(); // Fetch all reviews from the database
+        $averageRating = $reviews->avg('rating');
+        return view('reviews', compact('reviews', 'averageRating'));
+    }
+
     public function store(Request $request)
     {
         $request->validate([
@@ -16,22 +22,13 @@ class ReviewController extends Controller
             'rating' => 'required|numeric|min:0|max:5',
         ]);
 
-        $customer = Auth::user(); // This will now return an instance of Customer
-        $cust_id = $customer->cust_id;
-
-        // Retrieve the room_id based on the booking list
-        $booking = Booking::where('cust_id', $cust_id)
-                          ->whereDate('booking_date', now()->toDateString())
-                          ->first();
-
-        if (!$booking) {
-            return redirect()->back()->with('error', 'No booking found for today.');
-        }
+        $user = Auth::user();
+        $userId = $user ? $user->id : -1;
+        $userName = $user ? $user->name : 'Anonymous';
 
         $review = new Review();
-        $review->review_id = uniqid();
-        $review->cust_id = $cust_id;
-        $review->room_id = $booking->room_id;
+        $review->user_id = $userId;
+        $review->user_name = $userName;
         $review->rating = $request->input('rating');
         $review->review_text = $request->input('review_text');
         $review->review_date = now();

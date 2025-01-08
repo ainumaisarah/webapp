@@ -22,3 +22,4 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 });
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');

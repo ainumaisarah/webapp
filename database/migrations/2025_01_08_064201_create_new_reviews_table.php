@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('reviews', function (Blueprint $table) {
-            $table->id();
+            $table->id(); // Auto-incrementing primary key
             $table->string('review_id', 8)->unique();
-            $table->string('user_id', 8);
+            $table->unsignedBigInteger('user_id');
+            $table->string('user_name');
             $table->float('rating');
             $table->string('review_text');
             $table->date('review_date')->nullable();
             $table->timestamps();
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
-            $table->foreign('room_id')->references('room_id')->on('rooms')->onDelete('cascade');
         });
     }
 
@@ -30,6 +30,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('reviews');
+        Schema::dropIfExists('new_reviews');
     }
 };
