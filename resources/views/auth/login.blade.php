@@ -1,4 +1,4 @@
-<x-guest-layout style="background-image: url('C:\Users\lenovo\Downloads\login.jpg'); background-size: cover; background-repeat: no-repeat; background-attachment: fixed; background-position: center;">
+<x-guest-layout>
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
