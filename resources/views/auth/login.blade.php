@@ -1,8 +1,12 @@
-<x-guest-layout>
+<x-guest-layout style="background-image:url(images/login.jpg);">
     <x-authentication-card>
         <x-slot name="logo">
             <x-authentication-card-logo />
         </x-slot>
+
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold text-black">{{ __('LOGIN') }}</h2>
+        </div>
 
         <x-validation-errors class="mb-4" />
 
@@ -44,5 +48,15 @@
                 </x-button>
             </div>
         </form>
+
+        <!-- Add the Admin Link Here -->
+        <div class="mt-4 text-center">
+            <p class="text-sm text-gray-600">
+                {{ __('Are you an admin?') }}
+                <a href="{{ route('admin.login') }}" class="text-indigo-600 hover:underline">
+                    {{ __('Click here') }}
+                </a>
+            </p>
+        </div>
     </x-authentication-card>
 </x-guest-layout>
