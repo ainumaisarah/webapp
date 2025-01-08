@@ -9,12 +9,14 @@
     <div style="background-color: #f0f4f8;">
         <div class="max-w-7xl mx-auto py-10 sm:px-6 lg:px-8">
             @if (Laravel\Fortify\Features::canUpdateProfileInformation())
-                <div class="bg-white shadow sm:rounded-lg p-6">
-                    @livewire('profile.update-profile-information-form')
-                </div>
+    <div class="bg-white shadow sm:rounded-lg p-6 flex flex-col items-center">
+        <!-- Centered Content -->
+        @livewire('profile.update-profile-information-form')
+        <x-section-border />
+    </div>
+    @endif
 
-                <x-section-border />
-            @endif
+
 
             @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
                 <div class="bg-white shadow sm:rounded-lg p-6 mt-6">
