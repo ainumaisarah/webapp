@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
+use App\Http\Controllers\PaymentController;
+
 
 Route::get('/', function () {
     return view('mainpage');
@@ -13,6 +15,10 @@ Route::get('/reviews', function () {
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
+Route::get('/login', function () {
+    return view('auth.login');
+})->name('login');
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
@@ -23,3 +29,9 @@ Route::middleware([
     })->name('dashboard');
 });
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
+
+
+
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
+
