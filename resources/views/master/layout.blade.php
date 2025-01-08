@@ -24,7 +24,32 @@
   </head>
   <body>
     <!--Top BE-->
-
+    <div class="top_bar">
+        <div class="container">
+            <div class="row">
+                <div class="col d-flex justify-content-between align-items-center">
+                    <div class="social">
+                        <ul class="social_list">
+                            <li class="social_list_item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="user_box">
+                        @if (Auth::check())
+                            <form method="POST" action="{{ route('logout') }}" class="user_box">
+                                @csrf
+                                <button type="submit" id="logoutbtn">Logout</button>
+                            </form>
+                        @else
+                            <div class="user_box_login user_box_link"><a href="{{ route('login') }}">Sign In</a></div>
+                            <div class="user_box_register user_box_link"><a href="{{ route('register') }}">Register</a></div>
+                        @endif
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">

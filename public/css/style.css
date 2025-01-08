@@ -40,6 +40,7 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
+
 html {
   font-family: sans-serif;
   line-height: 1.15;
@@ -66,6 +67,80 @@ body {
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
+
+/* Top Bar Styles */
+.top_bar {
+    background-color: #333;
+    color: #fff;
+    padding: 8px 0;
+    position: relative;
+    z-index: 1000; /* Ensure the top bar is above other elements */
+}
+
+.top_bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top_bar .social {
+    display: flex;
+    align-items: center;
+}
+
+.top_bar .social_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+.top_bar .social_list_item {
+    margin-right: 10px;
+}
+
+.top_bar .social_list_item a {
+    color: #fff;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.top_bar .social_list_item a:hover {
+    color: #f39c12;
+}
+
+.top_bar .user_box {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.top_bar .user_box_link {
+    margin-left: 20px;
+}
+
+.top_bar .user_box_link a {
+    color: #fff;
+    font-size: 14px;
+    transition: color 0.3s;
+}
+
+.top_bar .user_box_link a:hover {
+    color: #f39c12;
+}
+
+.top_bar .user_box button {
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.top_bar .user_box button:hover {
+    color: #f39c12;
+}
 
 
 /* Reviews Section Styles */
