@@ -45,4 +45,45 @@
             @endif
         </div>
     </div>
+
+    <div class="container">
+        <h2 class="mb-4">My Bookings</h2>
+
+        @if($bookings->isEmpty())
+            <p>You have no bookings at the moment.</p>
+        @else
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Room ID</th>
+                        <th>Check-In Date</th>
+                        <th>Check-Out Date</th>
+                        <th>Actions</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach($bookings as $booking)
+                        <tr>
+                            <td>{{ $loop->iteration }}</td>
+                            <td>{{ $booking->room_id }}</td>
+                            <td>{{ $booking->check_in_date }}</td>
+                            <td>{{ $booking->check_out_date }}</td>
+                            <td>
+                                <!-- Action Buttons -->
+                                <a href="{{ route('bookings.show', $booking->booking_id) }}" class="btn btn-info btn-sm">View</a>
+                                <a href="{{ route('bookings.edit', $booking->booking_id) }}" class="btn btn-warning btn-sm">Edit</a>
+                                <form action="{{ route('bookings.destroy', $booking->booking_id) }}" method="POST" style="display:inline;">
+                                    @csrf
+                                    @method('DELETE')
+                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
+                                </form>
+                            </td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+        @endif
+    </div>
+
 </x-app-layout>

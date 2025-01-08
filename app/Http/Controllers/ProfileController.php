@@ -7,10 +7,15 @@ use Illuminate\Support\Facades\Auth;
 
 class ProfileController extends Controller
 {
+
     public function show()
-    {
-        return view('profile.show');
-    }
+{
+    // Fetch bookings for the authenticated user
+    $bookings = \App\Models\Booking::where('user_id', auth()->id())->get();
+
+    // Pass the bookings to the view
+    return view('profile.show', ['bookings' => $bookings]);
+}
 
     public function update(Request $request)
     {
