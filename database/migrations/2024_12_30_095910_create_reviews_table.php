@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('review_id', 8)->unique();
             $table->string('user_id', 8);
+            $table->string('room_id', 8);
             $table->float('rating');
             $table->string('review_text');
             $table->date('review_date')->nullable();
