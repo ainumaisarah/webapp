@@ -21,7 +21,8 @@
     <link rel="stylesheet" href="css/icomoon.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/raty/2.7.1/jquery.raty.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  </head>
+
+</head>
   <body>
     <!--Top BE-->
 
