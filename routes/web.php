@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PaymentController;
+use App\Http\Controllers\BookingController;
+use App\Http\Controllers\AdminController;
 
 
 Route::get('/', function () {
@@ -16,6 +18,10 @@ Route::get('/reviews', function () {
 Route::get('/contact', function () {
     return view('contact');
 });
+
+Route::get('/admin', function () {
+    return view('admin');
+})->name('admin');
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
@@ -39,3 +45,15 @@ Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index'
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
 
+// admin details
+Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
+Route::post('/admin', [AdminController::class, 'admindetail']);
+
+
+//admin page get data part
+Route::get('/admin', [BookingController::class, 'index'])->name('admin.index');
+Route::get('/admin/bookings', [BookingController::class, 'index'])->name('bookings.index');
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
+Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
+Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
