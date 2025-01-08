@@ -22,12 +22,10 @@
         <div class="rating-score">
             <span class="score">{{ number_format($averageRating, 1) }}</span>
             <span class="label">
-                @if ($averageRating >= 9)
+                @if ($averageRating >= 4)
                     Excellent
-                @elseif ($averageRating >= 7)
+                @elseif ($averageRating >= 3)
                     Good
-                @elseif ($averageRating >= 5)
-                    Average
                 @else
                     Poor
                 @endif
