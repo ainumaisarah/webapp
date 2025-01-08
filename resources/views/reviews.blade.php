@@ -1,6 +1,8 @@
 @extends('master.layout')
 @section('content')
-
+@php
+    use Carbon\Carbon;
+@endphp
 <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
@@ -14,7 +16,6 @@
       </div>
     </div>
   </div>
-
 
 <div class="reviews-container">
     <div class="overall-rating">
@@ -64,13 +65,13 @@
             <div class="guest-review">
                 <div class="guest-info">
                     <p><strong>{{ $review->user->name }}</strong> <br> {{ $review->user->country }}</p>
-                    <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : now()->format('F Y') }}</p>
+                    <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : Carbon::now()->format('F Y') }}</p>
                 </div>
                 <div class="review-text">
                     {{ $review->review_text }}
                 </div>
                 <div class="review-date">
-                    Posted on {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : now()->format('j F Y \a\t g:iA') }}
+                    Posted on {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
                 </div>
             </div>
         @endforeach
