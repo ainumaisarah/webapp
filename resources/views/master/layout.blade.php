@@ -42,6 +42,7 @@
                     <div class="user_box d-flex ml-auto"> <!-- Ensure user_box is treated as flex and aligned to the right -->
                         @if (Auth::check())
                         <div class="user_box_profile user_box_link"><a href="{{ route('profile.show') }}">Profile</a></div>
+                        <div class="spacer"></div>
                         <form method="POST" action="{{ route('logout') }}" class="user_box">
                             @csrf
                             <button type="submit" id="logoutbtn">Logout</button>
