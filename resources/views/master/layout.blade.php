@@ -42,12 +42,19 @@
                     <!-- User Box (Login/Register) on the Right -->
                     <div class="user_box d-flex ml-auto"> <!-- Ensure user_box is treated as flex and aligned to the right -->
                         @if (Auth::check())
-                        <div class="user_box_profile user_box_link"><a href="{{ route('profile.show') }}">Profile</a></div>
+                        <div class="user_box_profile user_box_link">
+                            <a href="{{ route('profile.show') }}">Profile</a>
+                        </div>
                         <div class="spacer"></div>
-                        <form method="POST" action="{{ route('logout') }}" class="user_box">
+                        <div class="user_box_link">
+                            <a href="#" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout</a>
+                        </div>
+
+                        <!-- Hidden Form for Logout -->
+                        <form id="logout-form" method="POST" action="{{ route('logout') }}" style="display: none;">
                             @csrf
-                            <button type="submit" id="logoutbtn">Logout</button>
-                            </form>
+                        </form>
+
                         @else
                             <div class="user_box_login user_box_link"><a href="{{ route('login') }}">Sign In</a></div>
                             <div class="user_box_register user_box_link"><a href="{{ route('register') }}">Register</a></div>
