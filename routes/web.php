@@ -8,6 +8,8 @@ use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProfileController;
+
 
 
 Route::get('/', function () {
@@ -59,6 +61,7 @@ Route::middleware(['auth'])->get('/profile', function () {
     return view('profile.show');
 })->name('profile.show');
 
+Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 
 Route::get('/mainpage', [MainPageController::class, 'index'])->name('mainpage');
 // admin details

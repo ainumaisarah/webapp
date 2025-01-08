@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Booking;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
@@ -14,7 +15,7 @@ class ProfileController extends Controller
     $bookings = \App\Models\Booking::where('user_id', auth()->id())->get();
 
     // Pass the bookings to the view
-    return view('profile.show', ['bookings' => $bookings]);
+    return view('profile.show', compact('bookings'));
 }
 
     public function update(Request $request)
