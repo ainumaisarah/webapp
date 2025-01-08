@@ -24,10 +24,12 @@
   </head>
   <body>
     <!--Top BE-->
+
     <div class="top_bar">
         <div class="container">
-            <div class="row">
+            <div class="row w-100"> <!-- Full width for the row -->
                 <div class="col d-flex justify-content-between align-items-center">
+                    <!-- Social Media Links on the Left -->
                     <div class="social">
                         <ul class="social_list">
                             <li class="social_list_item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
@@ -35,11 +37,14 @@
                             <li class="social_list_item"><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
-                    <div class="user_box">
+
+                    <!-- User Box (Login/Register) on the Right -->
+                    <div class="user_box d-flex ml-auto"> <!-- Ensure user_box is treated as flex and aligned to the right -->
                         @if (Auth::check())
-                            <form method="POST" action="{{ route('logout') }}" class="user_box">
-                                @csrf
-                                <button type="submit" id="logoutbtn">Logout</button>
+                        <div class="user_box_profile user_box_link"><a href="{{ route('profile.show') }}">Profile</a></div>
+                        <form method="POST" action="{{ route('logout') }}" class="user_box">
+                            @csrf
+                            <button type="submit" id="logoutbtn">Logout</button>
                             </form>
                         @else
                             <div class="user_box_login user_box_link"><a href="{{ route('login') }}">Sign In</a></div>
@@ -51,7 +56,9 @@
         </div>
     </div>
 
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+
+
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="position: fixed; top: 10; left: 0; right: 0; z-index: 9999; margin-top: 0; padding-top: 15px; padding-bottom: 15px;">
         <div class="container">
             <a class="navbar-brand" href="index.html">Moonlit Lagoon</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -63,10 +70,8 @@
 	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
 	          <li class="nav-item"><a href="rooms.html" class="nav-link">Rooms</a></li>
 	          <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
-	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
-	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="/payment" class="nav-link">payment</a></li>
+              <li class="nav-item"><a href="/payment" class="nav-link">Payment</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -80,7 +85,7 @@
         <div class="row mb-5">
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Deluxe Hotel</h2>
+              <h2 class="ftco-heading-2">Moonlit Lagoon Hotel</h2>
               <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-5">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>

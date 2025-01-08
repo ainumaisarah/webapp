@@ -4,6 +4,10 @@
             <x-authentication-card-logo />
         </x-slot>
 
+        <div class="text-center mb-6">
+            <h2 class="text-2xl font-bold text-black">{{ __('SIGN UP') }}</h2>
+        </div>
+
         <x-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
@@ -52,7 +56,7 @@
                 </a>
 
                 <x-button class="ms-4">
-                    {{ __('Register') }}
+                    {{ __('Sign Up') }}
                 </x-button>
             </div>
         </form>

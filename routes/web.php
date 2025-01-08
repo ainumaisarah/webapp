@@ -4,11 +4,12 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\PaymentController;
 use App\Http\Controllers\AdminLoginController;
+use App\Http\Controllers\RegisterController;
 
 
 Route::get('/', function () {
     return view('mainpage');
-});
+})->name('home');
 
 Route::get('/reviews', function () {
     return view('reviews');
@@ -19,6 +20,8 @@ Route::get('/contact', function () {
 });
 
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
+Route::post('register', [RegisterController::class, 'register'])->name('register.submit');
 
 Route::get('/login', function () {
     return view('auth.login');
@@ -43,3 +46,6 @@ Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
 
+Route::middleware(['auth'])->get('/profile', function () {
+    return view('profile.show');
+})->name('profile.show');

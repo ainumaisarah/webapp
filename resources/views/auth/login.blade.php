@@ -54,7 +54,7 @@
             <p class="text-sm text-gray-600">
                 {{ __('Are you an admin?') }}
                 <a href="{{ route('admin.login') }}" class="text-indigo-600 hover:underline">
-                    {{ __('Click here') }}
+                    {{ __('Login here') }}
                 </a>
             </p>
         </div>
