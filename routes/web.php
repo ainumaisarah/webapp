@@ -13,6 +13,10 @@ Route::get('/reviews', function () {
     return view('reviews');
 });
 
+Route::get('/contact', function () {
+    return view('contact');
+});
+
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 Route::get('/login', function () {

@@ -40,7 +40,7 @@
 	          <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
               <li class="nav-item"><a href="/payment" class="nav-link">payment</a></li>
 	        </ul>
 	      </div>
