@@ -7,11 +7,14 @@ use App\Http\Controllers\AdminLoginController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\HomeController;
 
 
 Route::get('/', function () {
     return view('mainpage');
 })->name('home');
+
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 Route::get('/reviews', function () {
     return view('reviews');
@@ -55,6 +58,9 @@ Route::post('/payment', [PaymentController::class, 'processPayment'])->name('pay
 Route::middleware(['auth'])->get('/profile', function () {
     return view('profile.show');
 })->name('profile.show');
+
+
+Route::get('/mainpage', [MainPageController::class, 'index'])->name('mainpage');
 // admin details
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::post('/admin', [AdminController::class, 'admindetail']);

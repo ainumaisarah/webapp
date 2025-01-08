@@ -5,18 +5,23 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('home') }}">
                         <x-application-mark class="block h-9 w-auto" />
                     </a>
                 </div>
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
+                    <!-- Dashboard Link -->
                     <x-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
                         {{ __('Dashboard') }}
                     </x-nav-link>
+
+                    <!-- Add Main Page Link -->
+                    <x-nav-link href="{{ route('home') }}" :active="request()->routeIs('home')">
+                        {{ __('Home') }}
+                    </x-nav-link>
                 </div>
-            </div>
 
             <div class="hidden sm:flex sm:items-center sm:ms-6">
                 <!-- Teams Dropdown -->
@@ -102,6 +107,7 @@
                                 {{ __('Profile') }}
                             </x-dropdown-link>
 
+
                             @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
                                 <x-dropdown-link href="{{ route('api-tokens.index') }}">
                                     {{ __('API Tokens') }}
@@ -139,8 +145,8 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link href="{{ route('dashboard') }}" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link href="{{ route('mainpage') }}" :active="request()->routeIs('mainpage')">
+                {{ __('Home') }}
             </x-responsive-nav-link>
         </div>
 
