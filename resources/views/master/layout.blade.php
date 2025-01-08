@@ -109,8 +109,6 @@
               <ul class="list-unstyled">
                 <li><a href="#" class="py-2 d-block">Blog</a></li>
                 <li><a href="#" class="py-2 d-block">Rooms</a></li>
-                <li><a href="#" class="py-2 d-block">Amenities</a></li>
-                <li><a href="#" class="py-2 d-block">Gift Card</a></li>
               </ul>
             </div>
           </div>
@@ -118,10 +116,7 @@
              <div class="ftco-footer-widget mb-4">
               <h2 class="ftco-heading-2">Privacy</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="py-2 d-block">Career</a></li>
-                <li><a href="#" class="py-2 d-block">About Us</a></li>
                 <li><a href="#" class="py-2 d-block">Contact Us</a></li>
-                <li><a href="#" class="py-2 d-block">Services</a></li>
               </ul>
             </div>
           </div>
@@ -130,9 +125,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, 47500 Subang Jaya, Selangor, Malaysia.</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+60 17 3523 5598</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">moonlitlagoonhotel.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
