@@ -21,20 +21,7 @@
                     @livewire('profile.update-password-form')
                 </div>
 
-                <x-section-border />
             @endif
-
-            @if (Laravel\Fortify\Features::canManageTwoFactorAuthentication())
-                <div class="bg-white shadow sm:rounded-lg p-6 mt-6">
-                    @livewire('profile.two-factor-authentication-form')
-                </div>
-
-                <x-section-border />
-            @endif
-
-            <div class="bg-white shadow sm:rounded-lg p-6 mt-6">
-                @livewire('profile.logout-other-browser-sessions-form')
-            </div>
 
             @if (Laravel\Jetstream\Jetstream::hasAccountDeletionFeatures())
                 <x-section-border />
@@ -46,44 +33,47 @@
         </div>
     </div>
 
-    <div class="container">
-        <h2 class="mb-4">My Bookings</h2>
+   <!-- My Bookings Section -->
+   <div class="bg-white shadow sm:rounded-lg p-6 mt-6">
+    <h2 class="text-xl font-semibold mb-4">My Bookings</h2>
 
-        @if($bookings->isEmpty())
-            <p>You have no bookings at the moment.</p>
-        @else
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th>Room ID</th>
-                        <th>Check-In Date</th>
-                        <th>Check-Out Date</th>
-                        <th>Actions</th>
+    @if($bookings->isEmpty())
+        <p class="text-gray-500">You have no bookings at the moment.</p>
+    @else
+        <table class="w-full border-collapse border border-gray-300">
+            <thead>
+                <tr class="bg-gray-100">
+                    <th class="border border-gray-300 px-4 py-2">#</th>
+                    <th class="border border-gray-300 px-4 py-2">Room ID</th>
+                    <th class="border border-gray-300 px-4 py-2">Check-In Date</th>
+                    <th class="border border-gray-300 px-4 py-2">Check-Out Date</th>
+                    <th class="border border-gray-300 px-4 py-2">Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach($bookings as $booking)
+                    <tr class="even:bg-gray-50">
+                        <td class="border border-gray-300 px-4 py-2">{{ $loop->iteration }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $booking->room_id }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $booking->check_in_date }}</td>
+                        <td class="border border-gray-300 px-4 py-2">{{ $booking->check_out_date }}</td>
+                        <td class="border border-gray-300 px-4 py-2">
+                            <!-- Action Buttons -->
+                            <a href="{{ route('bookings.show', $booking->booking_id) }}" class="text-blue-500 hover:underline">View</a> |
+                            <a href="{{ route('bookings.edit', $booking->booking_id) }}" class="text-yellow-500 hover:underline">Edit</a> |
+                            <form action="{{ route('bookings.destroy', $booking->booking_id) }}" method="POST" style="display:inline;">
+                                @csrf
+                                @method('DELETE')
+                                <button type="submit" class="text-red-500 hover:underline" onclick="return confirm('Are you sure?')">Delete</button>
+                            </form>
+                        </td>
                     </tr>
-                </thead>
-                <tbody>
-                    @foreach($bookings as $booking)
-                        <tr>
-                            <td>{{ $loop->iteration }}</td>
-                            <td>{{ $booking->room_id }}</td>
-                            <td>{{ $booking->check_in_date }}</td>
-                            <td>{{ $booking->check_out_date }}</td>
-                            <td>
-                                <!-- Action Buttons -->
-                                <a href="{{ route('bookings.show', $booking->booking_id) }}" class="btn btn-info btn-sm">View</a>
-                                <a href="{{ route('bookings.edit', $booking->booking_id) }}" class="btn btn-warning btn-sm">Edit</a>
-                                <form action="{{ route('bookings.destroy', $booking->booking_id) }}" method="POST" style="display:inline;">
-                                    @csrf
-                                    @method('DELETE')
-                                    <button type="submit" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure?')">Delete</button>
-                                </form>
-                            </td>
-                        </tr>
-                    @endforeach
-                </tbody>
-            </table>
-        @endif
-    </div>
+                @endforeach
+            </tbody>
+        </table>
+    @endif
+</div>
+</div>
+</div>
 
 </x-app-layout>
