@@ -64,6 +64,7 @@ Route::middleware(['auth'])->get('/profile', function () {
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 
 Route::get('/mainpage', [MainPageController::class, 'index'])->name('mainpage');
+
 // admin details
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::post('/admin', [AdminController::class, 'admindetail']);
