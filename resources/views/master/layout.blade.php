@@ -69,7 +69,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar" style="position: fixed; top: 10; left: 0; right: 0; z-index: 9999; margin-top: 0; padding-top: 15px; padding-bottom: 15px;">
         <div class="container">
-            <a class="navbar-brand" href="index.html">Moonlit Lagoon</a>
+            <a class="navbar-brand" href="/">Moonlit Lagoon</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
