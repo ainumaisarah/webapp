@@ -40,7 +40,7 @@
                     <br> Reach out to our friendly team via phone, email or the contact form. Your satisfaction is our priority, and we’re committed to providing you with the best service possible.
                     <br> Don’t hesitate – we’re just a message away!</p>
                 <br>
-                <p><span>ADDRESS </br></span> Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, 47500 Subang Jaya, Selangor, Malaysia</p>
+                <p><span>ADDRESS </br></span> <a href="#">Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, 47500 Subang Jaya, Selangor, Malaysia </a></p>
                 <p><span>CONTACT NUMBER  </br></span> <a href="tel://1234567920">+60 17 3523 5598</a></p>
                 <p><span>EMAIL  </br></span> <a href="mailto:info@yoursite.com">moonlitlagoon@gmail.com</a></p>
                 <p><span>WEBSITE  </br></span> <a href="#">moonlitlagoonhotel.com</a></p>
