@@ -41,11 +41,22 @@ class BookingController extends Controller
             'room_id' => 'required|exists:rooms,room_id',
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
+            'guest_count' => 'required|integer|min:1',
+            'booking_status' => 'nullable|string',
+        ]);
+        $booking_id = 'BOOK-' . strtoupper(uniqid());
+
+        Booking::create([
+            'booking_id' => $booking_id,
+            'user_id' => $request->user_id,
+            'room_id' => $request->room_id,
+            'check_in_date' => $request->check_in_date,
+            'check_out_date' => $request->check_out_date,
+            'guest_count' => $request->guest_count ?? 1, // Default to 1 if not provided
+            'booking_status' => $request->booking_status ?? 'pending', // Default to 'pending'
         ]);
 
-        Booking::create($request->all());
-
-        return redirect()->route('bookings.index')->with('success', 'Booking added successfully.');
+        return redirect()->route('admin.index')->with('success', 'Booking added successfully.');
     }
 
 
@@ -58,7 +69,7 @@ class BookingController extends Controller
         return view('edit-booking', compact('booking', 'users', 'rooms'));
     }
 
-    public function update(Request $request, $id)
+    public function update(Request $request, $booking_id)
     {
         $request->validate([
             'user_id' => 'required|exists:users,id',
@@ -67,15 +78,20 @@ class BookingController extends Controller
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
         ]);
 
-        $booking = Booking::findOrFail($id);
-        $booking->update($request->all());
+        $booking = Booking::findOrFail($booking_id);
+        $booking->update([
+            'user_id' => $request->user_id,
+            'room_id' => $request->room_id,
+            'check_in_date' => $request->check_in_date,
+            'check_out_date' => $request->check_out_date,
+        ]);
 
         return redirect()->route('bookings.index')->with('success', 'Booking updated successfully.');
     }
 
-    public function destroy($id)
+    public function destroy($booking_id)
     {
-        $booking = Booking::findOrFail($id);
+        $booking = Booking::findOrFail($booking_id);
         $booking->delete();
 
         return redirect()->route('bookings.index')->with('success', 'Booking deleted successfully.');

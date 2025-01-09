@@ -28,6 +28,7 @@ class DatabaseSeeder extends Seeder
         $this->call([
             RoomSeeder::class,
             BookingSeeder::class,
+            PaymentSeeder::class,
             ReviewSeeder::class,
             AdminSeeder::class,
         ]);

@@ -10,6 +10,23 @@ class Booking extends Model
     protected $primaryKey = 'booking_id';
     protected $fillable = ['user_id', 'room_id', 'check_in_date', 'check_out_date'];
 
+    protected static function boot()
+    {
+        parent::boot();
+
+        static::creating(function ($model) {
+            if (empty($model->booking_id)) {
+                $model->booking_id = 'BOOK-' . strtoupper(uniqid());
+            }
+            if (empty($model->guest_count)) {
+                $model->guest_count = 1; // Default 1 guest
+            }
+            if (empty($model->booking_status)) {
+                $model->booking_status = 'pending'; // Default status
+            }
+        });
+    }
+
     public function user()
     {
         return $this->belongsTo(User::class);

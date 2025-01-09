@@ -1,6 +1,21 @@
 @extends('master.layout')
 
 @section('content')
+
+@php
+    use Carbon\Carbon;
+@endphp
+
+<div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
+        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+        </div>
+      </div>
+    </div>
+  </div>
+
 <div class="container mt-5">
     <!-- flash msg part -->
     @if (session('success'))
@@ -51,7 +66,7 @@
     </table>
 
     <!-- Add Booking Modal -->
-<button class="btn btn-success" data-bs-toggle="modal" data-bs-target="#addBookingModal">Add Booking</button>
+<button class="btn btn-success" data-toggle="modal" data-target="#addBookingModal">Add Booking</button>
 <div class="modal fade" id="addBookingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
         <form action="{{ route('bookings.store') }}" method="POST">
@@ -93,11 +108,26 @@
                         <label for="check_out_date" class="form-label">Check-Out Date</label>
                         <input type="date" name="check_out_date" class="form-control" required>
                     </div>
+                    <!-- Guest Count -->
+                    <div class="mb-3">
+                        <label for="guest_count" class="form-label">Guest Count</label>
+                        <input type="number" name="guest_count" class="form-control" min="1" required>
+                    </div>
+
+                    <!-- Booking Status -->
+                    <div class="mb-3">
+                        <label for="booking_status" class="form-label">Booking Status</label>
+                        <select name="booking_status" class="form-control">
+                            <option value="pending">Pending</option>
+                            <option value="confirmed">Confirmed</option>
+                            <option value="cancelled">Cancelled</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="submit" class="btn btn-success">Save</button>
-                </div>
+                    </div>
             </div>
         </form>
     </div>

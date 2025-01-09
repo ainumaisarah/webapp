@@ -66,8 +66,6 @@ Route::middleware(['auth'])->get('/profile', function () {
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 
-Route::get('/mainpage', [MainPageController::class, 'index'])->name('mainpage');
-
 // admin details
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
 Route::post('/admin', [AdminController::class, 'admindetail']);
@@ -79,4 +77,4 @@ Route::get('/admin/bookings', [BookingController::class, 'index'])->name('bookin
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
 Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
-Route::delete('/bookings/{id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
