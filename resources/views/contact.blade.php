@@ -1,20 +1,5 @@
 @extends('master.layout')
 @section('content')
-|
-    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Playfair+Display:400,400i,700,700i" rel="stylesheet">
-    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
-    <link rel="stylesheet" href="css/animate.css">
-    <link rel="stylesheet" href="css/owl.carousel.min.css">
-    <link rel="stylesheet" href="css/owl.theme.default.min.css">
-    <link rel="stylesheet" href="css/magnific-popup.css">
-    <link rel="stylesheet" href="css/aos.css">
-    <link rel="stylesheet" href="css/ionicons.min.css">
-    <link rel="stylesheet" href="css/bootstrap-datepicker.css">
-    <link rel="stylesheet" href="css/jquery.timepicker.css">
-    <link rel="stylesheet" href="css/flaticon.css">
-    <link rel="stylesheet" href="css/icomoon.css">
-    <link rel="stylesheet" href="css/style.css">
 
     <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
       <div class="overlay"></div>
@@ -30,7 +15,9 @@
       </div>
     </div>
 
+
     <section class="ftco-section contact-section bg-light">
+    <h3 class="ourlocation">Our Location</h3>
       <div class="container">
         <div class="row block-9">
           <div class="col-md-12 d-flex mb-5">
@@ -49,11 +36,14 @@
           <div class="w-100"></div>
           <div class="col-md-6 d-flex">
               <div class="info bg-white p-4">
-                <p>Desc</p>
-                <p><span>Address:</span> Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, 47500 Subang Jaya, Selangor, Malaysia.</p>
-                <p><span>Contact Number:</span> <a href="tel://1234567920">+60 17 3523 5598</a></p>
-                <p><span>Email:</span> <a href="mailto:info@yoursite.com">moonlitlagoon@gmail.com</a></p>
-                <p><span>Website</span> <a href="#">moonlitlagoonhotel.com</a></p>
+                <p class="contactdesc">We’re here to help! Whether you have questions or want to share feedback, we’d love to hear from you.
+                    <br> Reach out to our friendly team via phone, email or the contact form. Your satisfaction is our priority, and we’re committed to providing you with the best service possible.
+                    <br> Don’t hesitate – we’re just a message away!</p>
+                <br>
+                <p><span>ADDRESS </br></span> Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, 47500 Subang Jaya, Selangor, Malaysia</p>
+                <p><span>CONTACT NUMBER  </br></span> <a href="tel://1234567920">+60 17 3523 5598</a></p>
+                <p><span>EMAIL  </br></span> <a href="mailto:info@yoursite.com">moonlitlagoon@gmail.com</a></p>
+                <p><span>WEBSITE  </br></span> <a href="#">moonlitlagoonhotel.com</a></p>
               </div>
           </div>
           <div class="col-md-6 d-flex">

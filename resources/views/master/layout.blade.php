@@ -36,6 +36,7 @@
                             <li class="social_list_item"><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
                             <li class="social_list_item"><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
                             <li class="social_list_item"><a href="#"><i class="fa fa-youtube" aria-hidden="true"></i></a></li>
+                            <li class="social_list_item"><a href="#"><i class="fa fa-phone" aria-hidden="true"></i></a></li>
                         </ul>
                     </div>
 
@@ -59,6 +60,9 @@
                             <div class="user_box_login user_box_link"><a href="{{ route('login') }}">Sign In</a></div>
                             <div class="user_box_register user_box_link"><a href="{{ route('register') }}">Register</a></div>
                         @endif
+                        <div class="user_box_link">
+                            <a href="/rooms" class="btn btn-primary book-now-btn">Book Now</a>
+                        </div>
                     </div>
                 </div>
             </div>

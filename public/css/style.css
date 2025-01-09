@@ -100,8 +100,6 @@ body {
     margin-bottom: 100px;
 }
 
-
-
 .review-form .desc {
     font-size: 14px;
     color: var(--gray-dark);
@@ -154,7 +152,7 @@ textarea {
 }
 
 .top_bar .social_list_item {
-    margin-right: 10px;
+    margin-right: 25px;
 }
 
 .top_bar .social_list_item a {
@@ -199,7 +197,19 @@ textarea {
 .top_bar .user_box button:hover {
     color: #f39c12;
 }
+.user_box_link .btn.book-now-btn {
+    background-color: #7b6233; /* Orange color */
+    color: #fff;
+    padding: 5px 15px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
 
+.user_box_link .btn.book-now-btn:hover {
+    background-color: white; /* Darker orange on hover */
+}
 
 /* Reviews Section Styles */
 
@@ -302,7 +312,7 @@ textarea {
 }
 
 .review-form h3 {
-    color:#333;
+    color:#000000;
     margin-bottom: 20px;
     font-size: 23px;
     font-weight: bold;
@@ -375,7 +385,7 @@ textarea {
     text-align: center;
     font-weight: bold;
     font-style: italic;
-    color: #333;
+    color:#000000;
 
 }
 .guest-reviews h4 {
@@ -440,6 +450,15 @@ textarea {
     text-decoration: underline;
 }
 
+/* Contact */
+.ourlocation {
+    margin-top: 0;
+  font-size: 35px;
+  margin-bottom: 20px;
+  text-align: center;
+  color: #7b6233;
+
+}
 hr {
   -webkit-box-sizing: content-box;
   box-sizing: content-box;
@@ -870,6 +889,9 @@ pre {
     padding-right: 0;
     padding-left: 0; }
 
+    .col-md-6 d-flex{
+        color:  #7b6233;
+    }
 .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col,
 .col-auto, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm,
 .col-sm-auto, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md,
@@ -880,7 +902,16 @@ pre {
   width: 100%;
   min-height: 1px;
   padding-right: 15px;
-  padding-left: 15px; }
+  padding-left: 15px;
+color:#000;
+font-size:16px;
+ }
+
+ .contactdesc{
+    font-size: 16px;
+    margin-bottom: 40px;
+    color: var(--gray);
+ }
 
 .col {
   -ms-flex-preferred-size: 0;
