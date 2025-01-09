@@ -6,31 +6,34 @@
 <div class="hero-wrap" style="background-image: url('images/bg_1.jpg');">
     <div class="overlay"></div>
     <div class="container">
-      <div class="row no-gutters slider-text d-flex align-itemd-end justify-content-center">
-        <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
-            <div class="text">
-              <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
-              <h1 class="mb-4 bread">Reviews</h1>
-          </div>
+        <div class="row no-gutters slider-text d-flex align-items-end justify-content-center">
+            <div class="col-md-9 ftco-animate text-center d-flex align-items-end justify-content-center">
+                <div class="text">
+                    <p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home</a></span> <span>About</span></p>
+                    <h1 class="mb-4 bread">Reviews</h1>
+                </div>
+            </div>
         </div>
-      </div>
     </div>
-  </div>
+</div>
 
 <div class="reviews-container">
     <div class="overall-rating">
         <h2>Leave Us A Review</h2>
+
         <div class="rating-score">
-            <span class="score">{{ number_format($averageRating, 1) }}</span>
-            <span class="label">
-                @if ($averageRating >= 4)
-                    Excellent
-                @elseif ($averageRating >= 3)
-                    Good
-                @else
-                    Poor
-                @endif
-            </span>
+            <div class="score-label">
+                <span class="score">{{ number_format($averageRating, 1) }}</span>
+                <span class="label">
+                    @if ($averageRating >= 4)
+                        Excellent
+                    @elseif ($averageRating >= 3)
+                        Good
+                    @else
+                        Poor
+                    @endif
+                </span>
+            </div>
             <div class="stars">
                 @for ($i = 0; $i < 5; $i++)
                     @if ($i < floor($averageRating))
@@ -39,21 +42,30 @@
                         &#9734;
                     @endif
                 @endfor
-                <p>Over {{ $reviews->count() }} Guests Loved It – Will You Be Next?
             </div>
         </div>
     </div>
 
     <div class="review-form">
-        <h3>Tell Us About Your Stay !</h3>
-        <p> We’d love to know how your experience with our hotel was
+        <h3>Tell Us About Your Stay!</h3>
+        <p class="desc">We’d love to know how your experience with our hotel was.
             <br> From the moment you checked in to the time you checked out, your feedback matters!
             <br> Share your story – what stood out, what made you smile and how we can make your next visit even better!</p>
         <div class="rating-options">
-            <span>Overall Experience</span>
+            <br>
             <p>Tap To Rate</p>
+            <span>Comfort</span>
+            <div class="stars" data-score="0" id="comfort"></div>
+            <span>Staff</span>
+            <div class="stars" data-score="0" id="staff"></div>
+            <span>Facilities</span>
+            <div class="stars" data-score="0" id="facilities"></div>
+            <span>Value For Money</span>
+            <div class="stars" data-score="0" id="value"></div>
+            <span>Overall Experience</span>
             <div class="stars" data-score="0" id="rating"></div>
         </div>
+
         <form action="{{ route('reviews.store') }}" method="POST">
             @csrf
             <input type="hidden" name="rating" id="rating-score">
@@ -61,40 +73,48 @@
             <button type="submit" class="btn-post">Post Review</button>
         </form>
     </div>
+    <br/>
 
+</div>
+<div class="guest-reviews-container">
     <div class="guest-reviews">
         <h3>Our Guest Reviews</h3>
         <h4>{{ $reviews->count() }} Reviews</h4>
-        <p>Here’s What Our Guests Are Saying About Their Stay</p>
+        <p>Here’s What Our Guests Are Saying About Their Stay...</p>
         @foreach ($reviews as $review)
             <div class="guest-review">
                 <div class="guest-info">
-                    <p><strong>{{ $review->user->profile_photo_path}} {{ $review->user->name }}</strong> <br> {{ $review->user->email }}</p>
+                    <p>
+                        <img src="{{ asset($review->user->profile_photo_path) }}" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
+                        <strong>{{ $review->user->name }}</strong> <br> {{ $review->user->email }}
+                    </p>
                     <div class="review-text">
                         {{ $review->review_text }}
                     </div>
                     <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : Carbon::now()->format('F Y') }}</p>
                 </div>
-                <div class="stars">
-                    @for ($i = 0; $i < 5; $i++)
-                        @if ($i < floor($review->rating))
-                            &#9733;
-                        @elseif ($i < ceil($review->rating) && $review->rating - floor($review->rating) >= 0.5)
-                            &#9733; <!-- Half star -->
-                        @else
-                            &#9734;
-                        @endif
-                    @endfor
-                </div>
-                <br>
-                <br>
-                <div class="review-date">
-                    Posted On {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
+                <div class="review-meta">
+                    <div class="stars">
+                        @for ($i = 0; $i < 5; $i++)
+                            @if ($i < floor($review->rating))
+                                &#9733;
+                            @elseif ($i < ceil($review->rating) && $review->rating - floor($review->rating) >= 0.5)
+                                &#9733; <!-- Half star -->
+                            @else
+                                &#9734;
+                            @endif
+                        @endfor
+                    </div>
+                    <div class="review-date">
+                        Posted On {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
+                    </div>
                 </div>
             </div>
         @endforeach
     </div>
 </div>
+
+
 
 <script>
     $(document).ready(function() {
@@ -106,6 +126,58 @@
             starOff: 'fa fa-star-o',
             click: function(score, evt) {
                 $('#rating-score').val(score);
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#comfort').raty({
+            half: true,
+            starType: 'i',
+            starOn: 'fa fa-star',
+            starHalf: 'fa fa-star-half-o',
+            starOff: 'fa fa-star-o',
+            click: function(score, evt) {
+                $('#comfort-score').val(score);
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#staff').raty({
+            half: true,
+            starType: 'i',
+            starOn: 'fa fa-star',
+            starHalf: 'fa fa-star-half-o',
+            starOff: 'fa fa-star-o',
+            click: function(score, evt) {
+                $('#staff-score').val(score);
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#facilities').raty({
+            half: true,
+            starType: 'i',
+            starOn: 'fa fa-star',
+            starHalf: 'fa fa-star-half-o',
+            starOff: 'fa fa-star-o',
+            click: function(score, evt) {
+                $('#facilities-score').val(score);
+            }
+        });
+    });
+
+    $(document).ready(function() {
+        $('#value').raty({
+            half: true,
+            starType: 'i',
+            starOn: 'fa fa-star',
+            starHalf: 'fa fa-star-half-o',
+            starOff: 'fa fa-star-o',
+            click: function(score, evt) {
+                $('#value-score').val(score);
             }
         });
     });
