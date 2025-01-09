@@ -19,7 +19,7 @@
 
 <div class="reviews-container">
     <div class="overall-rating">
-        <h2>Reviews</h2>
+        <h2>Leave Us A Review</h2>
         <div class="rating-score">
             <span class="score">{{ number_format($averageRating, 1) }}</span>
             <span class="label">
@@ -39,14 +39,19 @@
                         &#9734;
                     @endif
                 @endfor
+                <p>Over {{ $reviews->count() }} Guests Loved It – Will You Be Next?
             </div>
         </div>
     </div>
 
     <div class="review-form">
-        <h3>Review</h3>
+        <h3>Tell Us About Your Stay !</h3>
+        <p> We’d love to know how your experience with our hotel was
+            <br> From the moment you checked in to the time you checked out, your feedback matters!
+            <br> Share your story – what stood out, what made you smile and how we can make your next visit even better!</p>
         <div class="rating-options">
-            <span>Rating</span>
+            <span>Overall Experience</span>
+            <p>Tap To Rate</p>
             <div class="stars" data-score="0" id="rating"></div>
         </div>
         <form action="{{ route('reviews.store') }}" method="POST">
@@ -58,13 +63,13 @@
     </div>
 
     <div class="guest-reviews">
-        <h3>Guest Reviews</h3>
-        <p>{{ $reviews->count() }} reviews</p>
-
+        <h3>Our Guest Reviews</h3>
+        <h4>{{ $reviews->count() }} Reviews</h4>
+        <p>Here’s What Our Guests Are Saying About Their Stay</p>
         @foreach ($reviews as $review)
             <div class="guest-review">
                 <div class="guest-info">
-                    <p><strong>{{ $review->user->name }}</strong> <br> {{ $review->user->country }}</p>
+                    <p><strong>{{ $review->user->profile_photo_path}} {{ $review->user->name }}</strong> <br> {{ $review->user->email }}</p>
                     <div class="review-text">
                         {{ $review->review_text }}
                     </div>
@@ -81,8 +86,10 @@
                         @endif
                     @endfor
                 </div>
+                <br>
+                <br>
                 <div class="review-date">
-                    Posted on {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
+                    Posted On {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
                 </div>
             </div>
         @endforeach

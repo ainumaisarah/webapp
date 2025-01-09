@@ -22,6 +22,9 @@ Route::get('/reviews', function () {
     return view('reviews');
 });
 
+Route::get('/rooms', function () {
+    return view('rooms');
+});
 Route::get('/contact', function () {
     return view('contact');
 });
