@@ -10,8 +10,8 @@ class PaymentSeeder extends Seeder
     public function run()
     {
         DB::table('payments')->insert([
-            ['booking_id' => 1, 'amount' => 500, 'payment_status' => 'paid'],
-            ['booking_id' => 2, 'amount' => 300, 'payment_status' => 'unpaid'],
+            ['payment_id' =>214,'booking_id' => 'A445', 'amount' => 500.0, 'payment_status' => 'success'],
+            ['payment_id' => 616,'booking_id' => 'ABC1234', 'amount' => 300.0, 'payment_status' => 'fail'],
         ]);
     }
 }
