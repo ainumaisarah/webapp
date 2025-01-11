@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 
 
+Route::resource('reviews', ReviewController::class);
 
 Route::get('/', function () {
     return view('mainpage');
@@ -33,7 +34,9 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
 
 Route::post('register', [RegisterController::class, 'register'])->name('register.submit');
 
@@ -78,5 +81,8 @@ Route::get('/admin', [BookingController::class, 'index'])->name('admin.index');
 Route::get('/admin/bookings', [BookingController::class, 'index'])->name('bookings.index');
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
-Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
-Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::put('/bookings/user/{user_id}', [BookingController::class, 'update'])->name('bookings.update');
+Route::delete('/bookings/user/{user_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+
+//get room data from dataabase for rooms page
+Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
