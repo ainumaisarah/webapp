@@ -6,6 +6,7 @@ use App\Models\Booking;
 use App\Models\Room;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class BookingController extends Controller
 {
@@ -100,9 +101,23 @@ class BookingController extends Controller
         return redirect()->route('admin.index')->with('success', 'Booking deleted successfully.');
     }
 
-    public function rooms()
+    public function rooms(Request $request)
 {
-    $rooms = Room::all(); // Fetch all room data
+    $query = DB::table('rooms');
+    //$query = Room::query(); // Assuming you have a Room model
+
+      // Apply filters if provided
+      if ($request->has('room_type') && $request->room_type != '') {
+        $query->where('type', $request->room_type);
+    }
+     // Filter by guest count if provided
+    if ($request->has('guest_count') && $request->guest_count != '') {
+        $query->where('maxperson', '>=', $request->guest_count);
+    }
+
+    $rooms = $query->get(); //Retrieve filtered rooms
+    //$rooms = Room::all(); // Fetch all room data
+
     return view('rooms', compact('rooms'));
 }
 }
