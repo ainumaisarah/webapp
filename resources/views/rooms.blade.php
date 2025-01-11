@@ -15,8 +15,6 @@
       </div>
     </div>
 
-
-
     @php
     $roomImages = [
         'Suite Room' => '/images/room-1.jpg',
@@ -36,11 +34,7 @@
                         @foreach ($rooms as $room)
                             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                                 <div class="room">
-                                    <a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url('{{ $roomImages[$room->type] ?? '/images/default.jpg' }}');">
-                                        <div class="icon d-flex justify-content-center align-items-center">
-                                            <span class="icon-search2"></span>
-                                        </div>
-                                    </a>
+                                    <a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url('{{ $roomImages[$room->type] ?? '/images/default.jpg' }}');"></a>
                                     <div class="text p-3 text-center">
                                         <h3 class="mb-3"><a href="rooms-single.html">{{ $room->type }}</a></h3>
                                         <p><span class="price mr-2">RM{{ number_format($room->prices, 2) }}</span> <span class="per">per night</span></p>
@@ -196,7 +190,7 @@
 		    	<div class="col-lg-3 sidebar">
 	      		<div class="sidebar-wrap bg-light ftco-animate">
 	      			<h3 class="heading mb-4">Advanced Search</h3>
-	      			<form action="#">
+	      			<form action="{{ route('rooms') }}" method="GET">
 	      				<div class="fields">
 		              <div class="form-group">
 		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
@@ -207,28 +201,28 @@
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control">
-	                    	<option value="">Room Type</option>
-	                    	<option value="">Suite Room</option>
-	                      <option value="">Family Room</option>
-	                      <option value="">Deluxe Room</option>
-	                      <option value="">Classic Room</option>
-	                      <option value="">Superior Room</option>
-	                      <option value="">Luxury Room</option>
-	                    </select>
+	                    <select name="room_type" id="room_type" class="form-control">
+                            <option value="">Room Type</option>
+                            <option value="Suite Room">Suite Room</option>
+                            <option value="Family Room">Family Room</option>
+                            <option value="Deluxe Room">Deluxe Room</option>
+                            <option value="Classic Room">Classic Room</option>
+                            <option value="Superior Room">Superior Room</option>
+                            <option value="Luxury Room">Luxury Room</option>
+                        </select>
 	                  </div>
 		              </div>
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="" id="" class="form-control">
-	                    	<option value="">0 Guest</option>
-	                    	<option value="">1 Guest</option>
-	                      <option value="">2 Guest</option>
-	                      <option value="">3 Guest</option>
-	                      <option value="">4 Guest</option>
-	                      <option value="">5 Guest</option>
-	                      <option value="">6 Guest</option>
+	                    <select name="guest_count" id="guest_count" class="form-control">
+                            <option value="">Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
 	                    </select>
 	                  </div>
 		              </div>
@@ -243,6 +237,7 @@
 		    </div>
     	</div>
     </section>
+
 
 
     <section class="instagram pt-5">
@@ -291,5 +286,6 @@
         </div>
       </div>
     </section>
+
 
     @endsection

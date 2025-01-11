@@ -82,4 +82,5 @@ Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->n
 Route::put('/bookings/user/{user_id}', [BookingController::class, 'update'])->name('bookings.update');
 Route::delete('/bookings/user/{user_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
+//get room data from dataabase for rooms page
 Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
