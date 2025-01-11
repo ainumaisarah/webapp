@@ -99,4 +99,10 @@ class BookingController extends Controller
 
         return redirect()->route('admin.index')->with('success', 'Booking deleted successfully.');
     }
+
+    public function rooms()
+{
+    $rooms = Room::all(); // Fetch all room data
+    return view('rooms', compact('rooms'));
+}
 }

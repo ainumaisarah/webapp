@@ -16,6 +16,8 @@ return new class extends Migration
             $table->string('room_id', 8)->unique();
             $table->string('type');
             $table->float('prices');
+            $table->integer('maxperson');
+            $table->integer('bed');
             $table->boolean('availability')->default(true); // Default to available (true)
             $table->timestamps();
         });

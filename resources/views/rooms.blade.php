@@ -16,7 +16,51 @@
     </div>
 
 
+
+    @php
+    $roomImages = [
+        'Suite Room' => '/images/room-1.jpg',
+        'Family Room' => '/images/room-2.jpg',
+        'Deluxe Room' => '/images/room-3.jpg',
+        'Classic Room' => '/images/room-4.jpg',
+        'Superior Room' => '/images/room-5.jpg',
+        'Luxury Room' => '/images/room-6.jpg',
+    ];
+    @endphp
+
     <section class="ftco-section bg-light">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-9">
+                    <div class="row">
+                        @foreach ($rooms as $room)
+                            <div class="col-sm col-md-6 col-lg-4 ftco-animate">
+                                <div class="room">
+                                    <a href="rooms-single.html" class="img d-flex justify-content-center align-items-center" style="background-image: url('{{ $roomImages[$room->type] ?? '/images/default.jpg' }}');">
+                                        <div class="icon d-flex justify-content-center align-items-center">
+                                            <span class="icon-search2"></span>
+                                        </div>
+                                    </a>
+                                    <div class="text p-3 text-center">
+                                        <h3 class="mb-3"><a href="rooms-single.html">{{ $room->type }}</a></h3>
+                                        <p><span class="price mr-2">RM{{ number_format($room->prices, 2) }}</span> <span class="per">per night</span></p>
+                                        <ul class="list">
+                                            <li><span>Max Persons:</span> {{ $room->maxperson }}</li>
+                                            <li><span>Size:</span> 45 m2</li>
+                                            <li><span>Bed:</span> {{ $room->bed }}</li>
+                                            <li><span>View:</span> Sea View</li>
+                                            <li><span>Availability:</span> {{ $room->availability ? 'Available' : 'Unavailable' }}</li>
+
+                                        </ul>
+                                        <hr>
+                                        <p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>
+                                    </div>
+                                </div>
+                            </div>
+                        @endforeach
+                    </div>
+                </div>
+    <!--<section class="ftco-section bg-light">
     	<div class="container">
     		<div class="row">
 	        <div class="col-lg-9">
@@ -148,7 +192,7 @@
 		    				</div>
 		    			</div>
 		    		</div>
-		    	</div>
+		    	</div> -->
 		    	<div class="col-lg-3 sidebar">
 	      		<div class="sidebar-wrap bg-light ftco-animate">
 	      			<h3 class="heading mb-4">Advanced Search</h3>
@@ -165,7 +209,7 @@
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 	                    <select name="" id="" class="form-control">
 	                    	<option value="">Room Type</option>
-	                    	<option value="">Suite</option>
+	                    	<option value="">Suite Room</option>
 	                      <option value="">Family Room</option>
 	                      <option value="">Deluxe Room</option>
 	                      <option value="">Classic Room</option>

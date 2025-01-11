@@ -78,3 +78,5 @@ Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.st
 Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
 Route::put('/bookings/user/{user_id}', [BookingController::class, 'update'])->name('bookings.update');
 Route::delete('/bookings/user/{user_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+
+Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
