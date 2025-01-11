@@ -53,7 +53,7 @@
             <br> Share your story – what stood out, what made you smile and how we can make your next visit even better!</p>
         <div class="rating-options">
             <br>
-            <p>Tap To Rate</p>
+            <p>Rate This Property</p>
             <span>Comfort</span>
             <div class="stars" data-score="0" id="comfort"></div>
             <span>Staff</span>
@@ -66,10 +66,18 @@
             <div class="stars" data-score="0" id="rating"></div>
         </div>
 
-        <form action="{{ route('reviews.store') }}" method="POST">
+        <form action="{{ route('reviews.store') }}" method="POST"enctype="multipart/form-data" onsubmit="return validateForm()">
             @csrf
-            <input type="hidden" name="rating" id="rating-score">
+            <input type="hidden" name="rating" id="rating-score" >
+            <input type="hidden" name="comfort" id="comfort-score" >
+            <input type="hidden" name="staff" id="staff-score" >
+            <input type="hidden" name="facilities" id="facilities-score" >
+            <input type="hidden" name="value" id="value-score" >
+            <br>
+            <p>Tell us what you loved and how we can make your next stay even better!</p>
             <textarea name="review_text" placeholder="Your review..." required></textarea>
+            {{--<p>What You Don't Like About Your Stay</p>
+            <textarea name="negativereview_text" placeholder="Your review..." required></textarea>--}}
             <button type="submit" class="btn-post">Post Review</button>
         </form>
     </div>
@@ -85,11 +93,11 @@
             <div class="guest-review">
                 <div class="guest-info">
                     <p>
-                        <img src="{{ asset($review->user->profile_photo_path) }}" alt="" style="width: 50px; height: 50px; border-radius: 50%;">
-                        <strong>{{ $review->user->name }}</strong> <br> {{ $review->user->email }}
+                        <img src="{{ asset('storage/' . $review->user->profile_photo_path) }}" alt="" style="width: 50px; height: 50px; border-radius: 50%;">                        <strong>{{ $review->user->name }}</strong> <br> {{ $review->user->email }}
                     </p>
                     <div class="review-text">
                         {{ $review->review_text }}
+                        {{ $review->negativereview_text }}
                     </div>
                     <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : Carbon::now()->format('F Y') }}</p>
                 </div>
@@ -108,15 +116,37 @@
                     <div class="review-date">
                         Posted On {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
                     </div>
+                    @if (Auth::check() && Auth::id() == $review->user_id)
+                    <div class="review-actions">
+                        <form action="{{ route('reviews.destroy', $review->id) }}" method="POST" style="display:inline;">
+                            @csrf
+                            @method('DELETE')
+                            <button type="submit" class="btn btn-danger">Delete Review</button>
+                        </form>
+                    </div>
+                @endif
                 </div>
             </div>
         @endforeach
     </div>
 </div>
 
-
-
 <script>
+
+    function validateForm() {
+        const rating = document.getElementById('rating-score').value;
+        const comfort = document.getElementById('comfort-score').value;
+        const staff = document.getElementById('staff-score').value;
+        const facilities = document.getElementById('facilities-score').value;
+        const value = document.getElementById('value-score').value;
+
+        if (!rating || !comfort || !staff || !facilities || !value) {
+            alert('Please fill in all the required fields.');
+            return false;
+        }
+        return true;
+    }
+
     $(document).ready(function() {
         $('#rating').raty({
             half: true,
@@ -128,9 +158,7 @@
                 $('#rating-score').val(score);
             }
         });
-    });
 
-    $(document).ready(function() {
         $('#comfort').raty({
             half: true,
             starType: 'i',
@@ -141,9 +169,7 @@
                 $('#comfort-score').val(score);
             }
         });
-    });
 
-    $(document).ready(function() {
         $('#staff').raty({
             half: true,
             starType: 'i',
@@ -154,9 +180,7 @@
                 $('#staff-score').val(score);
             }
         });
-    });
 
-    $(document).ready(function() {
         $('#facilities').raty({
             half: true,
             starType: 'i',
@@ -167,9 +191,7 @@
                 $('#facilities-score').val(score);
             }
         });
-    });
 
-    $(document).ready(function() {
         $('#value').raty({
             half: true,
             starType: 'i',

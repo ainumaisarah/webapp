@@ -11,6 +11,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 
 
+Route::resource('reviews', ReviewController::class);
 
 Route::get('/', function () {
     return view('mainpage');
@@ -33,7 +34,9 @@ Route::get('/admin', function () {
     return view('admin');
 })->name('admin');
 
+Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
+
 
 Route::post('register', [RegisterController::class, 'register'])->name('register.submit');
 

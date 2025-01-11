@@ -78,6 +78,9 @@ body {
 }
 
 /* Reviews Page Styles */
+.picturereview{
+    color:#000;
+}
 .reviews-page {
     display: flex;
     flex-direction: column;
