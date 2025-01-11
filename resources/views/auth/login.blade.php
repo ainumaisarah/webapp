@@ -60,12 +60,3 @@
         </div>
     </x-authentication-card>
 </x-guest-layout>
-
-<style>
-    body {
-        background-image:url(images/login.jpg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-</style>
