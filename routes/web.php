@@ -59,6 +59,8 @@ Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
+Route::post('/success', [PaymentController::class, 'processsuccess'])->name('success.shimi');
+Route::get('/success', [PaymentController::class, 'shimi'])->name('success.shimi');
 
 Route::middleware(['auth'])->get('/profile', function () {
     return view('profile.show');
