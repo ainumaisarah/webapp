@@ -9,6 +9,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\CartController;
 
 
 Route::resource('reviews', ReviewController::class);
@@ -84,3 +85,6 @@ Route::delete('/bookings/user/{user_id}', [BookingController::class, 'destroy'])
 
 //get room data from dataabase for rooms page
 Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
+
+
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');

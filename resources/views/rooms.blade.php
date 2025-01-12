@@ -31,6 +31,14 @@
             <div class="row">
                 <div class="col-lg-9">
                     <div class="row">
+                        @if ($rooms->isEmpty())
+                        <!-- Center the message -->
+                        <div class="col-12 text-center">
+                            <p class="mt-5 mb-5" style="font-size: 1.5rem; color: #333;">
+                                No rooms found for the given criteria.
+                            </p>
+                        </div>
+                        @endif
                         @foreach ($rooms as $room)
                             <div class="col-sm col-md-6 col-lg-4 ftco-animate">
                                 <div class="room">
@@ -47,7 +55,25 @@
 
                                         </ul>
                                         <hr>
-                                        <p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p>
+                                        <!--<p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p> -->
+                                        <form action="{{ route('bookings.store') }}" method="POST" class="add-to-cart-form">
+                                            @csrf
+                                            <input type="hidden" name="room_id" value="{{ $room->id }}">
+                                            <input type="hidden" name="price" value="{{ $room->prices }}">
+                                            <div class="form-group">
+                                                <label>Check-in Date:</label>
+                                                <input type="date" name="check_in_date" required class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Check-out Date:</label>
+                                                <input type="date" name="check_out_date" required class="form-control">
+                                            </div>
+                                            <div class="form-group">
+                                                <label>Guests:</label>
+                                                <input type="number" name="guest_count" min="1" max="{{ $room->maxperson }}" required class="form-control">
+                                            </div>
+                                            <button type="submit" class="btn btn-primary">Book Now</button>
+                                        </form>
                                     </div>
                                 </div>
                             </div>
@@ -201,7 +227,7 @@
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="room_type" id="room_type" class="form-control">
+	                    <select name="room_type" id="room_type" class="form-control" >
                             <option value="">Room Type</option>
                             <option value="Suite Room">Suite Room</option>
                             <option value="Family Room">Family Room</option>
@@ -215,7 +241,7 @@
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="guest_count" id="guest_count" class="form-control">
+	                    <select name="guest_count" id="guest_count" class="form-control" >
                             <option value="">Guests</option>
                             <option value="1">1 Guest</option>
                             <option value="2">2 Guests</option>
@@ -227,7 +253,7 @@
 	                  </div>
 		              </div>
 
-		                <input type="submit" value="Search" class="btn btn-primary py-3 px-5">
+		                <input type="submit" value="Apply" class="btn btn-primary py-3 px-5">
 		              </div>
 		            </div>
 	            </form>
@@ -289,3 +315,46 @@
 
 
     @endsection
+
+
+<!-- <form action="{{ route('rooms') }}" method="GET">
+	      				<div class="fields">
+		              <div class="form-group">
+		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
+		              </div>
+		              <div class="form-group">
+		                <input type="text" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
+		              </div>
+		              <div class="form-group">
+		                <div class="select-wrap one-third">
+	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                    <select name="room_type" id="room_type" class="form-control" >
+                            <option value="">Room Type</option>
+                            <option value="Suite Room">Suite Room</option>
+                            <option value="Family Room">Family Room</option>
+                            <option value="Deluxe Room">Deluxe Room</option>
+                            <option value="Classic Room">Classic Room</option>
+                            <option value="Superior Room">Superior Room</option>
+                            <option value="Luxury Room">Luxury Room</option>
+                        </select>
+	                  </div>
+		              </div>
+		              <div class="form-group">
+		                <div class="select-wrap one-third">
+	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
+	                    <select name="guest_count" id="guest_count" class="form-control" >
+                            <option value="">Guests</option>
+                            <option value="1">1 Guest</option>
+                            <option value="2">2 Guests</option>
+                            <option value="3">3 Guests</option>
+                            <option value="4">4 Guests</option>
+                            <option value="5">5 Guests</option>
+                            <option value="6">6 Guests</option>
+	                    </select>
+	                  </div>
+		              </div>
+
+		                <input type="submit" value="Apply" class="btn btn-primary py-3 px-5">
+		              </div>
+		            </div>
+	            </form> -->
