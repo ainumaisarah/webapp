@@ -9,7 +9,7 @@ use App\Http\Controllers\BookingController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
-use App\Http\Controllers\CartController;
+use App\Http\Controllers\RoomController;
 
 
 Route::resource('reviews', ReviewController::class);
@@ -87,4 +87,7 @@ Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name
 Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 //get room data from database for rooms page
-Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
+//Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
+Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
+
+Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');

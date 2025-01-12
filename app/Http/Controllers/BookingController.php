@@ -28,45 +28,46 @@ class BookingController extends Controller
     {
         return $this->belongsTo(Room::class);
     }
-    public function index()
+    public function index(Request $request)
     {
         $bookings = Booking::with(['user', 'room'])->get();
         $users = User::all();
         $rooms = Room::all();
 
         return view('admin', compact('bookings', 'users', 'rooms'));
+
+
+}
+public function store(Request $request)
+{
+    $validatedData = $request->validate([
+        'room_id' => 'required|exists:rooms,id',
+        'check_in_date' => 'required|date',
+        'check_out_date' => 'required|date|after:check_in_date',
+        'guest_count' => 'required|integer|min:1',
+    ]);
+
+    // Get the logged-in user
+    $user = Auth::user();
+    if (!$user) {
+        return redirect()->route('login')->with('error', 'You must be logged in to book a room.');
     }
 
-    public function store(Request $request)
-    {
-        $request->validate([
-            'user_id' => 'required|exists:users,id',
-            'room_id' => 'required|exists:rooms,room_id',
-            'check_in_date' => 'required|date',
-            'check_out_date' => 'required|date|after_or_equal:check_in_date',
-            'guest_count' => 'required|integer|',
-            'booking_status' => 'nullable|string',
-        ]);
-        $booking_id = 'BOOK-' . strtoupper(uniqid());
-        $guestCount = $request->input('guest_count');
-        $bookingStatus = $request->input('booking_status');
+    // Generate booking ID
+    $bookingId = 'BOOK-' . strtoupper(Str::random(8)); // Generate a unique booking ID
 
-    // Create a new booking
-    $bookings = new Booking();
-    $bookings->booking_id = strtoupper(Str::random(4)); // Generate a random booking ID
-    $bookings->user_id = $userId;
-    $bookings->room_id = $validatedData['room_id'];
-    $bookings->check_in_date = $validatedData['check_in_date'];
-    $bookings->check_out_date = $validatedData['check_out_date'];
-    $bookings->guest_count = $validatedData['guest_count'];
-    $bookings->price = $request->input('price');
-    $bookings->booking_status = 'pending'; // Default to pending
+    Booking::create([
+        'booking_id' => $bookingId,
+        'user_id' => $userId,
+        'room_id' => $validatedData['room_id'],
+        'check_in_date' => $validatedData['check_in_date'],
+        'check_out_date' => $validatedData['check_out_date'],
+        'guest_count' => $validatedData['guest_count'],
+        'booking_status' => 'pending',
+    ]);
 
-    $booking->save();
-
-    return redirect()->route('payment');
+    return redirect()->route('payment')->with('success', 'Booking successfully created!');
 }
-
 
     public function edit($booking_id)
     {
@@ -106,7 +107,7 @@ class BookingController extends Controller
         return redirect()->route('admin.index')->with('success', 'Booking deleted successfully.');
     }
 
-    public function rooms(Request $request)
+/*    public function rooms(Request $request)
 {
     $query = DB::table('rooms');
     //$query = Room::query(); // Assuming you have a Room model
@@ -127,5 +128,5 @@ class BookingController extends Controller
     $message = $rooms->isEmpty() ? 'No rooms found for the given criteria.' : null;
 
     return view('rooms', compact('rooms', 'message'));
-}
+}*/
 }

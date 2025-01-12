@@ -56,23 +56,13 @@
                                         </ul>
                                         <hr>
                                         <!--<p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p> -->
-                                        <form action="{{ route('bookings.store') }}" method="POST" class="add-to-cart-form">
+                                        <form action="{{ route('bookings.index') }}" method="POST" class="add-to-cart-form">
                                             @csrf
                                             <input type="hidden" name="room_id" value="{{ $room->id }}">
-                                            <input type="hidden" name="price" value="{{ $room->prices }}">
-                                            <div class="form-group">
-                                                <label>Check-in Date:</label>
-                                                <input type="date" name="check_in_date" required class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Check-out Date:</label>
-                                                <input type="date" name="check_out_date" required class="form-control">
-                                            </div>
-                                            <div class="form-group">
-                                                <label>Guests:</label>
-                                                <input type="number" name="guest_count" min="1" max="{{ $room->maxperson }}" required class="form-control">
-                                            </div>
-                                            <a href="{{ route('payment') }}" class="btn btn-primary">Book Now</a>
+                                            <input type="hidden" name="check_in_date"  value="{{ session('checkin_date') }}">
+                                            <input type="hidden" name="check_out_date"  value="{{ session('checkout_date') }}">
+                                            <input type="hidden" name="guest_count" min="1" max="{{ $room->maxperson }}" value="{{ session('cus_count') }}">
+                                            <a href="{{ route('payment') }} "type="submit" class="btn btn-primary">Book Now</a>
                                         </form>
                                     </div>
                                 </div>
@@ -219,10 +209,10 @@
 	      			<form action="{{ route('rooms') }}" method="GET">
 	      				<div class="fields">
 		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
+		                <input type="text" name="checkin_date" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
 		              </div>
 		              <div class="form-group">
-		                <input type="text" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
+		                <input type="text" name="checkout_date" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
 		              </div>
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
