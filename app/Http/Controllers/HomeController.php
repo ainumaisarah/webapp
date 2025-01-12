@@ -13,7 +13,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('mainpage'); // Return the view that represents your homepage
+        return view('mainpage');
+        // Return the view that represents your homepage
     }
 }
 
