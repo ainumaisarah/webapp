@@ -72,7 +72,7 @@
                                                 <label>Guests:</label>
                                                 <input type="number" name="guest_count" min="1" max="{{ $room->maxperson }}" required class="form-control">
                                             </div>
-                                            <button type="submit" class="btn btn-primary">Book Now</button>
+                                            <a href="{{ route('payment') }}" class="btn btn-primary">Book Now</a>
                                         </form>
                                     </div>
                                 </div>

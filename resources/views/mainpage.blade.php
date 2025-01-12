@@ -81,12 +81,12 @@
 			        					<div class="select-wrap">
 			                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
 			                    <select name="" id="" class="form-control">
-			                    	<option value="">1 Adult</option>
-			                      <option value="">2 Adult</option>
-			                      <option value="">3 Adult</option>
-			                      <option value="">4 Adult</option>
-			                      <option value="">5 Adult</option>
-			                      <option value="">6 Adult</option>
+			                    	<option value="">1 Guest</option>
+			                      <option value="">2 Guest</option>
+			                      <option value="">3 Guest</option>
+			                      <option value="">4 Guest</option>
+			                      <option value="">5 Guest</option>
+			                      <option value="">6 Guest</option>
 			                    </select>
 			                  </div>
 				              </div>
@@ -212,9 +212,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Suite Room</a></h3>
-                        <p><span class="price mr-2">$120.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM120.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}"  class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
@@ -227,9 +227,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Family Room</a></h3>
-                        <p><span class="price mr-2">$20.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM200.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
@@ -242,9 +242,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Deluxe Room</a></h3>
-                        <p><span class="price mr-2">$150.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM150.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
@@ -257,9 +257,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Classic Room</a></h3>
-                        <p><span class="price mr-2">$130.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM130.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
@@ -272,9 +272,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Superior Room</a></h3>
-                        <p><span class="price mr-2">$300.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM300.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>
@@ -287,9 +287,9 @@
                     </a>
                     <div class="text p-3 text-center">
                         <h3 class="mb-3"><a href="rooms.html">Luxury Room</a></h3>
-                        <p><span class="price mr-2">$500.00</span> <span class="per">per night</span></p>
+                        <p><span class="price mr-2">RM500.00</span> <span class="per">per night</span></p>
                         <hr>
-                        <p class="pt-1"><a href="room-single.html" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
+                        <p class="pt-1"><a href="{{ route('rooms') }}" class="btn-custom">View Room Details <span class="icon-long-arrow-right"></span></a></p>
                     </div>
                 </div>
             </div>

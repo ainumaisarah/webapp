@@ -52,19 +52,19 @@ class BookingController extends Controller
         $bookingStatus = $request->input('booking_status');
 
     // Create a new booking
-    $booking = new Booking();
-    $booking->booking_id = strtoupper(Str::random(4)); // Generate a random booking ID
-    $booking->user_id = $userId;
-    $booking->room_id = $validatedData['room_id'];
-    $booking->check_in_date = $validatedData['check_in_date'];
-    $booking->check_out_date = $validatedData['check_out_date'];
-    $booking->guest_count = $validatedData['guest_count'];
-    $booking->price = $request->input('price');
-    $booking->booking_status = 'pending'; // Default to pending
+    $bookings = new Booking();
+    $bookings->booking_id = strtoupper(Str::random(4)); // Generate a random booking ID
+    $bookings->user_id = $userId;
+    $bookings->room_id = $validatedData['room_id'];
+    $bookings->check_in_date = $validatedData['check_in_date'];
+    $bookings->check_out_date = $validatedData['check_out_date'];
+    $bookings->guest_count = $validatedData['guest_count'];
+    $bookings->price = $request->input('price');
+    $bookings->booking_status = 'pending'; // Default to pending
 
     $booking->save();
 
-    return redirect()->back()->with('success', 'Your booking has been successfully created.');
+    return redirect()->route('payment');
 }
 
 

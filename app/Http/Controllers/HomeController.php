@@ -15,6 +15,8 @@ class HomeController extends Controller
     {
         return view('mainpage');
         // Return the view that represents your homepage
+
+        return view('rooms');
     }
 }
 

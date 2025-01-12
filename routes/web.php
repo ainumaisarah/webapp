@@ -62,7 +62,7 @@ Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index'
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
 Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin.login.submit');
 
-Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
+Route::get('/payment', [PaymentController::class, 'index'])->name('payment');
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
 Route::post('/success', [PaymentController::class, 'processsuccess'])->name('success.shimi');
 Route::get('/success', [PaymentController::class, 'shimi'])->name('success.shimi');
@@ -86,8 +86,5 @@ Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->n
 Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
 Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
-//get room data from dataabase for rooms page
+//get room data from database for rooms page
 Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');
-
-
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');

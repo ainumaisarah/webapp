@@ -8,7 +8,9 @@ class PaymentController extends Controller
 {
     public function index()
     {
-        return view('payment');  // payment.blade.php
+
+        return view('payment');
+        //return view('payment');  // payment.blade.php
     }
     public function shimi()
     {
