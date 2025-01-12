@@ -54,11 +54,11 @@
                 <td>{{ $booking->check_out_date }}</td>
                 <td>
                     <!--edit button-->
-                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editBookingModal-{{ $booking->user_id }}">Edit</button>
+                    <button class="btn btn-primary btn-sm" data-toggle="modal" data-target="#editBookingModal-{{ $booking->booking_id }}">Edit</button>
                     <!-- eedit modal -->
-                    <div class="modal fade" id="editBookingModal-{{ $booking->user_id }}" tabindex="-1" aria-hidden="true">
+                    <div class="modal fade" id="editBookingModal-{{ $booking->booking_id }}" tabindex="-1" aria-hidden="true">
                         <div class="modal-dialog">
-                            <form action="{{ route('bookings.update', $booking->user_id) }}" method="POST">
+                            <form action="{{ route('bookings.update', $booking->booking_id) }}" method="POST">
                                 @csrf
                                 @method('PUT')
                                 <div class="modal-content">
@@ -95,7 +95,7 @@
                                         <!-- Guest Count -->
                                         <div class="mb-3">
                                             <label for="guest_count" class="form-label">Guest Count</label>
-                                            <input type="number" name="guest_count" class="form-control" min="1" value="{{ $booking->guest_count }}" required>
+                                            <input type="number" name="guest_count" class="form-control" min ="1" value="{{ $booking->guest_count }}" required>
                                         </div>
 
                                         <!-- Booking Status -->
@@ -117,7 +117,7 @@
                         </div>
                     </div>
 
-                    <form action="{{ route('bookings.destroy', $booking->user_id) }}" method="POST" style="display:inline-block;">
+                    <form action="{{ route('bookings.destroy', $booking->booking_id) }}" method="POST" style="display:inline-block;">
                         @csrf
                         @method('DELETE')
                         <button type="submit" class="btn btn-danger btn-sm">Delete</button>

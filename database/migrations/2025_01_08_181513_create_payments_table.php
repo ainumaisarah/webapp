@@ -15,6 +15,11 @@ return new class extends Migration
             $table->id('payment_id'); // Primary key
             $table->string('booking_id');  // Foreign key
             $table->decimal('amount', 10, 2); // Amount with precision
+            $table->decimal('card_number', 10, 2);
+            $table->decimal('expiry_date', 6);
+            $table->decimal('ccv', 3);
+
+
             $table->enum('payment_status', ['success', 'fail']); // Status
             $table->timestamps();
 

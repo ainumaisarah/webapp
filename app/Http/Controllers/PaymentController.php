@@ -10,6 +10,11 @@ class PaymentController extends Controller
     {
         return view('payment');  // payment.blade.php
     }
+    public function shimi()
+    {
+        return view('success');  // payment.blade.php
+    }
+
 
     // Handle payment processing (example)
     public function processPayment(Request $request)
@@ -18,5 +23,12 @@ class PaymentController extends Controller
 
         // Example response
         return redirect()->route('payment.index')->with('status', 'Payment successful!');
+    }
+    public function processSuccess(Request $request)
+    {
+        // Handle payment logic here (e.g., integration with a payment gateway)
+
+        // Example response
+        return redirect()->route('success.shimi')->with('status', 'Payment successful!');
     }
 }

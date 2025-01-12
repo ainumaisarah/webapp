@@ -13,12 +13,13 @@ use App\Http\Controllers\CartController;
 
 
 Route::resource('reviews', ReviewController::class);
+Route::resource('bookings', BookingController::class);
 
 Route::get('/', function () {
     return view('mainpage');
-})->name('home');
+})->name('mainpage');
 
-Route::get('/', [HomeController::class, 'index'])->name('home');
+Route::get('/home', [HomeController::class, 'index'])->name('home');
 
 Route::get('/reviews', function () {
     return view('reviews');
@@ -63,6 +64,8 @@ Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin
 
 Route::get('/payment', [PaymentController::class, 'index'])->name('payment.index');
 Route::post('/payment', [PaymentController::class, 'processPayment'])->name('payment.process');
+Route::post('/success', [PaymentController::class, 'processsuccess'])->name('success.shimi');
+Route::get('/success', [PaymentController::class, 'shimi'])->name('success.shimi');
 
 Route::middleware(['auth'])->get('/profile', function () {
     return view('profile.show');
@@ -80,8 +83,8 @@ Route::get('/admin', [BookingController::class, 'index'])->name('admin.index');
 Route::get('/admin/bookings', [BookingController::class, 'index'])->name('bookings.index');
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
 Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
-Route::put('/bookings/user/{user_id}', [BookingController::class, 'update'])->name('bookings.update');
-Route::delete('/bookings/user/{user_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
+Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 //get room data from dataabase for rooms page
 Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');

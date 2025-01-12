@@ -7,17 +7,8 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Booking extends Model
 {
-    protected $fillable = [
-        'booking_id',
-        'user_id',
-        'room_id',
-        'check_in_date',
-        'check_out_date',
-        'guest_count',
-        'booking_status',
-        'created_at',
-        'updated_at',
-    ];
+    protected $primaryKey = 'booking_id';
+    protected $fillable = ['user_id', 'room_id', 'check_in_date', 'check_out_date'];
 
     protected static function boot()
     {
@@ -26,12 +17,6 @@ class Booking extends Model
         static::creating(function ($model) {
             if (empty($model->booking_id)) {
                 $model->booking_id = 'BOOK-' . strtoupper(uniqid());
-            }
-            if (empty($model->guest_count)) {
-                $model->guest_count = 1; // Default 1 guest
-            }
-            if (empty($model->booking_status)) {
-                $model->booking_status = 'pending'; // Default status
             }
         });
     }
