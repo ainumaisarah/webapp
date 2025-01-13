@@ -6,11 +6,17 @@ use Illuminate\Http\Request;
 
 class PaymentController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
-
-        return view('payment');
-        //return view('payment');  // payment.blade.php
+        $data = [
+            'room_id' => $request->input('room_id'),
+            'room_type' => $request->input('room_type'),
+            'check_in_date' => $request->input('check_in_date'),
+            'check_out_date' => $request->input('check_out_date'),
+            'price' => $request->input('price'),
+            'guest_count' => $request->input('guest_count'),
+        ];
+        return view('payment')->with('data', $data);  // payment.blade.php
     }
     public function shimi()
     {

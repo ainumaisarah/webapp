@@ -30,15 +30,16 @@
         <div class="content">
             <div class="booking-details">
                 <div class="header">
-
                     <div class="logo">Moonlit Lagoon Hotel</div>
+                    <br>
                 </div>
                 <h3>Booking Details</h3>
                 <p><strong>Location:</strong> Kuala Lumpur, Malaysia</p>
-                <p><strong>Check-in:</strong> Friday, 20 Apr 2024, 15:00-23:00</p>
-                <p><strong>Check-out:</strong> Sunday, 30 Apr 2024, 08:00-12:30</p>
-                <p><strong>Total Length of Stay:</strong> 9 nights</p>
-                <p><strong>Selection:</strong> 1 room for 2 adults</p>
+                <p><strong>Check-in:</strong> {{ $data['check_in_date'] }}</p>
+                <p><strong>Check-out:</strong> {{ $data['check_out_date'] }}</p>
+                <p><strong>Total Length of Stay:</strong> {{ \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date'])) }} nights</p>
+                <p><strong>Selection:</strong> 1 room for {{ $data['guest_count'] }} guests</p>
+                <p><strong>Room Type:</strong> {{ $data['room_type'] }}</p>
                 <div class="stars">
                     <span class="star">★</span>
                     <span class="star">★</span>
@@ -46,18 +47,17 @@
                     <span class="star">★</span>
                     <span class="star">☆</span>
                 </div>
-
             </div>
             <div class="payment-summary">
                 <h3>Payment Summary</h3>
-                <p><strong>Subtotal:</strong> MYR 1,516.00</p>
-                <p><strong>Tax:</strong> MYR 30.00</p>ssssssss
-                <p><strong>Total:</strong> MYR 1,546.00</p>
+                <p><strong>Subtotal:</strong> MYR {{ $data['price'] }}</p>
+                <p><strong>Tax:</strong> MYR {{ $data['price'] * 0.06 }}</p>
+                <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
                 <h3>Cancellation Policy</h3>
                 <p><strong>Cancellation Fee:</strong> MYR 600.00</p>
                 <p><strong>Refund:</strong> The refund depends on the cancellation policy in the booking terms.</p>
                 <p><strong>Contact:</strong> +6013-2322112 (Help)</p>
-            </div>saddsa
+            </div>
         </div>
     </div>
 
@@ -66,16 +66,13 @@
         <form action="{{ route('success.shimi') }}" method="POST">
             @csrf
             <div class="form-group">
-                <label for="amount">Amount</label>S
-
-                <p><strong>Total:</strong> MYR 1,546.00</p>
-
+                <label for="amount">Amount</label>
+                <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
             </div>
 
             <div class="form-group">
                 <label for="card_number">Card Number</label>
                 <input type="number" name="card_number" id="card_number" required class="form-control">
-
             </div>
 
             <div class="form-group">
@@ -88,19 +85,9 @@
                 <input type="text" name="cvv" id="cvv" placeholder="Enter CVV" required class="form-control">
             </div>
 
-            <button type="submit" class="btn-post" ><a href="/success"></a>Make Payment</button>
-
+            <button type="submit" class="btn-post">Make Payment</button>
         </form>
-
-
     </div>
 </div>
 
 @endsection
-
-<script>
-    function makePayment(method) {
-                    // Implement payment logic here
-                    alert('Payment method selected: ' + method);
-                }
-</script>
