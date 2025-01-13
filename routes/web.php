@@ -91,3 +91,4 @@ Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+Route::get('payment', [PaymentController::class, 'index'])->name('payment');

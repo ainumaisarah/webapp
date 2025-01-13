@@ -38,6 +38,60 @@ class BookingController extends Controller
 
 
 }
+
+public function store(Request $request)
+{
+    // Retrieve the authenticated user's ID
+
+    $userId = DB::table('users')->value('id');
+
+    if (!$userId) {
+        return redirect()->back()->with('error', 'You must be logged in to book a room.');
+    }
+
+    // Fetch the latest search data
+    $latestSearch = DB::table('search')->orderBy('search_id', 'desc')->first();
+
+    if (!$latestSearch) {
+        return redirect()->back()->with('error', 'No search criteria found.');
+    }
+
+    // Fetch the first room as an example (You can change the logic as needed)
+    $room = DB::table('rooms')->where('room_id', $request->room_id)->first();
+
+    if (!$room) {
+        return redirect()->back()->with('error', 'No rooms available for booking.');
+    }
+
+    // Generate a unique booking ID
+    $bookingId = 'BOOK-' . strtoupper(uniqid());
+
+    // Create a new booking
+    $booking = Booking::create([
+        'booking_id' => $bookingId,
+        'user_id' => $userId,
+        'room_id' => $room->room_id,
+        'check_in_date' => $latestSearch->checkin_date,
+        'check_out_date' => $latestSearch->checkout_date,
+        'guest_count' => $latestSearch->cus_count,
+        'booking_status' => 'pending', // Default status
+    ]);
+
+    // Store booking data in the session for later use
+    session([
+        'room_id' => $room->room_id,
+        'room_type' => $room->type,
+        'check_in_date' => $booking->check_in_date,
+        'check_out_date' => $booking->check_out_date,
+        'price' => $room->prices,
+        'guest_count' => $booking->guest_count
+    ]);
+
+    // Redirect to the payment page with the booking details
+    return redirect()->route('payment');
+
+}
+/*
 public function store(Request $request)
 {
     $validatedData = $request->validate([
@@ -67,7 +121,7 @@ public function store(Request $request)
     ]);
 
     return redirect()->route('payment')->with('success', 'Booking successfully created!');
-}
+}*/
 
     public function edit($booking_id)
     {

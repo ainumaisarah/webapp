@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Booking extends Model
 {
     protected $primaryKey = 'booking_id';
-    protected $fillable = ['user_id', 'room_id', 'check_in_date', 'check_out_date'];
+    protected $fillable = ['user_id', 'room_id', 'check_in_date', 'check_out_date', 'guest_count' , 'booking_status'];
 
     protected static function boot()
     {

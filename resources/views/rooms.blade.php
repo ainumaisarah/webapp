@@ -56,14 +56,14 @@
                                         </ul>
                                         <hr>
                                         <!--<p class="pt-1"><a href="room-single.html" class="btn-custom">Book Now <span class="icon-long-arrow-right"></span></a></p> -->
-                                        <form action="{{ route('payment') }}" method="POST" class="add-to-cart-form">
+                                        <form action="{{ route('bookings.store') }}" method="POST" class="add-to-cart-form">
                                             @csrf
-                                            <input type="hidden" name="room_id" value="{{ $room->id }}">
+                                            <input type="hidden" name="room_id" value="{{ $room->room_id }}">
                                             <input type="hidden" name="room_type" value="{{ $room->type }}">
                                             <input type="hidden" name="check_in_date" value="{{ session('checkin_date') }}">
                                             <input type="hidden" name="check_out_date" value="{{ session('checkout_date') }}">
                                             <input type="hidden" name="price" value="{{ $room->prices }}">
-                                            <input type="hidden" name="guest_count" min="1" max="{{ $room->maxperson }}" value="{{ session('cus_count') }}">
+                                            <input type="hidden" name="guest_count" value="{{ session('cus_count') }}">
                                             <button type="submit" class="btn btn-primary">Book Now</button>
                                         </form>
                                     </div>
