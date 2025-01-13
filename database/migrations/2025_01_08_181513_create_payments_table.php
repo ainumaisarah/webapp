@@ -15,6 +15,7 @@ return new class extends Migration
             $table->id('payment_id'); // Primary key
             $table->string('booking_id');  // Foreign key
             $table->decimal('amount', 10, 2); // Amount with precision
+            $table->string('card_name', 30);
             $table->decimal('card_number', 10, 2);
             $table->decimal('expiry_date', 6);
             $table->decimal('ccv', 3);
