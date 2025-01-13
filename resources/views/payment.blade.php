@@ -75,7 +75,7 @@
 
             <div class="form-group">
                 <label for="card_name">CardHolder Name</label>
-                <input type="number" name="card_name" id="card_name" required class="form-control">
+                <input type="text" name="card_name" id="card_name" required class="form-control">
             </div>
 
             <div class="form-group">
