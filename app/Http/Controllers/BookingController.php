@@ -18,6 +18,8 @@ class BookingController extends Controller
         'room_id',
         'check_in_date',
         'check_out_date',
+        'guest_count',
+        'booking_status',
     ];
 
     public function user()
@@ -75,12 +77,12 @@ public function store(Request $request)
     return redirect()->route('payment')->with('success', 'Booking successfully created!');
 }
 
-//admin add booking function
+//admin add booking function (jgn edit)
 public function adminStore(Request $request)
     {
         $request->validate([
             'user_id' => 'required|exists:users,id',
-            'room_id' => 'required|exists:rooms,room_id',
+            'room_id' => 'required|exists:rooms,id',
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
             'guest_count' => 'required|integer|',
@@ -112,12 +114,12 @@ public function adminStore(Request $request)
         return view('edit-booking', compact('booking', 'users', 'rooms'));
     }
 
-    // admin edit booking function
+    // admin edit booking function (jgn edit)
     public function update(Request $request, $booking_id)
     {
         $bookings = Booking::findOrFail($booking_id);
         $validatedData = $request->validate([
-            'room_id' => 'required|exists:rooms,room_id',
+            'room_id' => 'required|exists:rooms,id',
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
             'guest_count' => 'required|integer|min:1',
@@ -131,10 +133,12 @@ public function adminStore(Request $request)
             'guest_count' => $request->input('guest_count'),
             'booking_status' => $request->input('booking_status'),
         ]);
+
         return redirect()->route('admin.index')->with('success', 'Booking edited successfully.');
+
     }
 
-    //admin delete bookingf function
+    //admin delete booking function (jgn edit)
     public function destroy(Request $request, $booking_id)
     {
         $bookings = Booking::findOrFail($booking_id);
