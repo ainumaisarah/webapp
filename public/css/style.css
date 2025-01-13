@@ -81,6 +81,72 @@ body {
     color: black;
 }
 
+/* Guest Reviews Section */
+.guest-reviews {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 20px;
+}
+
+.guest-reviews h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.guest-review {
+    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.guest-review:last-child {
+    border-bottom: none;
+}
+
+.guest-review .review-content {
+    flex: 1;
+}
+
+.guest-review .review-meta {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.guest-review .review-meta .stars,
+.guest-review .review-meta .review-date,
+.guest-review .review-meta .review-actions {
+    margin: 0 10px;
+    order: 3; /* Ensure stars are at the far right */
+}
+
+.guest-review .review-meta .review-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.guest-review p {
+    font-size: 16px;
+    color: #555;
+}
+
+.guest-review .review-author {
+    font-weight: bold;
+    color: #333;
+}
+
+.guest-review .review-date {
+    font-size: 14px;
+    color: #999;
+    margin-top: 5px;
+}
+
 
 /* Reviews Page Styles */
 .picturereview{
