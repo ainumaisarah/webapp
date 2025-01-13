@@ -97,7 +97,7 @@
                     </p>
                     <div class="review-text">
                         {{ $review->review_text }}
-                        {{ $review->negativereview_text }}
+
                     </div>
                     <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : Carbon::now()->format('F Y') }}</p>
                 </div>
