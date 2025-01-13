@@ -76,6 +76,11 @@ body {
     position: relative;
     z-index: 1000; /* Ensure the top bar is above other elements */
 }
+/* Payment Page Styles */
+.booking-details p, .payment-summary p, .review-form p{
+    color: black;
+}
+
 
 /* Reviews Page Styles */
 .picturereview{

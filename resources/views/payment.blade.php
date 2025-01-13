@@ -30,15 +30,16 @@
         <div class="content">
             <div class="booking-details">
                 <div class="header">
-                    <div class="logo">Moonlit Lagoon Hotel</div>
                     <br>
+                    <div class="logo">Moonlit Lagoon Hotel</div>
+
                 </div>
-                <h3>Booking Details</h3>
+                <h3> Your Booking Details</h3>
                 <p><strong>Location:</strong> Kuala Lumpur, Malaysia</p>
                 <p><strong>Check-in:</strong> {{ $data['check_in_date'] }}</p>
                 <p><strong>Check-out:</strong> {{ $data['check_out_date'] }}</p>
                 <p><strong>Total Length of Stay:</strong> {{ \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date'])) }} nights</p>
-                <p><strong>Selection:</strong> 1 room for {{ $data['guest_count'] }} guests</p>
+                <p><strong>Selection:</strong> 1 Room for {{ $data['guest_count'] }} guests</p>
                 <p><strong>Room Type:</strong> {{ $data['room_type'] }}</p>
                 <div class="stars">
                     <span class="star">★</span>
@@ -49,10 +50,12 @@
                 </div>
             </div>
             <div class="payment-summary">
+                <br>
                 <h3>Payment Summary</h3>
                 <p><strong>Subtotal:</strong> MYR {{ $data['price'] }}</p>
-                <p><strong>Tax:</strong> MYR {{ $data['price'] * 0.06 }}</p>
+                <p><strong>Total Tax:</strong> MYR {{ $data['price'] * 0.06 }}</p>
                 <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
+                <br>
                 <h3>Cancellation Policy</h3>
                 <p><strong>Cancellation Fee:</strong> MYR 600.00</p>
                 <p><strong>Refund:</strong> The refund depends on the cancellation policy in the booking terms.</p>
@@ -60,7 +63,7 @@
             </div>
         </div>
     </div>
-
+    <br>
     <div class="review-form">
         <h3>Enter Payment Details</h3>
         <form action="{{ route('success.shimi') }}" method="POST">
@@ -71,8 +74,13 @@
             </div>
 
             <div class="form-group">
+                <label for="card_name">CardHolder Name</label>
+                <input type="number" name="card_name" id="card_name" required class="form-control">
+            </div>
+
+            <div class="form-group">
                 <label for="card_number">Card Number</label>
-                <input type="number" name="card_number" id="card_number" required class="form-control">
+                <input type="text" name="card_number" id="card_number" required class="form-control">
             </div>
 
             <div class="form-group">
@@ -89,5 +97,10 @@
         </form>
     </div>
 </div>
-
+<style>
+    .booking-details , .payment-summary , .review-form {
+    color: black;
+}
+</style>
 @endsection
+
