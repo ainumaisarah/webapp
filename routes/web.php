@@ -81,10 +81,10 @@ Route::post('/admin', [AdminController::class, 'admindetail']);
 //admin page get data part
 Route::get('/admin', [BookingController::class, 'index'])->name('admin.index');
 Route::post('/admin/bookings', [PaymentController::class, 'index'])->name('bookings.index');
-Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
-Route::get('/bookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
-Route::put('/bookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
-Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
+Route::post('/adminbookings', [BookingController::class, 'adminStore'])->name('bookings.adminstore');
+Route::get('/adminbookings/{booking_id}/edit', [BookingController::class, 'edit'])->name('bookings.edit');
+Route::put('/adminbookings/{booking_id}', [BookingController::class, 'update'])->name('bookings.update');
+Route::delete('/adminbookings/{booking_id}', [BookingController::class, 'destroy'])->name('bookings.destroy');
 
 //get room data from database for rooms page
 //Route::get('/rooms', [BookingController::class, 'rooms'])->name('rooms');

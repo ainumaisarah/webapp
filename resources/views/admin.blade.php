@@ -137,7 +137,7 @@
 <button class="btn btn-success" data-toggle="modal" data-target="#addBookingModal">Add Booking</button>
 <div class="modal fade" id="addBookingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="{{ route('bookings.store') }}" method="POST">
+        <form action="{{ route('bookings.admintore') }}" method="POST">
             @csrf
             <div class="modal-content">
                 <div class="modal-header">
