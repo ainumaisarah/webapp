@@ -136,7 +136,7 @@ public function adminStore(Request $request)
     {
         $request->validate([
             'user_id' => 'required|exists:users,id',
-            'room_id' => 'required|exists:rooms,id',
+            'room_id' => 'required|exists:rooms,room_id',
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
             'guest_count' => 'required|integer|',
@@ -173,7 +173,7 @@ public function adminStore(Request $request)
     {
         $bookings = Booking::findOrFail($booking_id);
         $validatedData = $request->validate([
-            'room_id' => 'required|exists:rooms,id',
+            'room_id' => 'required|exists:rooms,room_id',
             'check_in_date' => 'required|date',
             'check_out_date' => 'required|date|after_or_equal:check_in_date',
             'guest_count' => 'required|integer|min:1',

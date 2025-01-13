@@ -10,7 +10,7 @@ class BookingSeeder extends Seeder
     public function run()
     {
         $users = DB::table('users')->pluck('id')->toArray();
-        $rooms = DB::table('rooms')->pluck('id')->toArray();
+        $rooms = DB::table('rooms')->pluck('room_id')->toArray();
         DB::table('bookings')->insert([
             [
                 'booking_id' => 'ABC1234',
