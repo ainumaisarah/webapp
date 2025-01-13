@@ -34,9 +34,9 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>USER ID</th>
-                <th>USER Name</th>
-                <th>EMAIL</th>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Email</th>
                 <th>Room</th>
                 <th>Room Type</th>
                 <th>Price (RM)</th>
