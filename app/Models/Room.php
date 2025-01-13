@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Room extends Model
 {
-    protected $fillable = ['room_id', 'type', 'prices'];
+    protected $fillable = ['room_id', 'type', 'prices', 'maxperson', 'bed', 'availability'];
 
     public function bookings()
     {

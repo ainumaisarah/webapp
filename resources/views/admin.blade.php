@@ -34,9 +34,9 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>USER ID</th>
-                <th>USER Name</th>
-                <th>EMAIL</th>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Email</th>
                 <th>Room</th>
                 <th>Room Type</th>
                 <th>Price (RM)</th>
@@ -78,7 +78,7 @@
                                             <label for="room_id" class="form-label">Room</label>
                                             <select name="room_id" class="form-control" required>
                                                 @foreach($rooms as $room)
-                                                    <option value="{{ $room->room_id }}" {{ $booking->room->room_id == $room->room_id ? 'selected' : '' }}>
+                                                    <option value="{{ $room->id }}" {{ $booking->room->id == $room->id ? 'selected' : '' }}>
                                                         {{ $room->room_id }} - {{ $room->type }} ({{ number_format($room->prices, 2) }})
                                                     </option>
                                                 @endforeach
@@ -137,7 +137,7 @@
 <button class="btn btn-success" data-toggle="modal" data-target="#addBookingModal">Add Booking</button>
 <div class="modal fade" id="addBookingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="{{ route('bookings.store') }}" method="POST">
+        <form action="{{ route('bookings.adminstore') }}" method="POST">
             @csrf
             <div class="modal-content">
                 <div class="modal-header">
@@ -160,7 +160,7 @@
                         <label for="room_id" class="form-label">Room</label>
                         <select name="room_id" class="form-control" required>
                             @foreach($rooms as $room)
-                                <option value="{{ $room->room_id }}">{{ $room->room_id }} - {{ $room->type }} ({{ number_format($room->prices, 2) }})</option>
+                                <option value="{{ $room->id }}">{{ $room->room_id }} - {{ $room->type }} ({{ number_format($room->prices, 2) }})</option>
                             @endforeach
                         </select>
                     </div>
