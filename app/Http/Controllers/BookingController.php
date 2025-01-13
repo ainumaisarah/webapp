@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Booking;
 use App\Models\Room;
+use App\Models\Admin;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -22,6 +23,11 @@ class BookingController extends Controller
     public function user()
     {
         return $this->belongsTo(User::class);
+    }
+
+    public function admin()
+    {
+        return $this->belongsTo(Admin::class);
     }
 
     public function room()
@@ -69,6 +75,34 @@ public function store(Request $request)
     return redirect()->route('payment')->with('success', 'Booking successfully created!');
 }
 
+//admin add booking function
+public function adminStore(Request $request)
+    {
+        $request->validate([
+            'user_id' => 'required|exists:users,id',
+            'room_id' => 'required|exists:rooms,room_id',
+            'check_in_date' => 'required|date',
+            'check_out_date' => 'required|date|after_or_equal:check_in_date',
+            'guest_count' => 'required|integer|',
+            'booking_status' => 'nullable|string',
+        ]);
+        $booking_id = 'BOOK-' . strtoupper(uniqid());
+        $guestCount = $request->input('guest_count', 1); // Default to 1 if not provided
+        $bookingStatus = $request->input('booking_status', 'pending'); // Default to 'pending' if not provided
+
+        Booking::create([
+            'booking_id' => $booking_id,
+            'user_id' => $request->user_id,
+            'room_id' => $request->room_id,
+            'check_in_date' => $request->check_in_date,
+            'check_out_date' => $request->check_out_date,
+            'guest_count' => $request->guest_count,
+            'booking_status' => $request->booking_status ,
+        ]);
+
+        return redirect()->route('admin.index')->with('success', 'Booking added successfully.');
+    }
+
     public function edit($booking_id)
     {
         $bookings = Booking::findOrFail($booking_id);
@@ -78,6 +112,7 @@ public function store(Request $request)
         return view('edit-booking', compact('booking', 'users', 'rooms'));
     }
 
+    // admin edit booking function
     public function update(Request $request, $booking_id)
     {
         $bookings = Booking::findOrFail($booking_id);
@@ -99,6 +134,7 @@ public function store(Request $request)
         return redirect()->route('admin.index')->with('success', 'Booking edited successfully.');
     }
 
+    //admin delete bookingf function
     public function destroy(Request $request, $booking_id)
     {
         $bookings = Booking::findOrFail($booking_id);
