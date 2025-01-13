@@ -20,7 +20,7 @@
     </div>
   </div>
 
-<div class="container mt-5">
+<div class="container-fluid mt-5">
     <!-- flash msg part -->
     @if (session('success'))
     <div class="alert alert-success">
@@ -28,6 +28,7 @@
     </div>
 @endif
 
+<div class="container-fluid py-5" style="width: 100%; margin: 0; padding: 0;">
     <h2>Guest List</h2>
     <table class="table table-bordered">
         <thead>
@@ -198,5 +199,6 @@
             </div>
         </form>
     </div>
+</div>
 </div>
 @endsection
