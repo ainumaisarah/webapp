@@ -91,3 +91,6 @@ Route::delete('/bookings/{booking_id}', [BookingController::class, 'destroy'])->
 Route::get('/rooms', [RoomController::class, 'index'])->name('rooms');
 
 Route::post('/bookings', [BookingController::class, 'store'])->name('bookings.store');
+
+Route::get('/reviews/{review}/edit', [ReviewController::class, 'edit'])->name('reviews.edit');
+Route::put('/reviews/{review}', [ReviewController::class, 'update'])->name('reviews.update');

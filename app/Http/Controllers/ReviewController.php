@@ -56,7 +56,19 @@ class ReviewController extends Controller
     public function edit($id)
     {
         $review = Review::findOrFail($id);
-        return view('reviews.edit', compact('review'));
+        return view('edit_review', compact('review'));
+    }
+    public function update(Request $request, $id)
+    {
+        $request->validate([
+            'review_text' => 'required|string|max:255',
+        ]);
+
+        $review = Review::findOrFail($id);
+        $review->review_text = $request->input('review_text');
+        $review->save();
+
+        return redirect()->route('reviews.index')->with('success', 'Review updated successfully.');
     }
 
 

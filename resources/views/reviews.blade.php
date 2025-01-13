@@ -123,7 +123,9 @@
                             @method('DELETE')
                             <button type="submit" class="btn btn-danger">Delete Review</button>
                         </form>
-                    </div>
+                        <form action="{{ route('reviews.edit', $review->id) }}" method="GET" style="display:inline;">
+                            @csrf
+                            <button type="submit" class="btn btn-primary">Update</button>                    </div>
                 @endif
                 </div>
             </div>
