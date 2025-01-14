@@ -32,5 +32,24 @@ class ProfileController extends Controller
 
         return back()->with('status', 'Profile updated successfully.');
     }
+
+    // filepath: /c:/xampp/htdocs/moonlit/app/Http/Controllers/ProfileController.php
+public function updateProfilePhoto(Request $request)
+{
+    $request->validate([
+        'profile_photo' => 'required|image|mimes:jpeg,png,jpg,gif|max:2048',
+    ]);
+
+    // Store the file in the public/images directory
+    $fileName = time() . '.' . $request->file('profile_photo')->getClientOriginalExtension();
+    $path = $request->file('profile_photo')->move(public_path('images'), $fileName);
+
+    // Save the path to the user's profile
+    $user = Auth::user();
+    $user->profile_photo_path = 'images/' . $fileName;
+    $user->save();
+
+    return back()->with('success', 'Profile photo updated successfully.');
+}
 }
 

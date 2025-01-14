@@ -72,6 +72,7 @@ Route::middleware(['auth'])->get('/profile', function () {
 })->name('profile.show');
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
+Route::put('/profile/photo', [ProfileController::class, 'updateProfilePhoto'])->name('profile.updatePhoto');
 
 // admin details
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
