@@ -34,9 +34,9 @@
         <thead>
             <tr>
                 <th>#</th>
-                <th>USER ID</th>
-                <th>USER Name</th>
-                <th>EMAIL</th>
+                <th>User ID</th>
+                <th>User Name</th>
+                <th>Email</th>
                 <th>Room</th>
                 <th>Room Type</th>
                 <th>Price (RM)</th>
@@ -137,7 +137,7 @@
 <button class="btn btn-success" data-toggle="modal" data-target="#addBookingModal">Add Booking</button>
 <div class="modal fade" id="addBookingModal" tabindex="-1" aria-hidden="true">
     <div class="modal-dialog">
-        <form action="{{ route('bookings.store') }}" method="POST">
+        <form action="{{ route('bookings.adminstore') }}" method="POST">
             @csrf
             <div class="modal-content">
                 <div class="modal-header">

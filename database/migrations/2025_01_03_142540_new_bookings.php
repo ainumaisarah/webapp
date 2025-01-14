@@ -13,13 +13,16 @@ return new class extends Migration
     {
         Schema::create('bookings', function (Blueprint $table) {
             $table->string('booking_id')->unique();
-            $table->foreignId('user_id')->constrained()->onDelete('cascade'); // References `id` in `users` table
-            $table->foreignId('room_id')->constrained('rooms')->onDelete('cascade'); // References `id` in `rooms` table
+            $table->unsignedBigInteger('user_id');
+            $table->string('room_id');
             $table->date('check_in_date');
             $table->date('check_out_date');
-            $table->integer('guest_count');
+            $table->integer('guest_count')->default(1);
             $table->string('booking_status')->default('pending');
             $table->timestamps(); // Adds created_at and updated_at columns
+
+            $table->foreign('room_id')->references('room_id')->on('rooms')->onDelete('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
         });
     }
 
