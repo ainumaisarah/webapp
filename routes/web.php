@@ -40,6 +40,7 @@ Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index'
 Route::post('/reviews', [ReviewController::class, 'store'])->name('reviews.store');
 
 
+
 Route::post('register', [RegisterController::class, 'register'])->name('register.submit');
 
 Route::get('/login', function () {
