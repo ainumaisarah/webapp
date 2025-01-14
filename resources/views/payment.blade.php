@@ -46,9 +46,9 @@
             <div class="payment-summary">
                 <br>
                 <h3>Payment Summary</h3>
-                <p><strong>Subtotal:</strong> MYR {{ $data['price'] }}</p>
+                <p><strong>Subtotal:</strong> MYR {{ $data['price'] * \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date']))}}</p>
                 <p><strong>Total Tax:</strong> MYR {{ $data['price'] * 0.06 }}</p>
-                <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
+                <p><strong>Total:</strong> MYR {{ ($data['price'] * \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date'])) )+ ($data['price'] * 0.06) }}</p>
                 <br>
                 <h3>Cancellation Policy</h3>
                 <p><strong>Cancellation Fee:</strong> MYR 600.00</p>
