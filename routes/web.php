@@ -53,10 +53,12 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified',
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/home', function () {
+        return view('mainpage');
+    })->name('home');
 });
+
+
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
 
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
