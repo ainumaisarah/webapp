@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('review_id', 8)->unique();
             $table->unsignedBigInteger('user_id');
             $table->string('user_name');
-            $table->float('rating');
+            $table->float('rating',1);
             $table->string('review_text');
             $table->date('review_date')->nullable();
             $table->timestamps();

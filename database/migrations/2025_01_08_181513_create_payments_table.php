@@ -14,13 +14,11 @@ return new class extends Migration
         Schema::create('payments', function (Blueprint $table) {
             $table->id('payment_id'); // Primary key
             $table->string('booking_id');  // Foreign key
-            $table->decimal('amount', 10, 2); // Amount with precision
+            $table->double('amount', 10, 2); // Amount with precision
             $table->string('card_name', 30);
-            $table->decimal('card_number', 10, 2);
-            $table->decimal('expiry_date', 6);
-            $table->decimal('ccv', 3);
-
-
+            $table->integer('card_number'); // Card number as integer
+            $table->string('expiry_date', 302); // Expiry date as date
+            $table->integer('ccv'); // CCV as integer2
             $table->enum('payment_status', ['success', 'fail']); // Status
             $table->timestamps();
 

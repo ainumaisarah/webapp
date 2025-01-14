@@ -86,7 +86,6 @@
 	          <li class="nav-item"><a href="/rooms" class="nav-link">Rooms</a></li>
 	          <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
 	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-              <li class="nav-item"><a href="/payment" class="nav-link">Payment</a></li>
 	        </ul>
 	      </div>
 	    </div>

@@ -99,7 +99,7 @@
                         {{ $review->review_text }}
 
                     </div>
-                    <p>{{ $review->room_type }} <br> {{ $review->stay_duration }} - {{ $review->stay_date ? $review->stay_date->format('F Y') : Carbon::now()->format('F Y') }}</p>
+                    <p>{{ $review->room_type }} <br> {{ $review->check_in }}</p>
                 </div>
                 <div class="review-meta">
                     <div class="stars">
@@ -114,7 +114,7 @@
                         @endfor
                     </div>
                     <div class="review-date">
-                        Posted On {{ $review->review_date ? $review->review_date->format('j F Y \a\t g:iA') : Carbon::now()->format('j F Y \a\t g:iA') }}
+                        Posted On {{ $review->review_date->format('j F Y ') }}
                     </div>
                     @if (Auth::check() && Auth::id() == $review->user_id)
                     <div class="review-actions">

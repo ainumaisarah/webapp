@@ -12,10 +12,10 @@ return new class extends Migration
     public function up()
     {
         Schema::table('reviews', function (Blueprint $table) {
-            $table->float('comfort')->nullable()->after('rating');
-            $table->float('staff')->nullable()->after('comfort');
-            $table->float('facilities')->nullable()->after('staff');
-            $table->float('value')->nullable()->after('facilities');
+            $table->float('comfort',1 )->nullable()->after('rating');
+            $table->float('staff', 1)->nullable()->after('comfort');
+            $table->float('facilities', 1)->nullable()->after('staff');
+            $table->float('value', 1)->nullable()->after('facilities');
             $table->string('property_photos')->nullable()->after('review_text');
         });
     }

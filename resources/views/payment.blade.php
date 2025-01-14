@@ -35,19 +35,13 @@
 
                 </div>
                 <h3> Your Booking Details</h3>
-                <p><strong>Location:</strong> Kuala Lumpur, Malaysia</p>
+                <p><strong>Location:</strong> Moonlit Lagoon Hotel, 123 Jalan Lagoon Utama, Sunway City, <br> 47500 Subang Jaya, Selangor, Malaysia </p>
                 <p><strong>Check-in:</strong> {{ $data['check_in_date'] }}</p>
                 <p><strong>Check-out:</strong> {{ $data['check_out_date'] }}</p>
                 <p><strong>Total Length of Stay:</strong> {{ \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date'])) }} nights</p>
                 <p><strong>Selection:</strong> 1 Room for {{ $data['guest_count'] }} guests</p>
                 <p><strong>Room Type:</strong> {{ $data['room_type'] }}</p>
-                <div class="stars">
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">★</span>
-                    <span class="star">☆</span>
-                </div>
+
             </div>
             <div class="payment-summary">
                 <br>
