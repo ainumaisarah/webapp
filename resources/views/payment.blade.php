@@ -93,9 +93,5 @@
         </form>
     </div>
 </div>
-<style>
-    .booking-details , .payment-summary , .review-form {
-    color: black;
-}
-</style>
+
 @endsection
