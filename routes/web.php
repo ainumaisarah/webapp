@@ -59,6 +59,7 @@ Route::middleware([
 });
 
 
+
 Route::get('/reviews', [ReviewController::class, 'index'])->name('reviews.index');
 
 Route::get('/admin/login', [AdminLoginController::class, 'showLoginForm'])->name('admin.login');
@@ -66,7 +67,7 @@ Route::post('/admin/login', [AdminLoginController::class, 'login'])->name('admin
 
 Route::post('/payment', [PaymentController::class, 'index'])->name('payment');
 Route::post('/payment/process', [PaymentController::class, 'processPayment'])->name('payment.process');
-Route::post('/success', [PaymentController::class, 'processsuccess'])->name('success.shimi');
+Route::post('/payment/{booking_id}', [PaymentController::class, 'processSuccess'])->name('payment.submit');
 Route::get('/success', [PaymentController::class, 'shimi'])->name('success.shimi');
 
 Route::middleware(['auth'])->get('/profile', function () {

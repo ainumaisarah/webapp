@@ -12,11 +12,15 @@ class Payment extends Model
     protected $fillable = [
         'booking_id',
         'amount',
+        'card_name',
+        'card_number',
+        'expiry_date',
+        'ccv',
         'payment_status',
     ];
 
     public function booking()
     {
-        return $this->belongsTo(Booking::class, 'booking_id');
+        return $this->belongsTo(Booking::class);
     }
 }

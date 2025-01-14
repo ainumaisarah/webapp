@@ -17,6 +17,13 @@
     </div>
 </div>
 
+<!-- flash msg part -->
+@if (session('success'))
+<div class="alert alert-success">
+    {{ session('success') }}
+</div>
+@endif
+
 <!-- Payment Section -->
 <div class="reviews-container">
     <div class="overall-payment">
@@ -60,14 +67,16 @@
     <br>
     <div class="review-form">
         <h3>Enter Payment Details</h3>
-        <form action="{{ route('success.shimi') }}" method="POST">
+        <form action="{{ route('payment.submit', ['booking_id' => $data['booking_id']]) }}" method="POST">
             @csrf
 
             <div class="form-group">
                 <label for="amount">Amount</label>
                 <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
-
             </div>
+
+            <input type="hidden" name="amount" value="{{ number_format(($data['price'] * \Carbon\Carbon::parse($data['check_in_date'])->diffInDays(\Carbon\Carbon::parse($data['check_out_date']))) + ($data['price'] * 0.06), 2, '.', '') }}">
+
 
             <div class="form-group">
                 <label for="card_name">CardHolder Name</label>
@@ -81,12 +90,12 @@
 
             <div class="form-group">
                 <label for="expiry_date">Expiry Date</label>
-                <input type="number" name="expiry_date" id="expiry_date" required class="form-control">
+                <input type="text" name="expiry_date" id="expiry_date" required class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="cvv">CVV</label>
-                <input type="number" name="cvv" id="cvv" placeholder="Enter CVV" required class="form-control">
+                <input type="number" name="ccv" id="ccv" placeholder="Enter CVV" required class="form-control">
             </div>
 
             <button type="submit" class="btn-post">Make Payment</button>
