@@ -51,7 +51,7 @@ public function store(Request $request)
 {
     // Retrieve the authenticated user's ID
 
-    $userId = DB::table('users')->value('id');
+    $userId = Auth::id();
 
     if (!$userId) {
         return redirect()->back()->with('error', 'You must be logged in to book a room.');
