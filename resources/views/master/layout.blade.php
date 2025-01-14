@@ -80,15 +80,29 @@
                 <span class="oi oi-menu"></span> Menu
             </button>
 
-	      <div class="collapse navbar-collapse" id="ftco-nav">
-	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item active"><a href="/" class="nav-link">Home</a></li>
-	          <li class="nav-item"><a href="/rooms" class="nav-link">Rooms</a></li>
-	          <li class="nav-item"><a href="/reviews" class="nav-link">Reviews</a></li>
-	          <li class="nav-item"><a href="/contact" class="nav-link">Contact</a></li>
-	        </ul>
-	      </div>
-	    </div>
+            <div class="collapse navbar-collapse" id="ftco-nav">
+                <ul class="navbar-nav ml-auto">
+                    <!-- Home link with active class -->
+                    <li class="nav-item {{ Request::is('/') ? 'active' : '' }}">
+                        <a href="/" class="nav-link">Home</a>
+                    </li>
+
+                    <!-- Rooms link with active class -->
+                    <li class="nav-item {{ Request::is('rooms') ? 'active' : '' }}">
+                        <a href="/rooms" class="nav-link">Rooms</a>
+                    </li>
+
+                    <!-- Reviews link with active class -->
+                    <li class="nav-item {{ Request::is('reviews') ? 'active' : '' }}">
+                        <a href="/reviews" class="nav-link">Reviews</a>
+                    </li>
+
+                    <!-- Contact link with active class -->
+                    <li class="nav-item {{ Request::is('contact') ? 'active' : '' }}">
+                        <a href="/contact" class="nav-link">Contact</a>
+                    </li>
+                </ul>
+            </div>
 	  </nav>
     <!-- END nav -->
 
