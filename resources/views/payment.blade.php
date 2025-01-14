@@ -68,29 +68,31 @@
         <h3>Enter Payment Details</h3>
         <form action="{{ route('success.shimi') }}" method="POST">
             @csrf
+
             <div class="form-group">
                 <label for="amount">Amount</label>
                 <p><strong>Total:</strong> MYR {{ $data['price'] + ($data['price'] * 0.06) }}</p>
+
             </div>
 
             <div class="form-group">
                 <label for="card_name">CardHolder Name</label>
-                <input type="number" name="card_name" id="card_name" required class="form-control">
+                <input type="text" name="card_name" id="card_name" required class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="card_number">Card Number</label>
-                <input type="text" name="card_number" id="card_number" required class="form-control">
+                <input type="number" name="card_number" id="card_number" required class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="expiry_date">Expiry Date</label>
-                <input type="month" name="expiry_date" id="expiry_date" required class="form-control">
+                <input type="number" name="expiry_date" id="expiry_date" required class="form-control">
             </div>
 
             <div class="form-group">
                 <label for="cvv">CVV</label>
-                <input type="text" name="cvv" id="cvv" placeholder="Enter CVV" required class="form-control">
+                <input type="number" name="cvv" id="cvv" placeholder="Enter CVV" required class="form-control">
             </div>
 
             <button type="submit" class="btn-post">Make Payment</button>

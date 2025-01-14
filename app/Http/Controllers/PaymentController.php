@@ -9,6 +9,7 @@ class PaymentController extends Controller
     public function index(Request $request)
     {
         $data = [
+            'booking_id' => $request->input('booking_id'),
             'room_id' => $request->input('room_id'),
             'room_type' => $request->input('room_type'),
             'check_in_date' => $request->input('check_in_date'),
@@ -34,7 +35,7 @@ class PaymentController extends Controller
     }
     public function processSuccess(Request $request)
     {
-        // Handle payment logic here (e.g., integration with a payment gateway)
+
 
         // Example response
         return redirect()->route('success.shimi')->with('status', 'Payment successful!');
