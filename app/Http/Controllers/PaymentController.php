@@ -8,15 +8,15 @@ class PaymentController extends Controller
 {
     public function index(Request $request)
     {
-        // Retrieve the session data
-    $data = [
-        'room_id' => session('room_id'),
-        'room_type' => session('room_type'),
-        'check_in_date' => session('check_in_date'),
-        'check_out_date' => session('check_out_date'),
-        'price' => session('price'),
-        'guest_count' => session('guest_count')
-    ];
+        $data = [
+            'booking_id' => $request->input('booking_id'),
+            'room_id' => $request->input('room_id'),
+            'room_type' => $request->input('room_type'),
+            'check_in_date' => $request->input('check_in_date'),
+            'check_out_date' => $request->input('check_out_date'),
+            'price' => $request->input('price'),
+            'guest_count' => $request->input('guest_count'),
+        ];
         return view('payment')->with('data', $data);  // payment.blade.php
     }
     public function shimi()
@@ -35,7 +35,7 @@ class PaymentController extends Controller
     }
     public function processSuccess(Request $request)
     {
-        // Handle payment logic here (e.g., integration with a payment gateway)
+
 
         // Example response
         return redirect()->route('success.shimi')->with('status', 'Payment successful!');
