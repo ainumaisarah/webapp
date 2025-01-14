@@ -51,5 +51,19 @@ public function updateProfilePhoto(Request $request)
 
     return back()->with('success', 'Profile photo updated successfully.');
 }
+
+/**public function destroy($booking_id)
+{
+    // Find the booking for the authenticated user
+    $booking = Booking::where('user_id', auth()->id())->where('id', $booking_id)->first();
+
+    // If booking exists, delete it
+    if ($booking) {
+        $booking->delete();
+        return back()->with('status', 'Your booking has been canceled successfully.');
+    }
+
+    return back()->with('error', 'Booking not found or you do not have permission to cancel this booking.');
+}**/
 }
 

@@ -38,7 +38,7 @@
                                 <th class="border border-gray-300 px-4 py-2">Room ID</th>
                                 <th class="border border-gray-300 px-4 py-2">Check-In Date</th>
                                 <th class="border border-gray-300 px-4 py-2">Check-Out Date</th>
-                                <th class="border border-gray-300 px-4 py-2">Actions</th>
+                                <!--<th class="border border-gray-300 px-4 py-2">Booking Status</th>-->
                             </tr>
                         </thead>
                         <tbody>
@@ -48,16 +48,7 @@
                                     <td class="border border-gray-300 px-4 py-2">{{ $booking->room_id }}</td>
                                     <td class="border border-gray-300 px-4 py-2">{{ $booking->check_in_date }}</td>
                                     <td class="border border-gray-300 px-4 py-2">{{ $booking->check_out_date }}</td>
-                                    <td class="border border-gray-300 px-4 py-2">
-                                        <!-- Action Buttons -->
-                                        <a href="{{ route('bookings.show', $booking->booking_id) }}" class="text-blue-500 hover:underline">View</a> |
-                                        <a href="{{ route('bookings.edit', $booking->booking_id) }}" class="text-yellow-500 hover:underline">Edit</a> |
-                                        <form action="{{ route('bookings.destroy', $booking->booking_id) }}" method="POST" style="display:inline;">
-                                            @csrf
-                                            @method('DELETE')
-                                            <button type="submit" class="text-red-500 hover:underline" onclick="return confirm('Are you sure?')">Delete</button>
-                                        </form>
-                                    </td>
+
                                 </tr>
                             @endforeach
                         </tbody>

@@ -75,6 +75,7 @@ Route::middleware(['auth'])->get('/profile', function () {
 
 Route::get('/profile', [ProfileController::class, 'show'])->name('profile.show');
 Route::put('/profile/photo', [ProfileController::class, 'updateProfilePhoto'])->name('profile.updatePhoto');
+//Route::middleware('auth')->delete('/profile/cancel-booking/{booking}', [ProfileController::class, 'destroy'])->name('profile.cancelBooking');
 
 // admin details
 Route::get('/admin', [AdminController::class, 'index'])->name('admin.index');
