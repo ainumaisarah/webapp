@@ -46,7 +46,7 @@
         <div class="col-md-8">
             <div class="card shadow-lg p-4">
                 <div class="card-body text-center">
-                    <h2 class="card-title mb-4">Your Payment Successful!</h2>
+                    <h2 class="card-title mb-4">Your Payment is Successful!</h2>
                      <p class="card-text mb-4">Thank you for your payment. <br> Your transaction has been completed successfully.</p>
                      <br>
                      <p class="card-text mb-4">Your Booking ID is : </p>
