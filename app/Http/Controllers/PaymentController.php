@@ -55,6 +55,6 @@ class PaymentController extends Controller
             'booking_status' => 'confirmed',
         ]);
 
-        return redirect()->route('payment')->with('success', 'Payment Confirmed.');
+        return redirect()->route('success.shimi')->with('booking_id', $booking_id);
     }
 }
