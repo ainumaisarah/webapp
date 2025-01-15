@@ -123,11 +123,15 @@ body {
 
 }
 
-.guest-review .review-meta .stars,
+
 .guest-review .review-meta .review-date,
 .guest-review .review-meta .review-actions {
     margin: 0 10px;
     order: 4; /* Ensure stars are at the far right */
+}
+.guest-review .review-meta .stars{
+    margin-right: 50px;
+    align-items: center;
 }
 
 
