@@ -1,17 +1,16 @@
-
 @extends('master.layout')
 
 @section('content')
 
 <style>
     body {
-       background-color: #6d8fb1;
+       background-color: #f1f0f0;
     }
     .edith2 {
         margin-top: 100px; /* Adjust this value as needed */
     }
     .btn-primary{
-        margin-bottom: 80px;
+        margin-bottom: 100px;
     }
 </style>
 <div class="container">
@@ -20,7 +19,7 @@
         @csrf
         @method('PUT')
         <div class="form-group">
-            <label for="review_text">What You Liked:</label>
+            <label for="review_text">Tell us what you loved and how we can make your next stay even better!</label>
             <textarea name="review_text" id="review_text" class="form-control" required>{{ $review->review_text }}</textarea>
         </div>
 

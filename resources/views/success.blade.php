@@ -49,7 +49,9 @@
                     <h2 class="card-title mb-4">Your Payment is Successful!</h2>
                      <p class="card-text mb-4">Thank you for your payment. <br> Your transaction has been completed successfully.</p>
                      <br>
-                     <p class="card-text mb-4">Your Booking ID is : </p>
+                     <p class="card-text mb-4">
+                        <strong>Your Booking ID is: </strong> {{ session('booking_id') }}
+                    </p>
 
                     <a href="{{ route('home') }}" class="btn btn-primary">Return to Home</a>
                 </div>

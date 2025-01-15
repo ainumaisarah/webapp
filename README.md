@@ -46,7 +46,7 @@ The Sequence Diagram of Hotel Management System
 ![sequence diagram](https://github.com/user-attachments/assets/7e8b4feb-bc82-461a-b237-8f773acf7370)
 
 
-## Prototype
+## Project System Captured Screen 
 
 1. Home page
 ![1](https://github.com/user-attachments/assets/97211a51-b6a0-4f0c-b561-40e466437bbe)

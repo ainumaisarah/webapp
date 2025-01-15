@@ -51,7 +51,7 @@ public function store(Request $request)
 {
     // Retrieve the authenticated user's ID
 
-    $userId = DB::table('users')->value('id');
+    $userId = Auth::id();
 
     if (!$userId) {
         return redirect()->back()->with('error', 'You must be logged in to book a room.');
@@ -87,6 +87,7 @@ public function store(Request $request)
 
     // Store booking data in the session for later use
     session([
+        'booking_id' => $booking->booking_id,
         'room_id' => $room->room_id,
         'room_type' => $room->type,
         'check_in_date' => $booking->check_in_date,

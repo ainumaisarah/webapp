@@ -113,19 +113,20 @@
                             @endif
                         @endfor
                     </div>
-                    <div class="review-date">
-                        Posted On {{ $review->review_date->format('j F Y ') }}
-                    </div>
+
                     @if (Auth::check() && Auth::id() == $review->user_id)
                     <div class="review-actions">
                         <form action="{{ route('reviews.destroy', $review->id) }}" method="POST" style="display:inline;">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger">Delete Review</button>
+                            <button type="submit" class="btn btn-danger">Delete Review</button> <div class="review-date">
+                                Posted On {{ $review->review_date->format('j F Y ') }}
+                            </div>
                         </form>
                         <form action="{{ route('reviews.edit', $review->id) }}" method="GET" style="display:inline;">
                             @csrf
-                            <button type="submit" class="btn btn-primary">Update</button>                    </div>
+                            <button type="submit" class="btn btn-primary">Update</button> </form>
+                    </div>
                 @endif
                 </div>
             </div>
