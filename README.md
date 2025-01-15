@@ -43,7 +43,7 @@ The ERD Diagram of Hotel Management System
 
 ## Sequence Diagram
 The Sequence Diagram of Hotel Management System
-![sequence diagram](https://github.com/user-attachments/assets/7e8b4feb-bc82-461a-b237-8f773acf7370)
+![SequenceDiagram](https://github.com/user-attachments/assets/5729f510-64b5-4bd2-8312-d47d4442076d)
 
 
 ## Project System Captured Screen 
