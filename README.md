@@ -49,17 +49,22 @@ The Sequence Diagram of Hotel Management System
 ## Project System Captured Screen 
 
 1. Home page
-![1](https://github.com/user-attachments/assets/97211a51-b6a0-4f0c-b561-40e466437bbe)
+![1](https://github.com/user-attachments/assets/c86872de-5fc4-4b7e-a7a8-21d24b878e99)
 
 2. Sign up Page 
-![2](https://github.com/user-attachments/assets/712407bc-8bd8-4952-9fdb-ea067ddcbe0a)
+![2](https://github.com/user-attachments/assets/23ec1e61-e00e-42c4-a84f-ce4bba40a437)
 
 3. Log in (Guest) Page
-![3](https://github.com/user-attachments/assets/5f531e7e-e9bb-4194-b0cc-8079ae294705)
+![3](https://github.com/user-attachments/assets/0c483c95-5cc9-45bf-aafb-d710ffcc073a)
 
 4. User Profile Page
-![5](https://github.com/user-attachments/assets/6c8a4ced-d1f9-4766-b032-3ffe342b8ac4)
-![6](https://github.com/user-attachments/assets/356d843d-ba73-4afa-8e1b-0de5a74b57eb)
+![5](https://github.com/user-attachments/assets/9296967e-156b-455a-9302-e4b45e3edb2a)
+![6](https://github.com/user-attachments/assets/966b8768-faec-4942-bd26-3f2605ab9a66)
+![7](https://github.com/user-attachments/assets/5b2ee546-10f7-43ec-b0e6-3bd73d741bff)
+When User wants to cancel booking
+![8](https://github.com/user-attachments/assets/9e35dc91-5b6a-4f77-b7b5-5c60cb9b193f)
+User profile after cancel booking
+![9](https://github.com/user-attachments/assets/bb6836ca-c4f2-4909-b672-283daa7f5215)
 
 6. Booking Page
 ![7](https://github.com/user-attachments/assets/e1ec8c16-aceb-4959-aae7-a7b96ff81770)
