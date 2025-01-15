@@ -82,7 +82,7 @@ User profile after cancel booking
 ![AdminLogin](https://github.com/user-attachments/assets/a811c2b3-4046-403c-ac66-afe741bbc00c)    
 
 10. Admin Control Panel Page
-![8](https://github.com/user-attachments/assets/29f989de-9250-4250-b037-f7882b77e89e)
+![AdminPage](https://github.com/user-attachments/assets/154acf9e-2104-4594-a5bb-208bfc589974)
 
    
 ## References
