@@ -69,8 +69,7 @@ User profile after cancel booking
 ![9](https://github.com/user-attachments/assets/bb6836ca-c4f2-4909-b672-283daa7f5215)
 
 6. Booking Page
-![image](https://github.com/user-attachments/assets/e4411cf5-77eb-4799-b883-98a7487bc384)
-
+![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
 7. Payment Page
  ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
