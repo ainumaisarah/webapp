@@ -38,7 +38,8 @@ The features and functionalities of Hotel Management System is equipped with fiv
 
 ## Entity-Relationship Diagram (ERD)
 The ERD Diagram of Hotel Management System
-![ER Diagram](https://github.com/user-attachments/assets/f7cbe9c4-c6e3-4c7b-9328-387962cc7fb7)
+![WhatsApp Image 2025-01-15 at 21 02 52_f9a9e083](https://github.com/user-attachments/assets/73eee6ef-4b37-41d6-b59f-c7abac34c467)
+
 
 
 ## Sequence Diagram
@@ -72,11 +73,21 @@ User profile after cancel booking
 ![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
 7. Payment Page
- ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
-![11](https://github.com/user-attachments/assets/d9388726-6291-4ab2-aeb6-50531f9a00a2)
+![WhatsApp Image 2025-01-15 at 21 45 37_50e2e4de](https://github.com/user-attachments/assets/3cdcab0f-26fe-44b2-978e-e276a938eda9)
+![WhatsApp Image 2025-01-15 at 21 45 36_c833c5b6](https://github.com/user-attachments/assets/adf489b2-033b-4936-8c71-331683791ef4)
+![WhatsApp Image 2025-01-15 at 21 45 37_88a3231e](https://github.com/user-attachments/assets/ddd72412-489d-4f2c-95f0-a21d022f5456)
+![WhatsApp Image 2025-01-15 at 21 45 36_cd1b37cc](https://github.com/user-attachments/assets/8424a640-1133-46e1-9df2-76c4abc3e843)
+![WhatsApp Image 2025-01-15 at 21 45 43_73455457](https://github.com/user-attachments/assets/0e92bd39-e176-481b-9a35-8dad42a4ee5f)
+
 
 8. Reviews and Ratings Page
-![9](https://github.com/user-attachments/assets/cebaf395-c47d-440d-9768-b7bde65432cf)
+![WhatsApp Image 2025-01-15 at 20 52 40_98ec53d8](https://github.com/user-attachments/assets/253c0d09-bc4f-4d06-924c-73427c0fe2d8)
+![WhatsApp Image 2025-01-15 at 20 52 54_c98dc1f2](https://github.com/user-attachments/assets/dbb236c0-2e68-4a34-b461-6f3c5abcbe3e)
+![WhatsApp Image 2025-01-15 at 20 53 09_ff854395](https://github.com/user-attachments/assets/8f7995a1-59f9-4450-b315-568e033728ab)
+![WhatsApp Image 2025-01-15 at 20 53 25_7a41c869](https://github.com/user-attachments/assets/c4c09b6a-9548-4695-9594-0064a40d36ba)
+![WhatsApp Image 2025-01-15 at 20 53 52_daebe695](https://github.com/user-attachments/assets/33017097-65a1-4dd9-8db4-cb8c88dbc6c3)
+![WhatsApp Image 2025-01-15 at 20 54 46_526bc68f](https://github.com/user-attachments/assets/431dfd0f-b367-4261-b9be-5e36f4fe2060)
+
 
 9. Log in (Admin) Page
 ![AdminLogin](https://github.com/user-attachments/assets/a811c2b3-4046-403c-ac66-afe741bbc00c)    
