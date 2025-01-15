@@ -61,8 +61,10 @@ The Sequence Diagram of Hotel Management System
 ![5](https://github.com/user-attachments/assets/9296967e-156b-455a-9302-e4b45e3edb2a)
 ![6](https://github.com/user-attachments/assets/966b8768-faec-4942-bd26-3f2605ab9a66)
 ![7](https://github.com/user-attachments/assets/5b2ee546-10f7-43ec-b0e6-3bd73d741bff)
+
 When User wants to cancel booking
 ![8](https://github.com/user-attachments/assets/9e35dc91-5b6a-4f77-b7b5-5c60cb9b193f)
+
 User profile after cancel booking
 ![9](https://github.com/user-attachments/assets/bb6836ca-c4f2-4909-b672-283daa7f5215)
 
