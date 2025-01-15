@@ -17,7 +17,7 @@
 ## Objectives of the Web Application
 The objectives of this Hotel Management System are: 
 
-1. To enable users to manage their personal information and booking details for successful hotel reservation through the implementations of CRUD functionalities, ensuring all user data is accurately stored and securely updated in the database
+1. To enable users to manage their personal information and booking details for successful hotel reservation through the implementations of CRUD functionalities, ensuring all user data is accurately stored and securely updated in the database.
 
 2. To provide hotel administrators with tools for managing customer information, managing room details and monitoring reservations records to ensure efficient data processing.
 
