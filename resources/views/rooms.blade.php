@@ -207,7 +207,7 @@
 		    	</div> -->
 		    	<div class="col-lg-3 sidebar">
 	      		<div class="sidebar-wrap bg-light ftco-animate">
-	      			<h3 class="heading mb-4">Advanced Search</h3>
+	      			<h3 class="heading mb-4">Choose Your Room</h3>
 	      			<form action="{{ route('rooms') }}" method="GET">
 	      				<div class="fields">
 		              <div class="form-group">
