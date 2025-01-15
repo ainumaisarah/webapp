@@ -1,4 +1,4 @@
-![image](https://github.com/user-attachments/assets/d3521087-0d94-4268-9265-8fabd608ed96)## Group Members
+## Group Members
 - Member 1: Ainu Maisarah Binti Ami Nuddin (2216320) 
 - Member 2: Arina Batrisyia Sobhan Binti Mohd Razali (2217572)
 - Member 3: Muhammad Hasif Irfan Bin A.Mazlam (2219299) test mic 123 
