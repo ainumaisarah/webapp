@@ -211,10 +211,10 @@
 	      			<form action="{{ route('rooms') }}" method="GET">
 	      				<div class="fields">
 		              <div class="form-group">
-		                <input type="text" name="checkin_date" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date">
+		                <input type="text" name="checkin_date" id="checkin_date" class="form-control checkin_date" placeholder="Check In Date" required>
 		              </div>
 		              <div class="form-group">
-		                <input type="text" name="checkout_date" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date">
+		                <input type="text" name="checkout_date" id="checkin_date" class="form-control checkout_date" placeholder="Check Out Date" required>
 		              </div>
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
@@ -233,7 +233,7 @@
 		              <div class="form-group">
 		                <div class="select-wrap one-third">
 	                    <div class="icon"><span class="ion-ios-arrow-down"></span></div>
-	                    <select name="guest_count" id="guest_count" class="form-control" >
+	                    <select name="guest_count" id="guest_count" class="form-control" required>
                             <option value="">Guests</option>
                             <option value="1">1 Guest</option>
                             <option value="2">2 Guests</option>
