@@ -17,16 +17,16 @@
 ## Objectives of the Web Application
 The objectives of this Hotel Management System are: 
 
-1. To enable users to manage their profiles and booking details, and provide reviews through the implementation of CRUD functionalities, ensuring all user data is properly stored in the database.
+1. To enable users to manage their personal information and booking details for successful hotel reservation through the implementations of CRUD functionalities, ensuring all user data is accurately stored and securely updated in the database
 
-2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records to ensure efficient data processing.
+2. To provide hotel administrators with tools for managing customer information, managing room details and monitoring reservations records to ensure efficient data processing.
 
 3. To implement review and rating features that allow customers to provide feedback on their stay and access reliable information for future booking decisions.
 
 ## Features and Functionalities of the Web Application
 The features and functionalities of Hotel Management System is equipped with five main features: User Profiles, Bookings, Reviews & Ratings, Payments and Admin Control Panel. The system allows for smooth management of user accounts, easy booking processes, valuable guest feedback through reviews, and secure payment transactions. By integrating these functionalities, Moonlit Lagoon Hotel enhances both customer satisfaction and operational efficiency, creating a comprehensive solution for modern hotel management system.
 
-1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email and password. Customers can then read and access their profiles, including viewing their booking history. The update feature allows users to edit their profile information, such as personal details and profile photo ensuring their profiles are always up to date. In case of account deactivation, customers can delete or deactivate their accounts, with admins overseeing the process.
+1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email, and password. Customers can then read and access their profiles, including viewing their booking history. They can also see their bookings and cancel them directly from their user profile. The update feature allows users to edit their profile information, such as personal details and profile photo, ensuring their profiles are always up to date. In case of account deactivation, customers can delete or deactivate their accounts, with admins overseeing the process. 
 
 2. Customers can create bookings by selecting their preferred check-in and check-out dates, room type and the number of guests. The system allow customers to filter available options based on their specific preferences. Once a booking is made, customers will have the opportunity to view and review the details of their reservation, including the dates, room type, and the number of guests. After selecting their preferred options, customers will be directed to the payment page where they can complete their transaction. Additionally, customers have the flexibility to manage their bookings through their profile, including the option to cancel their reservations using a delete feature. Admins have the ability to view and manage all bookings across the platform, ensuring that the system runs smoothly and all customer needs are met promptly.
 
