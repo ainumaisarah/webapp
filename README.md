@@ -1,8 +1,8 @@
 ## Group Members
 - Member 1: Ainu Maisarah Binti Ami Nuddin (2216320) 
 - Member 2: Arina Batrisyia Sobhan Binti Mohd Razali (2217572)
-- Member 3: Muhammad Hasif Irfan Bin A.Mazlam (2219299) test mic 123 
-- Member 4: Muhammad Syahmi Bin Noorhisham (2213991)test test test etst test dah jadi hdusahduiash
+- Member 3: Muhammad Hasif Irfan Bin A.Mazlam (2219299)
+- Member 4: Muhammad Syahmi Bin Noorhisham (2213991)
 - Member 5: Muhd Iskandar Bin Yong Fui Min (2214527) 
 
 #  Moonlit Lagoon Hotel - Hotel Management System
@@ -26,13 +26,13 @@ The objectives of this Hotel Management System are:
 ## Features and Functionalities of the Web Application
 The features and functionalities of Hotel Management System is equipped with five main features: User Profiles, Bookings, Reviews & Ratings, Payments and Admin Control Panel. The system allows for smooth management of user accounts, easy booking processes, valuable guest feedback through reviews, and secure payment transactions. By integrating these functionalities, Moonlit Lagoon Hotel enhances both customer satisfaction and operational efficiency, creating a comprehensive solution for modern hotel management system.
 
-1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email, password and contact information. Users can then read and access their profiles, including viewing their booking history and payment methods. The update feature allows users to edit their profile information, such as personal details and contact information ensuring their profiles are always up to date. In case of account deactivation, users can delete or deactivate their accounts, with admins overseeing the process.
+1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email and password. Customers can then read and access their profiles, including viewing their booking history. The update feature allows users to edit their profile information, such as personal details and profile photo ensuring their profiles are always up to date. In case of account deactivation, customers can delete or deactivate their accounts, with admins overseeing the process.
 
-2. Bookings system is used to handle customer reservations. Customers can create bookings by selecting their preferred dates, room type and the number of guests. Once a booking is made, customers can read and review the booking details, including booking status and dates. Admins have the ability to see and manage all bookings. Customers can update their reservations by changing the dates or the number of guests before payment. The delete feature allows customers to cancel their bookings.
+2. Customers can create bookings by selecting their preferred check-in and check-out dates, room type and the number of guests. The system allow customers to filter available options based on their specific preferences. Once a booking is made, customers will have the opportunity to view and review the details of their reservation, including the dates, room type, and the number of guests. After selecting their preferred options, customers will be directed to the payment page where they can complete their transaction. Additionally, customers have the flexibility to manage their bookings through their profile, including the option to cancel their reservations using a delete feature. Admins have the ability to view and manage all bookings across the platform, ensuring that the system runs smoothly and all customer needs are met promptly.
 
-3. Payments system manages all aspects of booking payments. Upon booking confirmation, customers will enter their bank details, including the name on the bank card, the card number, expiration date and CVV, to process the payment. Once payment is made, customers will receive receipts for their transactions, and admins can track payments and their statuses to ensure all financial records are up to date. Customers can view their payment receipts to mark payments as successful. In case of cancellations before payment confirmation, customers can cancel their payments, and admins can delete any invalid transactions that may arise.
+3. The payment system is responsible for managing all aspects of booking payments. After confirming their booking, customers will be presented with a payment summary that includes important details such as the check-in and check-out dates, the room type and the cancellation policy. To complete the payment, customers will be prompted to enter their bank details, including the name on the bank card, the card number, expiration date, and CVV. These details are required to securely process the payment. Once the payment has been successfully processed, a popup notification will appear on the screen, confirming the transaction and displaying the booking ID for reference. 
 
-4. Reviews & Ratings are for gathering customer feedback on services. After their stay, customers can create reviews and ratings for the rooms, sharing their experiences with future guests. These reviews are displayed for all to see on the booking pages, helping others make informed decisions. Customers also have the option to update their reviews within a specified timeframe, providing them with the flexibility to revise their feedback if needed. Admins monitor and delete inappropriate or spammy reviews to ensure that only valid, helpful feedback is visible.
+4. Reviews and Ratings are an essential feature for gathering customer feedback on services. After their stay, customers can leave reviews and ratings for the rooms, sharing their experiences with future guests. These reviews are displayed on the booking pages, helping others make informed decisions. Customers can rate their experience using a 5-star system, including categories like comfort, staff, facilities, value for money, and overall rating. Additionally, customers have the option to update their reviews, allowing them to revise feedback if necessary, and they can also delete their reviews, providing full control over the content they share. 
 
 5. Admin Control Panel are for managing the hotel management system's operations effectively. It provides admins with a full access to booking details, including guest ID and guest name, their contact number, room details, their room type and price as well as check-in and check-out dates. Admins can update booking details, such as room allocations, guest information, and check-in and check-out dates, ensuring all records are accurate and up to date. They can also manage cancellations by deleting bookings, helping to maintain an organized system. This feature streamlines booking management, allowing admins to address changes quickly and resolve issues efficiently.
 
@@ -43,7 +43,7 @@ The ERD Diagram of Hotel Management System
 
 ## Sequence Diagram
 The Sequence Diagram of Hotel Management System
-![sequence diagram](https://github.com/user-attachments/assets/7e8b4feb-bc82-461a-b237-8f773acf7370)
+![SequenceDiagram](https://github.com/user-attachments/assets/5729f510-64b5-4bd2-8312-d47d4442076d)
 
 
 ## Project System Captured Screen 
