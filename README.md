@@ -54,7 +54,7 @@ The Sequence Diagram of Hotel Management System
 ![image](https://github.com/user-attachments/assets/959803ca-7dce-4fb2-936f-a0ae32c97388)
 ![image](https://github.com/user-attachments/assets/26a60e1a-2dfb-4852-aabe-b1fc4ae1641b)
 
-When a user clicks on the 'Rooms', they will be redirected to the Rooms page. Visitors who do not have an account or are not logged in will be able to view the available rooms but will not have access to the booking functionality
+When a user clicks on the 'Rooms', they will be redirected to the Rooms page. Visitors who do not have an account or are not logged in will be able to view the available rooms but will not have access to the booking functionality.
 
 2. Sign up Page 
 ![2](https://github.com/user-attachments/assets/23ec1e61-e00e-42c4-a84f-ce4bba40a437)
@@ -64,16 +64,16 @@ When customers wish to book a room, they will be required to sign up and create 
 3. Log in (Guest) Page
 ![3](https://github.com/user-attachments/assets/0c483c95-5cc9-45bf-aafb-d710ffcc073a)
 
-After completing the sign-up process, customers will be redirected to the login page to book rooms.
+After completing the sign-up process, customers will be redirected to the login page.
 
 5. User Profile Page
 ![5](https://github.com/user-attachments/assets/0b00b3b5-f1ca-4047-9d26-0e6b8f7b5691)
 ![6](https://github.com/user-attachments/assets/966b8768-faec-4942-bd26-3f2605ab9a66)
 ![7](https://github.com/user-attachments/assets/b59cce20-4f3a-4759-a329-5719ea2462c2)
 
-Customers have the ability to update their profile information, including their photo, name, email, and password. Customers also have the option to delete their account if they wish to do so.
+Customers have the ability to update their profile information, including their photo, name, email, and password. Customers could view their booking history and have the option to cancel booking. Customers also have the option to delete their account if they wish to do so.
 
-When User wants to cancel booking
+When customer wants to cancel booking
 ![8](https://github.com/user-attachments/assets/9e35dc91-5b6a-4f77-b7b5-5c60cb9b193f)
 
 User profile after cancel booking
@@ -113,7 +113,7 @@ When user wants to edit their review
 ![AdminPage](https://github.com/user-attachments/assets/154acf9e-2104-4594-a5bb-208bfc589974)
 
 ## Challenges/Difficulties in Developing the System
-1. Making sure the data from the website page is passed on to the database
+1. Making sure the data from the website page is passed on to the database.
 2. XAMPP and MySQL frequently switching ports, causing difficulties in accessing the localhost.
    
 ## References
