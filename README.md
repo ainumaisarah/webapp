@@ -17,18 +17,18 @@
 ## Objectives of the Web Application
 The objectives of this Hotel Management System are: 
 
-1. To enable users to manage their profiles and booking details, and provide reviews through the implementation of CRUD functionalities, ensuring all user data is properly stored in the database.
+1. To enable users to manage their personal information and booking details for successful hotel reservation through the implementations of CRUD functionalities, ensuring all user data is accurately stored and securely updated in the database.
 
-2. To provide hotel administrators with tools for managing room details, monitoring reservations and handling payment records to ensure efficient data processing.
+2. To provide hotel administrators with tools for managing customer information, managing room details and monitoring reservations records to ensure efficient data processing.
 
 3. To implement review and rating features that allow customers to provide feedback on their stay and access reliable information for future booking decisions.
 
 ## Features and Functionalities of the Web Application
 The features and functionalities of Hotel Management System is equipped with five main features: User Profiles, Bookings, Reviews & Ratings, Payments and Admin Control Panel. The system allows for smooth management of user accounts, easy booking processes, valuable guest feedback through reviews, and secure payment transactions. By integrating these functionalities, Moonlit Lagoon Hotel enhances both customer satisfaction and operational efficiency, creating a comprehensive solution for modern hotel management system.
 
-1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email and password. Customers can then read and access their profiles, including viewing their booking history. The update feature allows users to edit their profile information, such as personal details and profile photo ensuring their profiles are always up to date. In case of account deactivation, customers can delete or deactivate their accounts, with admins overseeing the process.
+1. User Profiles are designed to manage user accounts effectively. The creation process involves registering users with essential details such as name, email, and password. Customers can then read and access their profiles, including viewing their booking history. They can also see their bookings and cancel them directly from their user profile. The update feature allows users to edit their profile information, such as personal details and profile photo, ensuring their profiles are always up to date. In case of account deactivation, customers can delete or deactivate their accounts, with admins overseeing the process. 
 
-2. Customers can create bookings by selecting their preferred check-in and check-out dates, room type and the number of guests. The system allow customers to filter available options based on their specific preferences. Once a booking is made, customers will have the opportunity to view and review the details of their reservation, including the dates, room type, and the number of guests. After selecting their preferred options, customers will be directed to the payment page where they can complete their transaction. Additionally, customers have the flexibility to manage their bookings through their profile, including the option to cancel their reservations using a delete feature. Admins have the ability to view and manage all bookings across the platform, ensuring that the system runs smoothly and all customer needs are met promptly.
+2. Customers can create bookings by selecting their preferred check-in and check-out dates, room type and the number of guests. The system allow customers to filter available options based on their specific preferences. Once a booking is made, customers can review the details of their reservation, including the dates, room type, and the number of guests. After selecting their preferred options, customers will be directed to the payment page where they can complete their transaction. Additionally, customers have the flexibility to manage their bookings through their profile, including the option to cancel their reservations using a delete feature. Admins have the ability to view and manage bookings.
 
 3. The payment system is responsible for managing all aspects of booking payments. After confirming their booking, customers will be presented with a payment summary that includes important details such as the check-in and check-out dates, the room type and the cancellation policy. To complete the payment, customers will be prompted to enter their bank details, including the name on the bank card, the card number, expiration date, and CVV. These details are required to securely process the payment. Once the payment has been successfully processed, a popup notification will appear on the screen, confirming the transaction and displaying the booking ID for reference. 
 
@@ -38,7 +38,8 @@ The features and functionalities of Hotel Management System is equipped with fiv
 
 ## Entity-Relationship Diagram (ERD)
 The ERD Diagram of Hotel Management System
-![ER Diagram](https://github.com/user-attachments/assets/f7cbe9c4-c6e3-4c7b-9328-387962cc7fb7)
+![WhatsApp Image 2025-01-15 at 21 02 52_f9a9e083](https://github.com/user-attachments/assets/73eee6ef-4b37-41d6-b59f-c7abac34c467)
+
 
 
 ## Sequence Diagram
@@ -50,19 +51,29 @@ The Sequence Diagram of Hotel Management System
 
 1. Home page
 ![1](https://github.com/user-attachments/assets/c474ba2b-4cbf-4c00-912a-2d37cedfe0ce)
+![image](https://github.com/user-attachments/assets/959803ca-7dce-4fb2-936f-a0ae32c97388)
+![image](https://github.com/user-attachments/assets/ca2e26f2-4c76-4305-bda2-a65ee9010ff5)
+
+When a user clicks on the 'Rooms', they will be redirected to the Rooms page. Visitors who do not have an account or are not logged in will be able to view the available rooms but will not have access to the booking functionality.
 
 2. Sign up Page 
 ![2](https://github.com/user-attachments/assets/23ec1e61-e00e-42c4-a84f-ce4bba40a437)
 
+When customers wish to book a room, they will be required to sign up and create an account. During the registration process, we will collect their name, email address, and password.
+
 3. Log in (Guest) Page
 ![3](https://github.com/user-attachments/assets/0c483c95-5cc9-45bf-aafb-d710ffcc073a)
 
-4. User Profile Page
+After completing the sign-up process, customers will be redirected to the login page.
+
+5. User Profile Page
 ![5](https://github.com/user-attachments/assets/0b00b3b5-f1ca-4047-9d26-0e6b8f7b5691)
 ![6](https://github.com/user-attachments/assets/966b8768-faec-4942-bd26-3f2605ab9a66)
 ![7](https://github.com/user-attachments/assets/b59cce20-4f3a-4759-a329-5719ea2462c2)
 
-When User wants to cancel booking
+Customers have the ability to update their profile information, including their photo, name, email, and password. Customers could view their booking history and have the option to cancel booking. Customers also have the option to delete their account if they wish to do so.
+
+When customer wants to cancel booking
 ![8](https://github.com/user-attachments/assets/9e35dc91-5b6a-4f77-b7b5-5c60cb9b193f)
 
 User profile after cancel booking
@@ -71,21 +82,49 @@ User profile after cancel booking
 6. Booking Page
 ![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
+<<<<<<< HEAD
 7. Payment Page
 user pay the booking using card
  ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
  user will go to success page and generate booking Id 
 ![11](https://github.com/user-attachments/assets/d9388726-6291-4ab2-aeb6-50531f9a00a2)
+=======
+After applying filters
+![image](https://github.com/user-attachments/assets/0cfc9246-4544-4afc-b942-e2f6667ef692)
+>>>>>>> 8cd60cc72de294842a8dac4544617e4905c51b19
 
-8. Reviews and Ratings Page
-![9](https://github.com/user-attachments/assets/cebaf395-c47d-440d-9768-b7bde65432cf)
+8. Payment Page
+![WhatsApp Image 2025-01-15 at 21 45 37_50e2e4de](https://github.com/user-attachments/assets/3cdcab0f-26fe-44b2-978e-e276a938eda9)
+![WhatsApp Image 2025-01-15 at 21 45 36_c833c5b6](https://github.com/user-attachments/assets/adf489b2-033b-4936-8c71-331683791ef4)
+![WhatsApp Image 2025-01-15 at 21 45 37_88a3231e](https://github.com/user-attachments/assets/ddd72412-489d-4f2c-95f0-a21d022f5456)
+![WhatsApp Image 2025-01-15 at 21 45 36_cd1b37cc](https://github.com/user-attachments/assets/8424a640-1133-46e1-9df2-76c4abc3e843)
 
-9. Log in (Admin) Page
+After payment successful
+![WhatsApp Image 2025-01-15 at 21 45 43_73455457](https://github.com/user-attachments/assets/0e92bd39-e176-481b-9a35-8dad42a4ee5f)
+
+
+10. Reviews and Ratings Page
+![WhatsApp Image 2025-01-15 at 20 52 40_98ec53d8](https://github.com/user-attachments/assets/253c0d09-bc4f-4d06-924c-73427c0fe2d8)
+![WhatsApp Image 2025-01-15 at 20 52 54_c98dc1f2](https://github.com/user-attachments/assets/dbb236c0-2e68-4a34-b461-6f3c5abcbe3e)
+![WhatsApp Image 2025-01-15 at 20 53 09_ff854395](https://github.com/user-attachments/assets/8f7995a1-59f9-4450-b315-568e033728ab)
+![WhatsApp Image 2025-01-15 at 20 53 25_7a41c869](https://github.com/user-attachments/assets/c4c09b6a-9548-4695-9594-0064a40d36ba)
+![WhatsApp Image 2025-01-15 at 20 53 52_daebe695](https://github.com/user-attachments/assets/33017097-65a1-4dd9-8db4-cb8c88dbc6c3)
+
+When user wants to edit their review 
+![WhatsApp Image 2025-01-15 at 20 54 46_526bc68f](https://github.com/user-attachments/assets/431dfd0f-b367-4261-b9be-5e36f4fe2060)
+
+
+12. Log in (Admin) Page
 ![AdminLogin](https://github.com/user-attachments/assets/a811c2b3-4046-403c-ac66-afe741bbc00c)    
 
-10. Admin Control Panel Page
+13. Admin Control Panel Page
 ![AdminPage](https://github.com/user-attachments/assets/154acf9e-2104-4594-a5bb-208bfc589974)
 
+## Challenges/Difficulties in Developing the System
+1. Making sure the data from the website page is passed on to the database.
+2. XAMPP and MySQL frequently switching ports, causing difficulties in accessing the localhost.
+3. Identify the mistakes in coding after error message occurs or function not working.
+4. making sure everyone get the same code and can run the code 
    
 ## References
 1. Bukit Bintang Accommodation | JW Marriott Hotel Kuala Lumpur. (n.d.). Marriott Bonvoy. https://www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/rooms/
