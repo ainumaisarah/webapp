@@ -72,7 +72,9 @@ User profile after cancel booking
 ![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
 7. Payment Page
+user pay the booking using card
  ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
+ user will go to success page and generate booking Id 
 ![11](https://github.com/user-attachments/assets/d9388726-6291-4ab2-aeb6-50531f9a00a2)
 
 8. Reviews and Ratings Page
