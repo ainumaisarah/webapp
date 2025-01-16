@@ -115,6 +115,7 @@ When user wants to edit their review
 ## Challenges/Difficulties in Developing the System
 1. Making sure the data from the website page is passed on to the database.
 2. XAMPP and MySQL frequently switching ports, causing difficulties in accessing the localhost.
+3. Identify the mistakes in coding after error message occurs or function not working.
    
 ## References
 1. Bukit Bintang Accommodation | JW Marriott Hotel Kuala Lumpur. (n.d.). Marriott Bonvoy. https://www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/rooms/
