@@ -103,7 +103,7 @@ When user wants to edit their review
 ![AdminPage](https://github.com/user-attachments/assets/154acf9e-2104-4594-a5bb-208bfc589974)
 
 ## Challenges/Difficulties in Developing the System
-
+1. Making sure the data from the website page is passed on to the database
    
 ## References
 1. Bukit Bintang Accommodation | JW Marriott Hotel Kuala Lumpur. (n.d.). Marriott Bonvoy. https://www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/rooms/
