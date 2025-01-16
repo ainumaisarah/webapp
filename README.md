@@ -94,6 +94,7 @@ After applying filters
 >>>>>>> 8cd60cc72de294842a8dac4544617e4905c51b19
 
 8. Payment Page
+
 User pay the booking using card
 ![WhatsApp Image 2025-01-15 at 21 45 37_50e2e4de](https://github.com/user-attachments/assets/3cdcab0f-26fe-44b2-978e-e276a938eda9)
 ![WhatsApp Image 2025-01-15 at 21 45 36_c833c5b6](https://github.com/user-attachments/assets/adf489b2-033b-4936-8c71-331683791ef4)
