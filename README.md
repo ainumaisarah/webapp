@@ -84,9 +84,8 @@ User profile after cancel booking
 
 <<<<<<< HEAD
 7. Payment Page
-user pay the booking using card
  ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
- user will go to success page and generate booking Id 
+
 ![11](https://github.com/user-attachments/assets/d9388726-6291-4ab2-aeb6-50531f9a00a2)
 =======
 After applying filters
@@ -94,12 +93,13 @@ After applying filters
 >>>>>>> 8cd60cc72de294842a8dac4544617e4905c51b19
 
 8. Payment Page
+User pay the booking using card
 ![WhatsApp Image 2025-01-15 at 21 45 37_50e2e4de](https://github.com/user-attachments/assets/3cdcab0f-26fe-44b2-978e-e276a938eda9)
 ![WhatsApp Image 2025-01-15 at 21 45 36_c833c5b6](https://github.com/user-attachments/assets/adf489b2-033b-4936-8c71-331683791ef4)
 ![WhatsApp Image 2025-01-15 at 21 45 37_88a3231e](https://github.com/user-attachments/assets/ddd72412-489d-4f2c-95f0-a21d022f5456)
 ![WhatsApp Image 2025-01-15 at 21 45 36_cd1b37cc](https://github.com/user-attachments/assets/8424a640-1133-46e1-9df2-76c4abc3e843)
 
-After payment successful
+After payment successful user will go to success page and generate booking Id 
 ![WhatsApp Image 2025-01-15 at 21 45 43_73455457](https://github.com/user-attachments/assets/0e92bd39-e176-481b-9a35-8dad42a4ee5f)
 
 
