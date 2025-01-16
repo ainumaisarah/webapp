@@ -87,14 +87,6 @@ Customers need to fill in the Check-in date, Check-out date and guest number bef
 After applying filters
 ![image](https://github.com/user-attachments/assets/0cfc9246-4544-4afc-b942-e2f6667ef692)
 
-<<<<<<< HEAD
-7. Payment Page
- ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
-
-![11](https://github.com/user-attachments/assets/d9388726-6291-4ab2-aeb6-50531f9a00a2)
-=======
-
->>>>>>> 8cd60cc72de294842a8dac4544617e4905c51b19
 
 8. Payment Page
 
@@ -109,9 +101,13 @@ After payment successful user will go to success page and generate booking Id
 
 
 10. Reviews and Ratings Page
+
+Customers who want to leave the review can view previous customers' experience with their stay. The overall experience will calculate the overall rating of the previous customers. Customers can leave their own feedback using a 5-star rating system.
 ![WhatsApp Image 2025-01-15 at 20 52 40_98ec53d8](https://github.com/user-attachments/assets/253c0d09-bc4f-4d06-924c-73427c0fe2d8)
 ![WhatsApp Image 2025-01-15 at 20 52 54_c98dc1f2](https://github.com/user-attachments/assets/dbb236c0-2e68-4a34-b461-6f3c5abcbe3e)
 ![WhatsApp Image 2025-01-15 at 20 53 09_ff854395](https://github.com/user-attachments/assets/8f7995a1-59f9-4450-b315-568e033728ab)
+
+The logged in customer can update or delete their review after posted. 
 ![WhatsApp Image 2025-01-15 at 20 53 25_7a41c869](https://github.com/user-attachments/assets/c4c09b6a-9548-4695-9594-0064a40d36ba)
 ![WhatsApp Image 2025-01-15 at 20 53 52_daebe695](https://github.com/user-attachments/assets/33017097-65a1-4dd9-8db4-cb8c88dbc6c3)
 
@@ -129,7 +125,8 @@ When user wants to edit their review
 1. Making sure the data from the website page is passed on to the database.
 2. XAMPP and MySQL frequently switching ports, causing difficulties in accessing the localhost.
 3. Identify the mistakes in coding after error message occurs or function not working.
-4. making sure everyone get the same code and can run the code 
+4. Making sure everyone get the same code and can run the code. 
+5. Difficulties in making the update form when user want to update the review.
    
 ## References
 1. Bukit Bintang Accommodation | JW Marriott Hotel Kuala Lumpur. (n.d.). Marriott Bonvoy. https://www.marriott.com/en-us/hotels/kuldt-jw-marriott-hotel-kuala-lumpur/rooms/
