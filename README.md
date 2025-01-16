@@ -66,7 +66,7 @@ When customers wish to book a room, they will be required to sign up and create 
 
 After completing the sign-up process, customers will be redirected to the login page.
 
-5. User Profile Page
+4. User Profile Page
 ![5](https://github.com/user-attachments/assets/0b00b3b5-f1ca-4047-9d26-0e6b8f7b5691)
 ![6](https://github.com/user-attachments/assets/966b8768-faec-4942-bd26-3f2605ab9a66)
 ![7](https://github.com/user-attachments/assets/b59cce20-4f3a-4759-a329-5719ea2462c2)
@@ -79,7 +79,7 @@ When customer wants to cancel booking
 User profile after cancel booking
 ![9](https://github.com/user-attachments/assets/bb6836ca-c4f2-4909-b672-283daa7f5215)
 
-6. Booking Page
+5. Booking Page
 ![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
 Customers need to fill in the Check-in date, Check-out date and guest number before booking. Customer also can use the filter to search room type they want. After customers click 'Book Now' button, it will store the booking information in data base and redirect to payment page.
@@ -88,9 +88,9 @@ After applying filters
 ![image](https://github.com/user-attachments/assets/0cfc9246-4544-4afc-b942-e2f6667ef692)
 
 
-8. Payment Page
+6. Payment Page
 
-User pay the booking using card
+User can complete the booking by paying using card
 ![WhatsApp Image 2025-01-15 at 21 45 37_50e2e4de](https://github.com/user-attachments/assets/3cdcab0f-26fe-44b2-978e-e276a938eda9)
 ![WhatsApp Image 2025-01-15 at 21 45 36_c833c5b6](https://github.com/user-attachments/assets/adf489b2-033b-4936-8c71-331683791ef4)
 ![WhatsApp Image 2025-01-15 at 21 45 37_88a3231e](https://github.com/user-attachments/assets/ddd72412-489d-4f2c-95f0-a21d022f5456)
@@ -100,7 +100,7 @@ After payment successful user will go to success page and generate booking Id
 ![WhatsApp Image 2025-01-15 at 21 45 43_73455457](https://github.com/user-attachments/assets/0e92bd39-e176-481b-9a35-8dad42a4ee5f)
 
 
-10. Reviews and Ratings Page
+7. Reviews and Ratings Page
 
 Customers who want to leave the review can view previous customers' experience with their stay. The overall experience will calculate the overall rating of the previous customers. Customers can leave their own feedback using a 5-star rating system.
 ![WhatsApp Image 2025-01-15 at 20 52 40_98ec53d8](https://github.com/user-attachments/assets/253c0d09-bc4f-4d06-924c-73427c0fe2d8)
@@ -115,10 +115,10 @@ When user wants to edit their review
 ![WhatsApp Image 2025-01-15 at 20 54 46_526bc68f](https://github.com/user-attachments/assets/431dfd0f-b367-4261-b9be-5e36f4fe2060)
 
 
-12. Log in (Admin) Page
+8. Log in (Admin) Page
 ![AdminLogin](https://github.com/user-attachments/assets/a811c2b3-4046-403c-ac66-afe741bbc00c)    
 
-13. Admin Control Panel Page
+9. Admin Control Panel Page
 ![AdminPage](https://github.com/user-attachments/assets/154acf9e-2104-4594-a5bb-208bfc589974)
 
 ## Challenges/Difficulties in Developing the System
