@@ -52,7 +52,7 @@ The Sequence Diagram of Hotel Management System
 1. Home page
 ![1](https://github.com/user-attachments/assets/c474ba2b-4cbf-4c00-912a-2d37cedfe0ce)
 ![image](https://github.com/user-attachments/assets/959803ca-7dce-4fb2-936f-a0ae32c97388)
-![image](https://github.com/user-attachments/assets/26a60e1a-2dfb-4852-aabe-b1fc4ae1641b)
+![image](https://github.com/user-attachments/assets/ca2e26f2-4c76-4305-bda2-a65ee9010ff5)
 
 When a user clicks on the 'Rooms', they will be redirected to the Rooms page. Visitors who do not have an account or are not logged in will be able to view the available rooms but will not have access to the booking functionality.
 
