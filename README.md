@@ -83,6 +83,7 @@ User profile after cancel booking
 ![image](https://github.com/user-attachments/assets/6ef71018-9edc-4a05-9c29-3ef0bcb084bd)
 
 Customers need to fill in the Check-in date, Check-out date and guest number before booking. Customer also can use the filter to search room type they want. After customers click 'Book Now' button, it will store the booking information in data base and redirect to payment page.
+
 <<<<<<< HEAD
 7. Payment Page
  ![10](https://github.com/user-attachments/assets/605711ca-d62b-40b7-901e-c93c4f08af07)
